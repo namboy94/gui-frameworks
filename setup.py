@@ -1,5 +1,5 @@
 """
-Copyright 2015,2016 Hermann Krumrey
+Copyright 2016 Hermann Krumrey
 
 This file is part of gfworks.
 
