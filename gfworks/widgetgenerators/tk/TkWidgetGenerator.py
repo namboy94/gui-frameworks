@@ -20,16 +20,15 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
-
-from gi.repository import Gtk, Gdk
+import tkinter
+from tkinter import ttk
+from functools import partial
 from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
-from gfworks.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 
 
-class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
+class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
     """
-    Implements the simple Widget Generating commands for GTK 3 (GObject)
+    Implements the simple Widget Generating commands for Tk/Tkinter
     """
 
     def generate_label(self, label_text: str):
@@ -38,8 +37,7 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
         :param label_text: The text to be displayed by the label
         :return: the label widget
         """
-        label = Gtk.Label()
-        label.set_text(label_text)
+        label = tkinter.Label(self, text=label_text)
         return label
 
     def generate_image_label(self, image_path: str,
@@ -67,12 +65,9 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
         :param args: optional arguments for the executed method as a tuple
         :return: the button widget
         """
-        button = Gtk.Button.new_with_label(button_text)
-        if command is not None:
-            button.connect("clicked", command, args)
+        button = tkinter.Button(self, text=button_text, command=partial(command, args))
         return button
 
-    # TODO Find out command type
     def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None):
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
@@ -82,14 +77,11 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
         :param enter_args: Optional arguments for the enter command
         :return: the text entry widget
         """
-        def enter(widget, event, command, *args):
-            if event.keyval == Gdk.KEY_Return and widget is not None:
-                command(args)
-
-        entry = Gtk.Entry()
-        entry.set_text(default_text)
+        text_var = tkinter.StringVar(self, default_text)
+        entry = tkinter.Entry(self, textvariable=text_var)
+        entry.text_var = text_var
         if enter_command is not None:
-            entry.connect("key-press-event", enter, enter_command, enter_args)
+            entry.bind('<Return>', partial(enter_command, enter_args))
         return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False):
@@ -99,10 +91,12 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
         :param active: The starting state of the widget, default to False
         :return: the check box widget
         """
-        check_box = Gtk.CheckButton.new_with_label(combo_box_text)
+        number_var = tkinter.IntVar()
+        check_button = tkinter.Checkbutton(self, text=combo_box_text, variable=number_var)
+        check_button.number_var = number_var
         if active:
-            check_box.set_active(True)
-        return check_box
+            check_button.select()
+        return check_button
 
     def generate_radio_button(self, radio_button_text: str):
         """
@@ -110,8 +104,8 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
         :param radio_button_text: the text to be displayed with the radio_button
         :return: the radio button widget
         """
-        radio = Gtk.RadioButton.new_with_label(None, radio_button_text)
-        return radio
+        # TODO Implement
+        super().generate_radio_button(radio_button_text)
 
     def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
         """
@@ -120,9 +114,8 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
                 be filled out at the start
         :return: the progress bar widget
         """
-        progress_bar = Gtk.ProgressBar()
-        progress_bar.set_fraction(initial_percentage)
-        return progress_bar
+        # TODO implement
+        super().generate_percentage_progress_bar(initial_percentage)
 
     def generate_string_combo_box(self, options_list: list(str)):
         """
@@ -131,15 +124,11 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
                 combo box
         :return: the combo box widget
         """
-        option_store = Gtk.ListStore(str)
-        for option in options_list:
-            option_store.append((option,))
-        combo_box = Gtk.ComboBox.new_with_model(option_store)
-        renderer_text = Gtk.CellRendererText()
-        combo_box.pack_start(renderer_text, True)
-        combo_box.add_attribute(renderer_text, "text", 0)
-        combo_box.set_active(0)
-        return PrimitiveComboBox(combo_box, option_store)
+        combo_box = ttk.Combobox(self)
+        combo_box['values'] = tuple(options_list)
+        combo_box.current(0)
+        combo_box.state(['readonly'])
+        return combo_box
 
     def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
         """
@@ -150,25 +139,8 @@ class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
         :return the multi list box widget
         """
-        # TODO SORT BY PRIORITY
-        types = ()
-        titles = []
-
-        for title in options_dictionary_with_types:
-            titles.append(title)
-            types += (options_dictionary_with_types[title][1],)
-
-        list_store = Gtk.ListStore(*types)
-        tree_view = Gtk.TreeView.new_with_model(list_store.filter_new())
-        for i, column_title in enumerate(titles):
-            renderer = Gtk.CellRendererText()
-            column = Gtk.TreeViewColumn(column_title, renderer, text=i)
-            tree_view.append_column(column)
-        scrollable_tree_list = Gtk.ScrolledWindow()
-        scrollable_tree_list.set_vexpand(True)
-        scrollable_tree_list.add(tree_view)
-        tree_selection = tree_view.get_selection()
-        tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
-        scrollable_tree_list.set_hexpand(True)
-        scrollable_tree_list.set_vexpand(True)
-        return PrimitiveMultiListBox(scrollable_tree_list, tree_selection, list_store)
+        # TODO Find a better solution
+        list_box = tkinter.Listbox(self, selectmode=tkinter.MULTIPLE)
+        for item in options_dictionary_with_types:
+            list_box.insert(tkinter.END, options_dictionary_with_types[item][1])
+        return list_box
