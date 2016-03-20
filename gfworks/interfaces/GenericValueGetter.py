@@ -27,6 +27,7 @@ class GenericValueGetter(object):
     Interface that defines the requirements for a GUI framework to read values from widgets.
     """
 
+    # TODO Make Generic Types maybe?
     @staticmethod
     def get_string_from_label(label):
         raise NotImplementedError()

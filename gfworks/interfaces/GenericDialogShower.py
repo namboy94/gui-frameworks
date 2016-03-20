@@ -27,10 +27,10 @@ class GenericDialogShower(object):
     Interface that defines the requirements for a GUI framework to show dialogs.
     """
 
-    def show_message_dialog(self, title, body):
+    def show_message_dialog(self, title: str, body: str):
         raise NotImplementedError()
 
-    def show_yes_no_dialog(self, title, body):
+    def show_yes_no_dialog(self, title: str, body: str):
         raise NotImplementedError()
 
     def show_file_chooser_dialog(self):
@@ -39,5 +39,5 @@ class GenericDialogShower(object):
     def show_directory_chooser_dialog(self):
         raise NotImplementedError()
 
-    def show_text_input_box(self, title, body):
+    def show_text_input_box(self, title: str, body: str):
         raise NotImplementedError()

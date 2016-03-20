@@ -27,7 +27,7 @@ class GenericWidgetGenerator(object):
     Interface that defines the requirements for a GUI framework to generate widgets.
     """
 
-    def generate_label(self, label_text):
+    def generate_label(self, label_text: str):
         """
         Generates a label widget that shows text
         :param label_text: The text to be displayed by the label
@@ -35,7 +35,8 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_label not implemented")
 
-    def generate_image_label(self, image_path, maintain_aspect_ratio=True, width=None, height=None):
+    def generate_image_label(self, image_path: str,
+                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None):
         """
         Generates an image label that shows an image
         :param image_path: The path to the file to be displayed
@@ -50,7 +51,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_image_label not implemented")
 
-    def generate_button(self, button_text, command=None, args=None):
+    def generate_button(self, button_text: str, command=None, args=None):
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -60,7 +61,8 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_button not implemented")
 
-    def generate_text_entry(self, default_text, enter_command=None, enter_args=None):
+    # TODO Find out command type
+    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None):
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -71,7 +73,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_text_entry not implemented")
 
-    def generate_check_box(self, combo_box_text, active=False):
+    def generate_check_box(self, combo_box_text: str, active: bool = False):
         """
         Generates a Check Box widget that allows selecting and deselecting options
         :param combo_box_text: The text to be displayed beside the combo box
@@ -80,7 +82,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_check_box not implemented")
 
-    def generate_radio_button(self, radio_button_text):
+    def generate_radio_button(self, radio_button_text: str):
         """
         Generates a Radio Button which can be used for selecting and deselecting options
         :param radio_button_text: the text to be displayed with the radio_button
@@ -88,7 +90,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_radio_button not implemented")
 
-    def generate_percentage_progress_bar(self, initial_percentage=0.0):
+    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
         """
         Generates a percentage-based progress bar
         :param initial_percentage: the initial percentage of the progress bar to
@@ -97,7 +99,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_percentage_progress_bar not implemented")
 
-    def generate_string_combo_box(self, options_list):
+    def generate_string_combo_box(self, options_list: list(str)):
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -106,7 +108,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_string_combo_box not implemented")
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types):
+    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected
