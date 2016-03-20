@@ -23,6 +23,8 @@ This file is part of gfworks.
 
 from gi.repository import Gtk, Gdk
 from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
+from gfworks.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
+from gfworks.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 
 
 class GenericValueGetter(GenericWidgetGenerator):
@@ -97,7 +99,10 @@ class GenericValueGetter(GenericWidgetGenerator):
         :param active: The starting state of the widget, default to False
         :return: the check box widget
         """
-        raise NotImplementedError("generate_check_box not implemented")
+        check_box = Gtk.CheckButton.new_with_label(combo_box_text)
+        if active:
+            check_box.set_active(True)
+        return check_box
 
     def generate_radio_button(self, radio_button_text: str):
         """
@@ -105,7 +110,8 @@ class GenericValueGetter(GenericWidgetGenerator):
         :param radio_button_text: the text to be displayed with the radio_button
         :return: the radio button widget
         """
-        raise NotImplementedError("generate_radio_button not implemented")
+        radio = Gtk.RadioButton.new_with_label(None, radio_button_text)
+        return radio
 
     def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
         """
@@ -114,7 +120,9 @@ class GenericValueGetter(GenericWidgetGenerator):
                 be filled out at the start
         :return: the progress bar widget
         """
-        raise NotImplementedError("generate_percentage_progress_bar not implemented")
+        progress_bar = Gtk.ProgressBar()
+        progress_bar.set_fraction(initial_percentage)
+        return progress_bar
 
     def generate_string_combo_box(self, options_list: list(str)):
         """
@@ -123,7 +131,15 @@ class GenericValueGetter(GenericWidgetGenerator):
                 combo box
         :return: the combo box widget
         """
-        raise NotImplementedError("generate_string_combo_box not implemented")
+        option_store = Gtk.ListStore(str)
+        for option in options_list:
+            option_store.append((option,))
+        combo_box = Gtk.ComboBox.new_with_model(option_store)
+        renderer_text = Gtk.CellRendererText()
+        combo_box.pack_start(renderer_text, True)
+        combo_box.add_attribute(renderer_text, "text", 0)
+        combo_box.set_active(0)
+        return PrimitiveComboBox(combo_box, option_store)
 
     def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
         """
@@ -134,4 +150,25 @@ class GenericValueGetter(GenericWidgetGenerator):
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
         :return the multi list box widget
         """
-        raise NotImplementedError("generate_primitive_multi_list_box not implemented")
+        # TODO SORT BY PRIORITY
+        types = ()
+        titles = []
+
+        for title in options_dictionary_with_types:
+            titles.append(title)
+            types += (options_dictionary_with_types[title][1],)
+
+        list_store = Gtk.ListStore(*types)
+        tree_view = Gtk.TreeView.new_with_model(list_store.filter_new())
+        for i, column_title in enumerate(titles):
+            renderer = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, renderer, text=i)
+            tree_view.append_column(column)
+        scrollable_tree_list = Gtk.ScrolledWindow()
+        scrollable_tree_list.set_vexpand(True)
+        scrollable_tree_list.add(tree_view)
+        tree_selection = tree_view.get_selection()
+        tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
+        scrollable_tree_list.set_hexpand(True)
+        scrollable_tree_list.set_vexpand(True)
+        return PrimitiveMultiListBox(scrollable_tree_list, tree_selection, list_store)
