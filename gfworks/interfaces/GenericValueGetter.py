@@ -27,35 +27,67 @@ class GenericValueGetter(object):
     Interface that defines the requirements for a GUI framework to read values from widgets.
     """
 
-    # TODO Make Generic Types maybe?
+    # TODO Somehow define types
     @staticmethod
     def get_string_from_label(label):
+        """
+        Returns the displayed string from a label
+        :return: the label string
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_string_from_text_entry(text_entry):
+        """
+        Returns the currently entered string from a text entry
+        :return: the current text entered
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_string_from_button(button):
+        """
+        Returns the displayed string from a button
+        :return: the button string
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_boolean_from_check_box(check_box):
+        """
+        Checks if a check box is currently selected and returns the value
+        :return: True if the check box is selected, False otherwise
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_boolean_from_radio_button(radio_button):
+        """
+        Checks if a radio button is currently selected and returns the value
+        :return: True if the radio button is selected, False otherwise
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_float_percentage_from_progress_bar(progress_bar):
+        """
+        Gets the current progress of a progress bar as a float value between 0.0 and 1.0
+        :return: the current progress as a float
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_string_from_current_selected_combo_box_option(combo_box):
+        """
+        Gets the currently selected string value of a combo box
+        :return: the currently selected string
+        """
         raise NotImplementedError()
 
     @staticmethod
     def get_list_of_selected_elements_from_multi_list_box(multi_list_box):
+        """
+        Gets the currently selected element from a multi list box
+        :return: the currently selected multi list box element
+        """
         raise NotImplementedError()

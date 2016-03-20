@@ -28,16 +28,45 @@ class GenericDialogShower(object):
     """
 
     def show_message_dialog(self, title: str, body: str):
+        """
+        Shows a message dialog which contains a message for the user and a button
+        for the user to press to confirm
+        :param title: the window title of the message dialog
+        :param body: the body text of the dialog
+        :return: void
+        """
         raise NotImplementedError()
 
     def show_yes_no_dialog(self, title: str, body: str):
+        """
+        Shows a yes/no dialog which shows some text and two buttons for the user to press.
+        'Yes' will return True if pressed, 'No' returns False
+        :param title: the window title of the yes/no dialog
+        :param body: the body text of the dialog
+        :return: True if 'Yes' was selected, False if 'No' was selected
+        """
         raise NotImplementedError()
 
     def show_file_chooser_dialog(self):
+        """
+        Shows a file chooser dialog that allows the user to select a file
+        :return: the path to the selected file
+        """
         raise NotImplementedError()
 
     def show_directory_chooser_dialog(self):
+        """
+        Shows a directory chooser dialog that allows the user to select a directory
+        :return: the path to the selected directory
+        """
         raise NotImplementedError()
 
     def show_text_input_box(self, title: str, body: str):
+        """
+        Shows a text input dialog, enabling the user to enter some text and afterwards
+        confirming it via a button
+        :param title: the window title of the dialog
+        :param body: the body text of the dialog
+        :return: the entered text
+        """
         raise NotImplementedError()
