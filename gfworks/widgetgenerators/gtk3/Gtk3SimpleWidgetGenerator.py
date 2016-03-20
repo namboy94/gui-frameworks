@@ -21,23 +21,10 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
 
-class GenericDialogShower(object):
+
+class GenericValueGetter(GenericWidgetGenerator):
     """
-    Interface that defines the requirements for a GUI framework to show dialogs.
+    Implements the simple Widget Generating commands for GTK 3 (GObject)
     """
-
-    def show_message_dialog(self, title, body):
-        raise NotImplementedError()
-
-    def show_yes_no_dialog(self, title, body):
-        raise NotImplementedError()
-
-    def show_file_chooser_dialog(self):
-        raise NotImplementedError()
-
-    def show_directory_chooser_dialog(self):
-        raise NotImplementedError()
-
-    def show_text_input_box(self, title, body):
-        raise NotImplementedError()
