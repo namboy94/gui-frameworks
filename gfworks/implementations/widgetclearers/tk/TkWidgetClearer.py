@@ -29,7 +29,7 @@ from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import Gener
 
 class TkValueClearer(GenericValueClearer):
     """
-    Interface that defines the requirements for a GUI framework to clear values from widgets.
+    Implements methods to clear widget data in Tk/Tkinter.
     """
 
     def clear_text_entry(self, text_entry: tkinter.Entry) -> None:
