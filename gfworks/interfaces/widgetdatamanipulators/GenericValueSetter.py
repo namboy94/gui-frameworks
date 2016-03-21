@@ -26,3 +26,88 @@ class GenericValueSetter(object):
     """
     Interface that defines the requirements for a GUI framework to write values to widgets.
     """
+
+    @staticmethod
+    def set_label_string(label, text: str):
+        """
+        Sets the displayed text of a label widget
+        :param label: the label to be modified
+        :param text: the text to be displayed
+        :return: void
+        """
+        raise NotImplementedError("set_label_string not implemented")
+
+    @staticmethod
+    def set_text_entry_string(text_entry, text: str):
+        """
+        Sets the current text of a text entry widget
+        :param text_entry: the text entry widget to be modified
+        :param text: the text to be entered into th widget
+        :return: void
+        """
+        raise NotImplementedError("set_text_entry_string not implemented")
+
+    @staticmethod
+    def set_button_string(button, text: str):
+        """
+        Sets the displayed text of a button widget
+        :param button: the button widget to be modified
+        :param text: the text to be displayed
+        :return: void
+        """
+        raise NotImplementedError("set_button_string not implemented")
+
+    @staticmethod
+    def set_check_box_boolean(check_box, checked: bool):
+        """
+        Sets the state of a check box widget
+        :param check_box: the check box widget to be modified
+        :param checked: flag to determine if the check box should be activated or not:
+                True: Selected, False: Deselected
+        :return: void
+        """
+        raise NotImplementedError("set_check_box_boolean not implemented")
+
+    @staticmethod
+    def set_radio_button_boolean(radio_button, checked: bool):
+        """
+        Sets the state of a radio button widget
+        :param radio_button: The radio button widget to be modified
+        :param checked: flag to determine if the radio button should be activated or not:
+                True: Selected, False: Deselected
+        :return: void
+        """
+        raise NotImplementedError("set_radio_button_boolean not implemented")
+
+    @staticmethod
+    def set_progress_bar_float_percentage(progress_bar, percentage: float):
+        """
+        Sets the completed percentage of a progress bar widget
+        :param progress_bar: the progress bar widget to be modified
+        :param percentage: the percentage to be displayed, represented by a
+                float value between 0.0 and 1.0
+        :return: void
+        """
+        raise NotImplementedError("set_progress_bar_float_percentage not implemented")
+
+    @staticmethod
+    def set_combo_box_string_options(combo_box, string_options):
+        """
+        Sets a list of strings as the combo box options. This clears all previous entries!
+        :param combo_box: the combo box widget to be modified
+        :param string_options: the options to be displayed as a list of strings
+        :return: void
+        """
+        raise NotImplementedError("set_combo_box_string_options not implemented")
+
+    @staticmethod
+    def set_multi_list_box_elements_options(multi_list_box, list_of_elements):
+        """
+        Sets a list of elements(tuples) to be displayed by a multi list box.
+        This clears the multi list box beforehand!
+        :param multi_list_box: the multi list box widget to be manipulated
+        :param list_of_elements: List of elements, which are themselves tuples of primitive
+                data types.
+        :return: void
+        """
+        raise NotImplementedError("set_multi_list_box_elements_options not implemented")

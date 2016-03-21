@@ -27,7 +27,6 @@ class GenericValueGetter(object):
     Interface that defines the requirements for a GUI framework to read values from widgets.
     """
 
-    # TODO Somehow define types
     @staticmethod
     def get_string_from_label(label):
         """
@@ -74,7 +73,7 @@ class GenericValueGetter(object):
         Gets the current progress of a progress bar as a float value between 0.0 and 1.0
         :return: the current progress as a float
         """
-        raise NotImplementedError("get_float_percentage_from_progress_bar")
+        raise NotImplementedError("get_float_percentage_from_progress_bar not implemented")
 
     @staticmethod
     def get_string_from_current_selected_combo_box_option(combo_box):
@@ -82,7 +81,7 @@ class GenericValueGetter(object):
         Gets the currently selected string value of a combo box
         :return: the currently selected string
         """
-        raise NotImplementedError("get_string_from_current_selected_combo_box")
+        raise NotImplementedError("get_string_from_current_selected_combo_box not implemented")
 
     @staticmethod
     def get_list_of_selected_elements_from_multi_list_box(multi_list_box):
@@ -90,4 +89,4 @@ class GenericValueGetter(object):
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element
         """
-        raise NotImplementedError("get_list_of_selected_elements_from_multi_list_box")
+        raise NotImplementedError("get_list_of_selected_elements_from_multi_list_box not implemented")
