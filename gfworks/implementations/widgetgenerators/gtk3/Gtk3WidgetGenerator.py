@@ -22,9 +22,10 @@ This file is part of gfworks.
 """
 
 from gi.repository import Gtk, Gdk
-from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
-from gfworks.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
+
+from gfworks.implementations.customwidgets.gtk3 import PrimitiveComboBox
+from gfworks.implementations.customwidgets.gtk3 import PrimitiveMultiListBox
+from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
 class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):

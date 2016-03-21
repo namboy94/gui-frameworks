@@ -22,9 +22,9 @@ This file is part of gfworks.
 """
 
 
-class GenericGridPositioner(object):
+class TkGridPositioner(object):
     """
-    Interface that defines the requirements for a grid layout based GUI to position widgets.
+    Implements the grid positioner interface in Tk/Tkinter
     """
 
     def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int):
@@ -36,7 +36,7 @@ class GenericGridPositioner(object):
         :param x_size: the width of the widget in the grid layout
         :param y_size: the width of the widget in the grid layout
         """
-        raise NotImplementedError("position_absolute not implemented")
+        raise NotImplementedError("position not implemented")
 
     def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int):
         """
@@ -52,4 +52,4 @@ class GenericGridPositioner(object):
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
         """
-        raise NotImplementedError("position_relative not implemented")
+        raise NotImplementedError()

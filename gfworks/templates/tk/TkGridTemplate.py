@@ -22,10 +22,11 @@ This file is part of gfworks.
 """
 
 import tkinter
+
+from gfworks.implementations.valuegetters.tk.TkValueGetter import TkValueGetter
+from gfworks.implementations.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
+from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.interfaces.GenericWindow import GenericWindow
-from gfworks.dialogshowers.tk.TkDialogShower import TkDialogShower
-from gfworks.valuegetters.tk.TkValueGetter import TkValueGetter
-from gfworks.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
 
 
 class TkGridTemplate(tkinter.Tk, GenericWindow, TkWidgetGenerator, TkValueGetter, TkDialogShower):

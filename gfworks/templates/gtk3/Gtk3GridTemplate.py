@@ -22,10 +22,11 @@ This file is part of gfworks.
 """
 
 from gi.repository import Gtk
+
+from gfworks.implementations.dialogshowers.gtk3.Gtk3DialogShower import GenericDialogShower
+from gfworks.implementations.valuegetters.gtk3.Gtk3ValueGetter import GenericValueGetter
 from gfworks.interfaces.GenericWindow import GenericWindow
-from gfworks.dialogshowers.gtk3.Gtk3DialogShower import GenericDialogShower
-from gfworks.valuegetters.gtk3.Gtk3ValueGetter import GenericValueGetter
-from gfworks.widgetgenerators.gtk3.Gtk3WidgetGenerator import GenericWidgetGenerator
+from gfworks.implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator import GenericWidgetGenerator
 
 
 class Gtk3GridTemplate(Gtk.Window, GenericWindow, GenericDialogShower, GenericValueGetter, GenericWidgetGenerator):

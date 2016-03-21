@@ -21,11 +21,15 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from gi.repository import Gtk
 
-class GenericGridPositioner(object):
+
+class Gtk3GridPositioner(object):
     """
-    Interface that defines the requirements for a grid layout based GUI to position widgets.
+    Implements the grid positioner interface in GTK 3/GObject
     """
+
+    grid = Gtk.Grid()
 
     def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int):
         """
@@ -36,7 +40,7 @@ class GenericGridPositioner(object):
         :param x_size: the width of the widget in the grid layout
         :param y_size: the width of the widget in the grid layout
         """
-        raise NotImplementedError("position_absolute not implemented")
+        self.grid.attach(widget, x_position, y_position, x_size, y_size)
 
     def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int):
         """
@@ -52,4 +56,13 @@ class GenericGridPositioner(object):
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
         """
-        raise NotImplementedError("position_relative not implemented")
+        if orientation.lower() in ["north", "n", "top"]:
+            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.TOP)
+        elif orientation.lower() in ["east", "e", "right"]:
+            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.RIGHT)
+        elif orientation.lower() in ["south", "s", "bottom"]:
+            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.BOTTOM)
+        elif orientation.lower() in ["west", "w", "left"]:
+            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.LEFT)
+        else:
+            raise ValueError("Incorrect orientation type " + orientation)

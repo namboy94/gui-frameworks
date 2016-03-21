@@ -23,7 +23,7 @@ This file is part of gfworks.
 
 import tkinter
 from tkinter import ttk
-from gfworks.interfaces.GenericValueGetter import GenericValueGetter
+from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
 
 class TkValueGetter(tkinter.Tk, GenericValueGetter):

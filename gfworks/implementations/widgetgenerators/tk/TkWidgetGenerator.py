@@ -21,9 +21,10 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 import tkinter
-from tkinter import ttk
 from functools import partial
-from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
+from tkinter import ttk
+
+from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
 class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):

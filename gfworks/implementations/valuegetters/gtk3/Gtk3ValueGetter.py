@@ -21,9 +21,10 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 from gi.repository import Gtk
-from gfworks.interfaces.GenericValueGetter import GenericValueGetter
-from gfworks.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
+
+from gfworks.implementations.customwidgets.gtk3 import PrimitiveComboBox
+from gfworks.implementations.customwidgets.gtk3 import PrimitiveMultiListBox
+from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
 
 class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):

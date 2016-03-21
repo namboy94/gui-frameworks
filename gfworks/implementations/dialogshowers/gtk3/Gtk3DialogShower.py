@@ -20,16 +20,15 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
-import tkinter
-from tkinter import messagebox
-from tkinter import filedialog
-from tkinter import simpledialog
-from gfworks.interfaces.GenericDialogShower import GenericDialogShower
+
+from gi.repository import Gtk
+
+from gfworks.interfaces.generators.GenericDialogShower import GenericDialogShower
 
 
-class TkDialogShower(tkinter.Tk, GenericDialogShower):
+class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
     """
-    Implements the Dialog showing commands for Tk/Tkinter
+    Implements the Dialog showing commands for GTK 3 (GObject)
     """
 
     def show_message_dialog(self, title: str, body: str):
@@ -40,7 +39,10 @@ class TkDialogShower(tkinter.Tk, GenericDialogShower):
         :param body: the body text of the dialog
         :return: void
         """
-        messagebox.showinfo(title, body)
+        dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, title)
+        dialog.format_secondary_text(body)
+        dialog.run()
+        dialog.destroy()
 
     def show_yes_no_dialog(self, title: str, body: str):
         """
@@ -50,7 +52,11 @@ class TkDialogShower(tkinter.Tk, GenericDialogShower):
         :param body: the body text of the dialog
         :return: True if 'Yes' was selected, False if 'No' was selected
         """
-        if messagebox.askyesno(title, body):
+        dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.QUESTION, Gtk.ButtonsType.YES_NO, title)
+        dialog.format_secondary_text(body)
+        response = dialog.run()
+        dialog.destroy()
+        if response == Gtk.ResponseType.YES:
             return True
         else:
             return False
@@ -60,14 +66,30 @@ class TkDialogShower(tkinter.Tk, GenericDialogShower):
         Shows a file chooser dialog that allows the user to select a file
         :return: the path to the selected file
         """
-        return filedialog.askopenfile()
+        dialog = Gtk.FileChooserDialog("Please choose a file", self, Gtk.FileChooserAction.OPEN,
+                                       (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+
+        response = dialog.run()
+        selected_file = ""
+        if response == Gtk.ResponseType.OK:
+            selected_file = dialog.get_filename()
+        dialog.destroy()
+        return selected_file
 
     def show_directory_chooser_dialog(self):
         """
         Shows a directory chooser dialog that allows the user to select a directory
         :return: the path to the selected directory
         """
-        return filedialog.askdirectory()
+        dialog = Gtk.FileChooserDialog("Please choose a file", self, Gtk.FileChooserAction.SELECT_FOLDER,
+                                       (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL, Gtk.STOCK_OPEN, Gtk.ResponseType.OK))
+
+        response = dialog.run()
+        directory = ""
+        if response == Gtk.ResponseType.OK:
+            directory = dialog.get_filename()
+        dialog.destroy()
+        return directory
 
     def show_text_input_box(self, title: str, body: str):
         """
@@ -75,6 +97,24 @@ class TkDialogShower(tkinter.Tk, GenericDialogShower):
         confirming it via a button
         :param title: the window title of the dialog
         :param body: the body text of the dialog
-        :return: the entered text
+        :return: the entered text, or an empty string if the operation was cancelled
         """
-        return simpledialog.askstring(title, body)
+        # TODO make window title
+        str(title)
+        dialog = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                                   Gtk.MessageType.QUESTION, Gtk.ButtonsType.OK_CANCEL, body)
+
+        dialog_box = dialog.get_content_area()
+        user_entry = Gtk.Entry()
+        user_entry.set_size_request(250, 0)
+        dialog_box.pack_end(user_entry, False, False, 0)
+
+        dialog.show_all()
+
+        response = dialog.run()
+        response_text = user_entry.get_text()
+        dialog.destroy()
+        if (response == Gtk.ResponseType.OK) and (response_text != ''):
+            return response_text
+        else:
+            return ""
