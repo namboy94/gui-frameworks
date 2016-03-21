@@ -22,6 +22,7 @@ This file is part of gfworks.
 """
 
 import tkinter
+from tkinter import ttk
 from gfworks.interfaces.GenericValueGetter import GenericValueGetter
 
 
@@ -31,44 +32,48 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
     """
 
     @staticmethod
-    def get_string_from_label(label):
+    def get_string_from_label(label: tkinter.Label):
         """
         Returns the displayed string from a label
         :return: the label string
         """
-        raise NotImplementedError("get_string_from_label not implemented")
+        # TODO Check Implementation
+        return label.getvar().get()
 
     @staticmethod
-    def get_string_from_text_entry(text_entry):
+    def get_string_from_text_entry(text_entry: tkinter.Entry):
         """
         Returns the currently entered string from a text entry
         :return: the current text entered
         """
-        raise NotImplementedError("get_string_from_text_entry not implemented")
+        return text_entry.get()
 
     @staticmethod
-    def get_string_from_button(button):
+    def get_string_from_button(button: tkinter.Button):
         """
         Returns the displayed string from a button
         :return: the button string
         """
-        raise NotImplementedError("get_string_from_button not implemented")
+        # TODO Check implementation
+        return button.getvar().get()
 
     @staticmethod
-    def get_boolean_from_check_box(check_box):
+    def get_boolean_from_check_box(check_box: tkinter.Checkbutton):
         """
         Checks if a check box is currently selected and returns the value
         :return: True if the check box is selected, False otherwise
         """
-        raise NotImplementedError("get_boolean_from_check_box not implemented")
+        # TODO Check implementation
+        return check_box.getvar().get()
 
     @staticmethod
-    def get_boolean_from_radio_button(radio_button):
+    def get_boolean_from_radio_button(radio_button: tkinter.Radiobutton):
         """
         Checks if a radio button is currently selected and returns the value
         :return: True if the radio button is selected, False otherwise
         """
-        raise NotImplementedError("get_boolean_from_radio_button not implemented")
+        # TODO Check implementation
+        return radio_button.getvar().get()
 
     @staticmethod
     def get_float_percentage_from_progress_bar(progress_bar):
@@ -76,15 +81,16 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         Gets the current progress of a progress bar as a float value between 0.0 and 1.0
         :return: the current progress as a float
         """
-        raise NotImplementedError("get_float_percentage_from_progress_bar")
+        # TODO implement
+        super().get_float_percentage_from_progress_bar(progress_bar)
 
     @staticmethod
-    def get_string_from_current_selected_combo_box_option(combo_box):
+    def get_string_from_current_selected_combo_box_option(combo_box: ttk.Combobox):
         """
         Gets the currently selected string value of a combo box
         :return: the currently selected string
         """
-        raise NotImplementedError("get_string_from_current_selected_combo_box")
+        return combo_box.get()
 
     @staticmethod
     def get_list_of_selected_elements_from_multi_list_box(multi_list_box):
@@ -92,4 +98,8 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element
         """
-        raise NotImplementedError("get_list_of_selected_elements_from_multi_list_box")
+        items = map(int, multi_list_box.curselection())
+        selected = {}
+        for item in items:
+            selected[item] = (multi_list_box.get(item))
+        return selected
