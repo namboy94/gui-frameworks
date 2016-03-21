@@ -28,7 +28,7 @@ from gfworks.implementations.customwidgets.gtk3 import PrimitiveMultiListBox
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
-class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
+class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
     """
     Implements the Widget Generating commands for GTK 3 (GObject)
     """

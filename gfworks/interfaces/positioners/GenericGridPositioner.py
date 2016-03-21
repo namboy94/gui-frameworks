@@ -35,6 +35,7 @@ class GenericGridPositioner(object):
         :param y_position: the vertical position of the widget in the grid
         :param x_size: the width of the widget in the grid layout
         :param y_size: the width of the widget in the grid layout
+        :return: void
         """
         raise NotImplementedError("position_absolute not implemented")
 
@@ -51,5 +52,6 @@ class GenericGridPositioner(object):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :return: void
         """
         raise NotImplementedError("position_relative not implemented")

@@ -22,16 +22,17 @@ This file is part of gfworks.
 """
 
 from gi.repository import Gtk
+from gfworks.interfaces.positioners.GenericGridPositioner import GenericGridPositioner
 
 
-class Gtk3GridPositioner(object):
+class Gtk3GridPositioner(GenericGridPositioner):
     """
     Implements the grid positioner interface in GTK 3/GObject
     """
 
     grid = Gtk.Grid()
 
-    def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int):
+    def position_absolute(self, widget: Gtk.Widget, x_position: int, y_position: int, x_size: int, y_size: int):
         """
         Position a widget absolutely in a grid layout
         :param widget: the widget to be positioned
@@ -39,10 +40,11 @@ class Gtk3GridPositioner(object):
         :param y_position: the vertical position of the widget in the grid
         :param x_size: the width of the widget in the grid layout
         :param y_size: the width of the widget in the grid layout
+        :return: void
         """
         self.grid.attach(widget, x_position, y_position, x_size, y_size)
 
-    def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int):
+    def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int):
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned
@@ -55,6 +57,7 @@ class Gtk3GridPositioner(object):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :return: void
         """
         if orientation.lower() in ["north", "n", "top"]:
             self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.TOP)

@@ -23,13 +23,19 @@ This file is part of gfworks.
 
 from gi.repository import Gtk
 
-from gfworks.implementations.dialogshowers.gtk3.Gtk3DialogShower import GenericDialogShower
-from gfworks.implementations.valuegetters.gtk3.Gtk3ValueGetter import GenericValueGetter
 from gfworks.interfaces.GenericWindow import GenericWindow
-from gfworks.implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator import GenericWidgetGenerator
+from gfworks.implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator import Gtk3WidgetGenerator
+from gfworks.implementations.positioners.gtk3.Gtk3GridPositioner import Gtk3GridPositioner
+from gfworks.implementations.dialogshowers.gtk3.Gtk3DialogShower import Gtk3DialogShower
+from gfworks.implementations.valuegetters.gtk3.Gtk3ValueGetter import Gtk3ValueGetter
 
 
-class Gtk3GridTemplate(Gtk.Window, GenericWindow, GenericDialogShower, GenericValueGetter, GenericWidgetGenerator):
+class Gtk3GridTemplate(Gtk.Window,
+                       GenericWindow,
+                       Gtk3GridPositioner,
+                       Gtk3WidgetGenerator,
+                       Gtk3ValueGetter,
+                       Gtk3DialogShower):
     """
     Interface that defines how a window is initialized, run and closed
     """

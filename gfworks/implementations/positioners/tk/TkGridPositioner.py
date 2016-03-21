@@ -20,14 +20,17 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
+import tkinter
+from tkinter import N, E, S, W
+from gfworks.interfaces.positioners.GenericGridPositioner import GenericGridPositioner
 
 
-class TkGridPositioner(object):
+class TkGridPositioner(GenericGridPositioner):
     """
     Implements the grid positioner interface in Tk/Tkinter
     """
 
-    def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int):
+    def position_absolute(self, widget: tkinter.Widget, x_position: int, y_position: int, x_size: int, y_size: int):
         """
         Position a widget absolutely in a grid layout
         :param widget: the widget to be positioned
@@ -35,10 +38,11 @@ class TkGridPositioner(object):
         :param y_position: the vertical position of the widget in the grid
         :param x_size: the width of the widget in the grid layout
         :param y_size: the width of the widget in the grid layout
+        :return: void
         """
-        raise NotImplementedError("position not implemented")
+        widget.grid(row=2, column=0, rowspan=1, columnspan=2, sticky=tkinter.W + E + N + S)
 
-    def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int):
+    def position_relative(self, widget: tkinter.Widget, neighbour:tkinter.Widget, orientation: str, x_size: int, y_size: int):
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned
@@ -51,5 +55,7 @@ class TkGridPositioner(object):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :return: void
         """
-        raise NotImplementedError()
+        # TODO figure out how to do this in Tk
+        widget.grid()
