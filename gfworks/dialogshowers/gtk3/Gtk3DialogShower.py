@@ -22,9 +22,9 @@ This file is part of gfworks.
 """
 
 
-class GenericDialogShower(object):
+class Gtk3DialogShower(object):
     """
-    Interface that defines the requirements for a GUI framework to show dialogs.
+    Implements the Dialog showing commands for GTK 3 (GObject)
     """
 
     def show_message_dialog(self, title: str, body: str):
@@ -35,7 +35,7 @@ class GenericDialogShower(object):
         :param body: the body text of the dialog
         :return: void
         """
-        raise NotImplementedError("show_message_dialog not implemented")
+        raise NotImplementedError()
 
     def show_yes_no_dialog(self, title: str, body: str):
         """
@@ -45,21 +45,21 @@ class GenericDialogShower(object):
         :param body: the body text of the dialog
         :return: True if 'Yes' was selected, False if 'No' was selected
         """
-        raise NotImplementedError("show_yes_no_dialog not implemented")
+        raise NotImplementedError()
 
     def show_file_chooser_dialog(self):
         """
         Shows a file chooser dialog that allows the user to select a file
         :return: the path to the selected file
         """
-        raise NotImplementedError("show_file_chooser_dialog not implemented")
+        raise NotImplementedError()
 
     def show_directory_chooser_dialog(self):
         """
         Shows a directory chooser dialog that allows the user to select a directory
         :return: the path to the selected directory
         """
-        raise NotImplementedError("show_directory_chooser_dialog not implemented")
+        raise NotImplementedError()
 
     def show_text_input_box(self, title: str, body: str):
         """
@@ -69,4 +69,4 @@ class GenericDialogShower(object):
         :param body: the body text of the dialog
         :return: the entered text
         """
-        raise NotImplementedError("show_text_input_box not implemented")
+        raise NotImplementedError()

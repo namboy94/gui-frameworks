@@ -29,7 +29,7 @@ from gfworks.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListB
 
 class GenericValueGetter(GenericWidgetGenerator, Gtk.Window):
     """
-    Implements the simple Widget Generating commands for GTK 3 (GObject)
+    Implements the Widget Generating commands for GTK 3 (GObject)
     """
 
     def generate_label(self, label_text: str):

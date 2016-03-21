@@ -28,7 +28,7 @@ from gfworks.interfaces.GenericWidgetGenerator import GenericWidgetGenerator
 
 class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
     """
-    Implements the simple Widget Generating commands for Tk/Tkinter
+    Implements the Widget Generating commands for Tk/Tkinter
     """
 
     def generate_label(self, label_text: str):
