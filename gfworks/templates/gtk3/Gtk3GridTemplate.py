@@ -30,12 +30,11 @@ from gfworks.implementations.dialogshowers.gtk3.Gtk3DialogShower import Gtk3Dial
 from gfworks.implementations.valuegetters.gtk3.Gtk3ValueGetter import Gtk3ValueGetter
 
 
-class Gtk3GridTemplate(Gtk.Window,
-                       GenericWindow,
-                       Gtk3GridPositioner,
+class Gtk3GridTemplate(Gtk3GridPositioner,
                        Gtk3WidgetGenerator,
                        Gtk3ValueGetter,
-                       Gtk3DialogShower):
+                       Gtk3DialogShower,
+                       GenericWindow):
     """
     Interface that defines how a window is initialized, run and closed
     """
@@ -54,7 +53,7 @@ class Gtk3GridTemplate(Gtk.Window,
         self.parent = parent
         self.hide_parent = hide_parent
 
-        super(Gtk.Window).__init__(title=title)
+        super().__init__(title=title)
         self.grid = Gtk.Grid()
         self.add(self.grid)
         self.lay_out()
