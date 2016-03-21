@@ -21,8 +21,14 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+import tkinter
+from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.dialogshowers.tk.TkDialogShower import TkDialogShower
+from gfworks.valuegetters.tk.TkValueGetter import TkValueGetter
+from gfworks.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
 
-class TkGridTemplate(object):
+
+class TkGridTemplate(tkinter.Tk, GenericWindow, TkWidgetGenerator, TkValueGetter, TkDialogShower):
     """
     Interface that defines how a window is initialized, run and closed
     """
@@ -36,10 +42,12 @@ class TkGridTemplate(object):
         :param hide_parent: Flag that defines if the parent should be hidden
         :return: void
         """
-        str(title)
-        str(parent)
-        str(hide_parent)
-        raise NotImplementedError("Constructor not implemented")
+        super().__init__()
+        self.title(title)
+        self.parent = parent
+        self.hide_parent = hide_parent
+        self.lay_out()
+        self.protocol("WM_DELETE_WINDOW", self.close_window)
 
     def lay_out(self):
         """
@@ -53,11 +61,17 @@ class TkGridTemplate(object):
         Starts the Window main loop
         :return:void
         """
-        raise NotImplementedError("start not implemented")
+        if self.parent is not None and self.hide_parent:
+            self.parent.withdraw()
+        self.mainloop()
+        if self.parent is not None and self.hide_parent:
+            self.parent.deiconify()
 
     def stop(self):
         """
         Forcibly stops the Window
         :return: void
         """
-        raise NotImplementedError("stop not implemented")
+        if self.parent is not None and self.hide_parent:
+            self.parent.deiconify()
+        self.destroy()

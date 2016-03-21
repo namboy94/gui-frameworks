@@ -21,8 +21,14 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from gi.repository import Gtk
+from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.dialogshowers.gtk3.Gtk3DialogShower import GenericDialogShower
+from gfworks.valuegetters.gtk3.Gtk3ValueGetter import GenericValueGetter
+from gfworks.widgetgenerators.gtk3.Gtk3WidgetGenerator import GenericWidgetGenerator
 
-class Gtk3GridTemplate(object):
+
+class Gtk3GridTemplate(Gtk.Window, GenericWindow, GenericDialogShower, GenericValueGetter, GenericWidgetGenerator):
     """
     Interface that defines how a window is initialized, run and closed
     """
@@ -36,10 +42,15 @@ class Gtk3GridTemplate(object):
         :param hide_parent: Flag that defines if the parent should be hidden
         :return: void
         """
-        str(title)
-        str(parent)
-        str(hide_parent)
-        raise NotImplementedError("Constructor not implemented")
+        self.window = None
+
+        self.parent = parent
+        self.hide_parent = hide_parent
+
+        super().__init__(self, title=title)
+        self.grid = Gtk.Grid()
+        self.add(self.grid)
+        self.lay_out()
 
     def lay_out(self):
         """
@@ -53,11 +64,20 @@ class Gtk3GridTemplate(object):
         Starts the Window main loop
         :return:void
         """
-        raise NotImplementedError("start not implemented")
+        if self.parent and self.hide_parent:
+            self.parent.window.hide()
+        self.window = self
+        self.window.connect("delete-event", Gtk.main_quit)
+        self.window.show_all()
+        Gtk.main()
+        if self.parent and self.hide_parent:
+            self.parent.window.show_all()
 
     def stop(self):
         """
         Forcibly stops the Window
         :return: void
         """
-        raise NotImplementedError("stop not implemented")
+        self.window.destroy()
+        if self.parent and self.hide_parent:
+            self.parent.window.show_all()
