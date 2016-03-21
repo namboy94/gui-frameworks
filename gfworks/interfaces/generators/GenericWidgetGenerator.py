@@ -100,7 +100,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_percentage_progress_bar not implemented")
 
-    def generate_string_combo_box(self, options_list: list(str)) -> object:
+    def generate_string_combo_box(self, options_list: list) -> object:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the

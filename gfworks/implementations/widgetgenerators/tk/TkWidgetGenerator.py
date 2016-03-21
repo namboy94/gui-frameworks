@@ -120,7 +120,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO implement
         super().generate_percentage_progress_bar(initial_percentage)
 
-    def generate_string_combo_box(self, options_list: list(str)) -> ttk.Combobox:
+    def generate_string_combo_box(self, options_list: list) -> ttk.Combobox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the

@@ -54,7 +54,7 @@ class Gtk3GridTemplate(Gtk.Window,
         self.parent = parent
         self.hide_parent = hide_parent
 
-        super().__init__(self, title=title)
+        super(Gtk.Window).__init__(title=title)
         self.grid = Gtk.Grid()
         self.add(self.grid)
         self.lay_out()
@@ -72,13 +72,13 @@ class Gtk3GridTemplate(Gtk.Window,
         :return:void
         """
         if self.parent and self.hide_parent:
-            self.parent.window.hide()
+            self.parent.hide()
         self.window = self
         self.window.connect("delete-event", Gtk.main_quit)
         self.window.show_all()
         Gtk.main()
         if self.parent and self.hide_parent:
-            self.parent.window.show_all()
+            self.parent.show_all()
 
     def stop(self) -> None:
         """
@@ -87,4 +87,4 @@ class Gtk3GridTemplate(Gtk.Window,
         """
         self.window.destroy()
         if self.parent and self.hide_parent:
-            self.parent.window.show_all()
+            self.parent.show_all()

@@ -128,7 +128,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         progress_bar.set_fraction(initial_percentage)
         return progress_bar
 
-    def generate_string_combo_box(self, options_list: list(str)) -> PrimitiveComboBox:
+    def generate_string_combo_box(self, options_list: list) -> PrimitiveComboBox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
