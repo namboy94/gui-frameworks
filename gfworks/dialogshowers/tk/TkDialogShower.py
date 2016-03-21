@@ -20,9 +20,14 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
+import tkinter
+from tkinter import messagebox
+from tkinter import filedialog
+from tkinter import simpledialog
+from gfworks.interfaces.GenericDialogShower import GenericDialogShower
 
 
-class TkDialogShower(object):
+class TkDialogShower(tkinter.Tk, GenericDialogShower):
     """
     Implements the Dialog showing commands for Tk/Tkinter
     """
@@ -35,7 +40,7 @@ class TkDialogShower(object):
         :param body: the body text of the dialog
         :return: void
         """
-        raise NotImplementedError()
+        messagebox.showinfo(title, body)
 
     def show_yes_no_dialog(self, title: str, body: str):
         """
@@ -45,21 +50,24 @@ class TkDialogShower(object):
         :param body: the body text of the dialog
         :return: True if 'Yes' was selected, False if 'No' was selected
         """
-        raise NotImplementedError()
+        if messagebox.askyesno(title, body):
+            return True
+        else:
+            return False
 
     def show_file_chooser_dialog(self):
         """
         Shows a file chooser dialog that allows the user to select a file
         :return: the path to the selected file
         """
-        raise NotImplementedError()
+        return filedialog.askopenfile()
 
     def show_directory_chooser_dialog(self):
         """
         Shows a directory chooser dialog that allows the user to select a directory
         :return: the path to the selected directory
         """
-        raise NotImplementedError()
+        return filedialog.askdirectory()
 
     def show_text_input_box(self, title: str, body: str):
         """
@@ -69,4 +77,4 @@ class TkDialogShower(object):
         :param body: the body text of the dialog
         :return: the entered text
         """
-        raise NotImplementedError()
+        return simpledialog.askstring(title, body)
