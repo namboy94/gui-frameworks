@@ -31,7 +31,7 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
     Implements the Dialog showing commands for GTK 3 (GObject)
     """
 
-    def show_message_dialog(self, title: str, body: str):
+    def show_message_dialog(self, title: str, body: str) -> None:
         """
         Shows a message dialog which contains a message for the user and a button
         for the user to press to confirm
@@ -44,7 +44,7 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         dialog.run()
         dialog.destroy()
 
-    def show_yes_no_dialog(self, title: str, body: str):
+    def show_yes_no_dialog(self, title: str, body: str) -> bool:
         """
         Shows a yes/no dialog which shows some text and two buttons for the user to press.
         'Yes' will return True if pressed, 'No' returns False
@@ -61,7 +61,7 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         else:
             return False
 
-    def show_file_chooser_dialog(self):
+    def show_file_chooser_dialog(self) -> str:
         """
         Shows a file chooser dialog that allows the user to select a file
         :return: the path to the selected file
@@ -76,7 +76,7 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         dialog.destroy()
         return selected_file
 
-    def show_directory_chooser_dialog(self):
+    def show_directory_chooser_dialog(self) -> str:
         """
         Shows a directory chooser dialog that allows the user to select a directory
         :return: the path to the selected directory
@@ -91,7 +91,7 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         dialog.destroy()
         return directory
 
-    def show_text_input_box(self, title: str, body: str):
+    def show_text_input_box(self, title: str, body: str) -> str:
         """
         Shows a text input dialog, enabling the user to enter some text and afterwards
         confirming it via a button

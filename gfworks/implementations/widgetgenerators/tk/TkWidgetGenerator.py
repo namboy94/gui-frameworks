@@ -32,7 +32,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
     Implements the Widget Generating commands for Tk/Tkinter
     """
 
-    def generate_label(self, label_text: str):
+    def generate_label(self, label_text: str) -> tkinter.Label:
         """
         Generates a label widget that shows text
         :param label_text: The text to be displayed by the label
@@ -41,8 +41,8 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         label = tkinter.Label(self, text=label_text)
         return label
 
-    def generate_image_label(self, image_path: str,
-                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None):
+    def generate_image_label(self, image_path: str, maintain_aspect_ratio: bool = True,
+                             width: int = None, height: int = None) -> tkinter.Label:
         """
         Generates an image label that shows an image
         :param image_path: The path to the file to be displayed
@@ -58,7 +58,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command=None, args=None):
+    def generate_button(self, button_text: str, command=None, args=None) -> tkinter.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -69,7 +69,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         button = tkinter.Button(self, text=button_text, command=partial(command, args))
         return button
 
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None):
+    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> tkinter.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -85,7 +85,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             entry.bind('<Return>', partial(enter_command, enter_args))
         return entry
 
-    def generate_check_box(self, combo_box_text: str, active: bool = False):
+    def generate_check_box(self, combo_box_text: str, active: bool = False) -> tkinter.Checkbutton:
         """
         Generates a Check Box widget that allows selecting and deselecting options
         :param combo_box_text: The text to be displayed beside the combo box
@@ -99,7 +99,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             check_button.select()
         return check_button
 
-    def generate_radio_button(self, radio_button_text: str):
+    def generate_radio_button(self, radio_button_text: str) -> tkinter.Radiobutton:
         """
         Generates a Radio Button which can be used for selecting and deselecting options
         :param radio_button_text: the text to be displayed with the radio_button
@@ -108,7 +108,8 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO Implement
         super().generate_radio_button(radio_button_text)
 
-    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
+    # TODO Figure out return type
+    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0) -> tkinter.Label:
         """
         Generates a percentage-based progress bar
         :param initial_percentage: the initial percentage of the progress bar to
@@ -118,7 +119,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO implement
         super().generate_percentage_progress_bar(initial_percentage)
 
-    def generate_string_combo_box(self, options_list: list(str)):
+    def generate_string_combo_box(self, options_list: list(str)) -> ttk.Combobox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -131,7 +132,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         combo_box.state(['readonly'])
         return combo_box
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
+    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> tkinter.Listbox:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected

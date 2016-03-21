@@ -32,7 +32,7 @@ class Gtk3GridPositioner(GenericGridPositioner):
 
     grid = Gtk.Grid()
 
-    def position_absolute(self, widget: Gtk.Widget, x_position: int, y_position: int, x_size: int, y_size: int):
+    def position_absolute(self, widget: Gtk.Widget, x_position: int, y_position: int, x_size: int, y_size: int) -> None:
         """
         Position a widget absolutely in a grid layout
         :param widget: the widget to be positioned
@@ -44,7 +44,8 @@ class Gtk3GridPositioner(GenericGridPositioner):
         """
         self.grid.attach(widget, x_position, y_position, x_size, y_size)
 
-    def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int):
+    def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int) \
+            -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned

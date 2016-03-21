@@ -33,7 +33,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
     """
 
     @staticmethod
-    def get_string_from_label(label: Gtk.Label):
+    def get_string_from_label(label: Gtk.Label) -> str:
         """
         Returns the displayed string from a label
         :return: the label string
@@ -41,7 +41,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return label.get_text()
 
     @staticmethod
-    def get_string_from_text_entry(text_entry: Gtk.Entry):
+    def get_string_from_text_entry(text_entry: Gtk.Entry) -> str:
         """
         Returns the currently entered string from a text entry
         :return: the current text entered
@@ -49,7 +49,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return text_entry.get_text()
 
     @staticmethod
-    def get_string_from_button(button: Gtk.Button):
+    def get_string_from_button(button: Gtk.Button) -> str:
         """
         Returns the displayed string from a button
         :return: the button string
@@ -57,7 +57,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return button.get_label().get_text()
 
     @staticmethod
-    def get_boolean_from_check_box(check_box: Gtk.CheckButton):
+    def get_boolean_from_check_box(check_box: Gtk.CheckButton) -> bool:
         """
         Checks if a check box is currently selected and returns the value
         :return: True if the check box is selected, False otherwise
@@ -65,7 +65,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return check_box.get_active()
 
     @staticmethod
-    def get_boolean_from_radio_button(radio_button: Gtk.RadioButton):
+    def get_boolean_from_radio_button(radio_button: Gtk.RadioButton) -> bool:
         """
         Checks if a radio button is currently selected and returns the value
         :return: True if the radio button is selected, False otherwise
@@ -73,7 +73,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return radio_button.get_active()
 
     @staticmethod
-    def get_float_percentage_from_progress_bar(progress_bar: Gtk.ProgressBar):
+    def get_float_percentage_from_progress_bar(progress_bar: Gtk.ProgressBar) -> float:
         """
         Gets the current progress of a progress bar as a float value between 0.0 and 1.0
         :return: the current progress as a float
@@ -81,7 +81,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return progress_bar.get_fraction()
 
     @staticmethod
-    def get_string_from_current_selected_combo_box_option(combo_box: PrimitiveComboBox):
+    def get_string_from_current_selected_combo_box_option(combo_box: PrimitiveComboBox) -> str:
         """
         Gets the currently selected string value of a combo box
         :return: the currently selected string
@@ -92,10 +92,10 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return combo_box.option_store.get(combo_iter, 0)[0]
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: PrimitiveMultiListBox):
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: PrimitiveMultiListBox) -> tuple:
         """
         Gets the currently selected element from a multi list box
-        :return: the currently selected multi list box element
+        :return: the currently selected multi list box element as a tuple
         """
         selected = []
         (model, path_list) = multi_list_box.tree_selection.get_selected_rows()

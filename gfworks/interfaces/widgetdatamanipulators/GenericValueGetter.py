@@ -28,7 +28,7 @@ class GenericValueGetter(object):
     """
 
     @staticmethod
-    def get_string_from_label(label):
+    def get_string_from_label(label) -> str:
         """
         Returns the displayed string from a label
         :return: the label string
@@ -36,7 +36,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_string_from_label not implemented")
 
     @staticmethod
-    def get_string_from_text_entry(text_entry):
+    def get_string_from_text_entry(text_entry) -> str:
         """
         Returns the currently entered string from a text entry
         :return: the current text entered
@@ -44,7 +44,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_string_from_text_entry not implemented")
 
     @staticmethod
-    def get_string_from_button(button):
+    def get_string_from_button(button) -> str:
         """
         Returns the displayed string from a button
         :return: the button string
@@ -52,7 +52,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_string_from_button not implemented")
 
     @staticmethod
-    def get_boolean_from_check_box(check_box):
+    def get_boolean_from_check_box(check_box) -> bool:
         """
         Checks if a check box is currently selected and returns the value
         :return: True if the check box is selected, False otherwise
@@ -60,7 +60,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_boolean_from_check_box not implemented")
 
     @staticmethod
-    def get_boolean_from_radio_button(radio_button):
+    def get_boolean_from_radio_button(radio_button) -> bool:
         """
         Checks if a radio button is currently selected and returns the value
         :return: True if the radio button is selected, False otherwise
@@ -68,7 +68,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_boolean_from_radio_button not implemented")
 
     @staticmethod
-    def get_float_percentage_from_progress_bar(progress_bar):
+    def get_float_percentage_from_progress_bar(progress_bar) -> float:
         """
         Gets the current progress of a progress bar as a float value between 0.0 and 1.0
         :return: the current progress as a float
@@ -76,7 +76,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_float_percentage_from_progress_bar not implemented")
 
     @staticmethod
-    def get_string_from_current_selected_combo_box_option(combo_box):
+    def get_string_from_current_selected_combo_box_option(combo_box) -> str:
         """
         Gets the currently selected string value of a combo box
         :return: the currently selected string
@@ -84,9 +84,9 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_string_from_current_selected_combo_box not implemented")
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box):
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box) -> tuple:
         """
         Gets the currently selected element from a multi list box
-        :return: the currently selected multi list box element
+        :return: the currently selected multi list box element as a tuple
         """
         raise NotImplementedError("get_list_of_selected_elements_from_multi_list_box not implemented")

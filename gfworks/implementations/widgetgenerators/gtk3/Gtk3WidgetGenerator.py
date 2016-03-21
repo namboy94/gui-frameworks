@@ -23,17 +23,18 @@ This file is part of gfworks.
 
 from gi.repository import Gtk, Gdk
 
-from gfworks.implementations.customwidgets.gtk3 import PrimitiveComboBox
-from gfworks.implementations.customwidgets.gtk3 import PrimitiveMultiListBox
+from gfworks.implementations.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
+from gfworks.implementations.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
+# noinspection PyMethodMayBeStatic
 class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
     """
     Implements the Widget Generating commands for GTK 3 (GObject)
     """
 
-    def generate_label(self, label_text: str):
+    def generate_label(self, label_text: str) -> Gtk.Label:
         """
         Generates a label widget that shows text
         :param label_text: The text to be displayed by the label
@@ -43,8 +44,9 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         label.set_text(label_text)
         return label
 
+    # TODO figure out return type
     def generate_image_label(self, image_path: str,
-                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None):
+                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None) -> Gtk.Label:
         """
         Generates an image label that shows an image
         :param image_path: The path to the file to be displayed
@@ -60,7 +62,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command=None, args=None):
+    def generate_button(self, button_text: str, command=None, args=None) -> Gtk.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -74,7 +76,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         return button
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None):
+    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> Gtk.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -93,7 +95,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
             entry.connect("key-press-event", enter, enter_command, enter_args)
         return entry
 
-    def generate_check_box(self, combo_box_text: str, active: bool = False):
+    def generate_check_box(self, combo_box_text: str, active: bool = False) -> Gtk.CheckButton:
         """
         Generates a Check Box widget that allows selecting and deselecting options
         :param combo_box_text: The text to be displayed beside the combo box
@@ -105,7 +107,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
             check_box.set_active(True)
         return check_box
 
-    def generate_radio_button(self, radio_button_text: str):
+    def generate_radio_button(self, radio_button_text: str) -> Gtk.RadioButton:
         """
         Generates a Radio Button which can be used for selecting and deselecting options
         :param radio_button_text: the text to be displayed with the radio_button
@@ -114,7 +116,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         radio = Gtk.RadioButton.new_with_label(None, radio_button_text)
         return radio
 
-    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
+    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0) -> Gtk.ProgressBar:
         """
         Generates a percentage-based progress bar
         :param initial_percentage: the initial percentage of the progress bar to
@@ -125,7 +127,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         progress_bar.set_fraction(initial_percentage)
         return progress_bar
 
-    def generate_string_combo_box(self, options_list: list(str)):
+    def generate_string_combo_box(self, options_list: list(str)) -> PrimitiveComboBox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -142,7 +144,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         combo_box.set_active(0)
         return PrimitiveComboBox(combo_box, option_store)
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
+    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> PrimitiveMultiListBox:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected

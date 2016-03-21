@@ -30,7 +30,8 @@ class TkGridPositioner(GenericGridPositioner):
     Implements the grid positioner interface in Tk/Tkinter
     """
 
-    def position_absolute(self, widget: tkinter.Widget, x_position: int, y_position: int, x_size: int, y_size: int):
+    def position_absolute(self, widget: tkinter.Widget, x_position: int, y_position: int, x_size: int, y_size: int) \
+            -> None:
         """
         Position a widget absolutely in a grid layout
         :param widget: the widget to be positioned
@@ -40,9 +41,10 @@ class TkGridPositioner(GenericGridPositioner):
         :param y_size: the width of the widget in the grid layout
         :return: void
         """
-        widget.grid(row=2, column=0, rowspan=1, columnspan=2, sticky=tkinter.W + E + N + S)
+        widget.grid(row=2, column=0, rowspan=1, columnspan=2, sticky=W + E + N + S)
 
-    def position_relative(self, widget: tkinter.Widget, neighbour:tkinter.Widget, orientation: str, x_size: int, y_size: int):
+    def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget,
+                          orientation: str, x_size: int, y_size: int) -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned

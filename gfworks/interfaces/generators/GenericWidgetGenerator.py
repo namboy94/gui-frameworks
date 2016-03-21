@@ -27,7 +27,7 @@ class GenericWidgetGenerator(object):
     Interface that defines the requirements for a GUI framework to generate widgets.
     """
 
-    def generate_label(self, label_text: str):
+    def generate_label(self, label_text: str) -> object:
         """
         Generates a label widget that shows text
         :param label_text: The text to be displayed by the label
@@ -36,7 +36,7 @@ class GenericWidgetGenerator(object):
         raise NotImplementedError("generate_label not implemented")
 
     def generate_image_label(self, image_path: str,
-                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None):
+                             maintain_aspect_ratio: bool = True, width: int = None, height: int = None) -> object:
         """
         Generates an image label that shows an image
         :param image_path: The path to the file to be displayed
@@ -51,7 +51,8 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_image_label not implemented")
 
-    def generate_button(self, button_text: str, command=None, args=None):
+    # TODO Find out command type
+    def generate_button(self, button_text: str, command=None, args=None) -> object:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -62,7 +63,7 @@ class GenericWidgetGenerator(object):
         raise NotImplementedError("generate_button not implemented")
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None):
+    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> object:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -73,7 +74,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_text_entry not implemented")
 
-    def generate_check_box(self, combo_box_text: str, active: bool = False):
+    def generate_check_box(self, combo_box_text: str, active: bool = False) -> object:
         """
         Generates a Check Box widget that allows selecting and deselecting options
         :param combo_box_text: The text to be displayed beside the combo box
@@ -82,7 +83,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_check_box not implemented")
 
-    def generate_radio_button(self, radio_button_text: str):
+    def generate_radio_button(self, radio_button_text: str) -> object:
         """
         Generates a Radio Button which can be used for selecting and deselecting options
         :param radio_button_text: the text to be displayed with the radio_button
@@ -90,7 +91,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_radio_button not implemented")
 
-    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0):
+    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0) -> object:
         """
         Generates a percentage-based progress bar
         :param initial_percentage: the initial percentage of the progress bar to
@@ -99,7 +100,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_percentage_progress_bar not implemented")
 
-    def generate_string_combo_box(self, options_list: list(str)):
+    def generate_string_combo_box(self, options_list: list(str)) -> object:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -108,7 +109,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_string_combo_box not implemented")
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict(str)):
+    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> object:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected

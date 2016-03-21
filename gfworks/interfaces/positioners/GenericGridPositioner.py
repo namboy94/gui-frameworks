@@ -27,7 +27,7 @@ class GenericGridPositioner(object):
     Interface that defines the requirements for a grid layout based GUI to position widgets.
     """
 
-    def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int):
+    def position_absolute(self, widget, x_position: int, y_position: int, x_size: int, y_size: int) -> None:
         """
         Position a widget absolutely in a grid layout
         :param widget: the widget to be positioned
@@ -39,7 +39,7 @@ class GenericGridPositioner(object):
         """
         raise NotImplementedError("position_absolute not implemented")
 
-    def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int):
+    def position_relative(self, widget, neighbour, orientation: str, x_size: int, y_size: int) -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned

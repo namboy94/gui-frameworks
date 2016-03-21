@@ -27,7 +27,7 @@ class GenericWindow(object):
     Interface that defines how a window is initialized, run and closed
     """
 
-    def __init__(self, title: str = "Window", parent=None, hide_parent: bool = True):
+    def __init__(self, title: str = "Window", parent=None, hide_parent: bool = True) -> None:
         """
         Constructor of the Window
         Should call lay_out at the end
@@ -41,21 +41,21 @@ class GenericWindow(object):
         str(hide_parent)
         raise NotImplementedError("Constructor not implemented")
 
-    def lay_out(self):
+    def lay_out(self) -> None:
         """
         Initializes widgets and positions them in the Window
         :return: void
         """
         raise NotImplementedError("lay_out not implemented")
 
-    def start(self):
+    def start(self) -> None:
         """
         Starts the Window main loop
         :return:void
         """
         raise NotImplementedError("start not implemented")
 
-    def stop(self):
+    def stop(self) -> None:
         """
         Forcibly stops the Window
         :return: void

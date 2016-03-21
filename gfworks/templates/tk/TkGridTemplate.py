@@ -40,7 +40,7 @@ class TkGridTemplate(tkinter.Tk,
     Interface that defines how a window is initialized, run and closed
     """
 
-    def __init__(self, title: str = "Window", parent=None, hide_parent: bool = True):
+    def __init__(self, title: str = "Window", parent=None, hide_parent: bool = True) -> None:
         """
         Constructor of the Window
         Should call lay_out at the end
@@ -56,14 +56,14 @@ class TkGridTemplate(tkinter.Tk,
         self.lay_out()
         self.protocol("WM_DELETE_WINDOW", self.close_window)
 
-    def lay_out(self):
+    def lay_out(self) -> None:
         """
         Initializes widgets and positions them in the Window
         :return: void
         """
         raise NotImplementedError("lay_out not implemented")
 
-    def start(self):
+    def start(self) -> None:
         """
         Starts the Window main loop
         :return:void
@@ -74,7 +74,7 @@ class TkGridTemplate(tkinter.Tk,
         if self.parent is not None and self.hide_parent:
             self.parent.deiconify()
 
-    def stop(self):
+    def stop(self) -> None:
         """
         Forcibly stops the Window
         :return: void
