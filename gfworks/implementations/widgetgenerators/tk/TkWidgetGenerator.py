@@ -58,7 +58,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command=None, args=None) -> tkinter.Button:
+    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> tkinter.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -69,7 +69,8 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         button = tkinter.Button(self, text=button_text, command=partial(command, args))
         return button
 
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> tkinter.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None) \
+            -> tkinter.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.

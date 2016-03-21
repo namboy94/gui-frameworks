@@ -21,13 +21,19 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from gi.repository import Gtk
 
-class GenericValueSetter(object):
+from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueSetter
+from gfworks.implementations.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
+from gfworks.implementations.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
+
+
+class Gtk3ValueSetter(GenericValueSetter):
     """
-    Interface that defines the requirements for a GUI framework to clear values from widgets.
+    Implements methods to clear widget data in Gtk3/GObject.
     """
 
-    def clear_text_entry(self, text_entry: object) -> None:
+    def clear_text_entry(self, text_entry: Gtk.Entry) -> None:
         """
         Clears a text entry widget and fills it with an empty string
         :param text_entry: The text entry to be cleared
@@ -35,7 +41,7 @@ class GenericValueSetter(object):
         """
         raise NotImplementedError("clear_text_entry not implemented")
 
-    def reset_percentage_progress_bar(self, percentage_progress_bar: object) -> None:
+    def reset_percentage_progress_bar(self, percentage_progress_bar: Gtk.ProgressBar) -> None:
         """
         Resets a percentage-based progress bar to 0%
         :param percentage_progress_bar: the progress bar to be reset
@@ -43,7 +49,7 @@ class GenericValueSetter(object):
         """
         raise NotImplementedError("reset_progress_bar not implemented")
 
-    def clear_primitive_combo_box(self, primitive_combo_box: object) -> None:
+    def clear_primitive_combo_box(self, primitive_combo_box: PrimitiveComboBox) -> None:
         """
         Clears all entries of a primitive-type (str, int, etc.) storing combo box.
         :param primitive_combo_box: the combo box to be cleared
@@ -51,7 +57,7 @@ class GenericValueSetter(object):
         """
         raise NotImplementedError("clear_primitive_combo_box not implemented")
 
-    def clear_primitive_multi_list_box(self, primitive_multi_list_box: object) -> None:
+    def clear_primitive_multi_list_box(self, primitive_multi_list_box: PrimitiveMultiListBox) -> None:
         """
         Clears all entries of a primitive-type (str, int, etc.) storing multi list box.
         :param primitive_multi_list_box: the multi list box to be cleared
@@ -59,7 +65,7 @@ class GenericValueSetter(object):
         """
         raise NotImplementedError("clear_primitive_multi_list_box not implemented")
 
-    def reset_check_box(self, check_box: object) -> None:
+    def reset_check_box(self, check_box: Gtk.CheckButton) -> None:
         """
         Resets a check box to be deselected
         :param check_box: the check box to be reset
@@ -67,7 +73,7 @@ class GenericValueSetter(object):
         """
         raise NotImplementedError("reset_check_box not implemented")
 
-    def reset_radio_button(self, radio_button: object) -> None:
+    def reset_radio_button(self, radio_button: Gtk.RadioButton) -> None:
         """
         Resets a radio button to be deselected
         :param radio_button: the radio button to be deselected

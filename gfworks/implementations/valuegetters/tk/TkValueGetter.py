@@ -76,7 +76,7 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         return radio_button.getvar().get()
 
     @staticmethod
-    def get_float_percentage_from_progress_bar(progress_bar) -> float:
+    def get_float_percentage_from_progress_bar(progress_bar: object) -> float:
         """
         Gets the current progress of a progress bar as a float value between 0.0 and 1.0
         :return: the current progress as a float
@@ -93,7 +93,7 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         return combo_box.get()
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box) -> tuple:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: tkinter.Listbox) -> tuple:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple

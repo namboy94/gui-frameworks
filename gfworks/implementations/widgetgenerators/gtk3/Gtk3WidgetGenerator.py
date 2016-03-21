@@ -62,7 +62,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command=None, args=None) -> Gtk.Button:
+    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> Gtk.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -76,7 +76,8 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         return button
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> Gtk.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None)\
+            -> Gtk.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.

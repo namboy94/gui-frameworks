@@ -40,7 +40,7 @@ class Gtk3GridTemplate(Gtk.Window,
     Interface that defines how a window is initialized, run and closed
     """
 
-    def __init__(self, title: str = "Window", parent=None, hide_parent: bool = True) -> None:
+    def __init__(self, title: str = "Window", parent: Gtk.Window = None, hide_parent: bool = True) -> None:
         """
         Constructor of the Window
         Should call lay_out at the end

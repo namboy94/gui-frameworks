@@ -52,7 +52,7 @@ class GenericWidgetGenerator(object):
         raise NotImplementedError("generate_image_label not implemented")
 
     # TODO Find out command type
-    def generate_button(self, button_text: str, command=None, args=None) -> object:
+    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> object:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -63,7 +63,7 @@ class GenericWidgetGenerator(object):
         raise NotImplementedError("generate_button not implemented")
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command=None, enter_args=None) -> object:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None) -> object:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
