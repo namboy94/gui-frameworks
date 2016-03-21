@@ -22,7 +22,7 @@ This file is part of gfworks.
 """
 
 
-class GenericValueSetter(object):
+class GenericValueClearer(object):
     """
     Interface that defines the requirements for a GUI framework to clear values from widgets.
     """
