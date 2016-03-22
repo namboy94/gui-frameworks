@@ -22,8 +22,6 @@ This file is part of gfworks.
 """
 from gi.repository import Gtk
 
-from gfworks.implementations.customwidgets.gtk3 import PrimitiveComboBox
-from gfworks.implementations.customwidgets.gtk3 import PrimitiveMultiListBox
 from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
 
@@ -81,18 +79,18 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return progress_bar.get_fraction()
 
     @staticmethod
-    def get_string_from_current_selected_combo_box_option(combo_box: PrimitiveComboBox) -> str:
+    def get_string_from_current_selected_combo_box_option(combo_box: Gtk.ComboBox) -> str:
         """
         Gets the currently selected string value of a combo box
         :return: the currently selected string
         """
-        combo_iter = combo_box.box.get_active_iter()
+        combo_iter = combo_box.get_active_iter()
         if combo_iter is None:
             return None
         return combo_box.option_store.get(combo_iter, 0)[0]
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: PrimitiveMultiListBox) -> tuple:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: Gtk.ScrolledWindow) -> tuple:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple

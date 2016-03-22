@@ -70,7 +70,10 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         """
         button = Gtk.Button.new_with_label(button_text)
         if command is not None:
-            button.connect("clicked", command, args)
+            if args is None:
+                button.connect("clicked", command)
+            else:
+                button.connect("clicked", command, args)
         return button
 
     # TODO Find out command type

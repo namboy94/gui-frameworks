@@ -12,8 +12,6 @@ gfworks/implementations/customdialogs/__init__.py
 gfworks/implementations/customdialogs/gtk3/__init__.py
 gfworks/implementations/customdialogs/tk/__init__.py
 gfworks/implementations/customwidgets/__init__.py
-gfworks/implementations/customwidgets/gtk3/PrimitiveComboBox.py
-gfworks/implementations/customwidgets/gtk3/PrimitiveMultiListBox.py
 gfworks/implementations/customwidgets/gtk3/__init__.py
 gfworks/implementations/customwidgets/tk/__init__.py
 gfworks/implementations/dialogshowers/__init__.py

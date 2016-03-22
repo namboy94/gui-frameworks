@@ -30,12 +30,11 @@ from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShow
 from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
 
 
-class TkGridTemplate(tkinter.Tk,
-                     GenericWindow,
-                     TkWidgetGenerator,
+class TkGridTemplate(TkWidgetGenerator,
                      TkValueGetter,
                      TkDialogShower,
-                     TkGridPositioner):
+                     TkGridPositioner,
+                     GenericWindow):
     """
     Interface that defines how a window is initialized, run and closed
     """
@@ -54,7 +53,7 @@ class TkGridTemplate(tkinter.Tk,
         self.parent = parent
         self.hide_parent = hide_parent
         self.lay_out()
-        self.protocol("WM_DELETE_WINDOW", self.close_window)
+        self.protocol("WM_DELETE_WINDOW", self.stop)
 
     def lay_out(self) -> None:
         """
