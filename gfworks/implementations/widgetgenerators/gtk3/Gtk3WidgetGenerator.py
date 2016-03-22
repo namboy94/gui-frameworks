@@ -23,8 +23,6 @@ This file is part of gfworks.
 
 from gi.repository import Gtk, Gdk
 
-from gfworks.implementations.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.implementations.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
@@ -128,7 +126,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         progress_bar.set_fraction(initial_percentage)
         return progress_bar
 
-    def generate_string_combo_box(self, options_list: list) -> PrimitiveComboBox:
+    def generate_string_combo_box(self, options_list: list) -> Gtk.ComboBox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -143,9 +141,12 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         combo_box.pack_start(renderer_text, True)
         combo_box.add_attribute(renderer_text, "text", 0)
         combo_box.set_active(0)
-        return PrimitiveComboBox(combo_box, option_store)
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> PrimitiveMultiListBox:
+        combo_box.option_store = option_store
+
+        return combo_box
+
+    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> Gtk.ScrolledWindow:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected
@@ -175,4 +176,8 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
         scrollable_tree_list.set_hexpand(True)
         scrollable_tree_list.set_vexpand(True)
-        return PrimitiveMultiListBox(scrollable_tree_list, tree_selection, list_store)
+
+        scrollable_tree_list.tree_selection = tree_selection
+        scrollable_tree_list.list_store = list_store
+
+        return scrollable_tree_list

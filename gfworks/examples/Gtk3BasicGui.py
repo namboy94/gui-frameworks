@@ -38,6 +38,9 @@ class Gtk3BasicGui(Gtk3GridTemplate):
         :return: void
         """
         self.label = None
+        self.button = None
+        self.text_entry = None
+        self.combo_box = None
         super().__init__(title)
 
     def lay_out(self):
@@ -46,7 +49,13 @@ class Gtk3BasicGui(Gtk3GridTemplate):
         :return: void
         """
         self.label = self.generate_label("Label")
-        self.position_absolute(self.label, 1, 1, 1, 1)
+        self.position_absolute(self.label, 0, 0, 2, 1)
+        self.button = self.generate_button("Button")
+        self.position_absolute(self.button, 2, 0, 2, 1)
+        self.text_entry = self.generate_text_entry("Entry")
+        self.position_absolute(self.text_entry, 2, 2, 2, 1)
+        self.combo_box = self.generate_string_combo_box(["Combo", "Box"])
+        self.position_relative(self.combo_box, self.text_entry, "right", 3, 3)
 
     # noinspection PyMethodMayBeStatic
     def start(self):

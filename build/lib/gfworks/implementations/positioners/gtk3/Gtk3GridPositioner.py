@@ -61,12 +61,12 @@ class Gtk3GridPositioner(GenericGridPositioner):
         :return: void
         """
         if orientation.lower() in ["north", "n", "top"]:
-            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.TOP)
+            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.TOP, x_size, y_size)
         elif orientation.lower() in ["east", "e", "right"]:
-            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.RIGHT)
+            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.RIGHT, x_size, y_size)
         elif orientation.lower() in ["south", "s", "bottom"]:
-            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.BOTTOM)
+            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.BOTTOM, x_size, y_size)
         elif orientation.lower() in ["west", "w", "left"]:
-            self.grid.attach_next_to(widget, neighbour, x_size, y_size, Gtk.PositionType.LEFT)
+            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.LEFT, x_size, y_size)
         else:
             raise ValueError("Incorrect orientation type " + orientation)
