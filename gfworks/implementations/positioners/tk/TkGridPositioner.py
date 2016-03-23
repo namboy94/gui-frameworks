@@ -41,7 +41,7 @@ class TkGridPositioner(GenericGridPositioner):
         :param y_size: the width of the widget in the grid layout
         :return: void
         """
-        widget.grid(row=2, column=0, rowspan=1, columnspan=2, sticky=W + E + N + S)
+        widget.grid(row=x_position, column=y_position, rowspan=x_size, columnspan=y_size, sticky=W + E + N + S)
 
     def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget,
                           orientation: str, x_size: int, y_size: int) -> None:
@@ -59,5 +59,22 @@ class TkGridPositioner(GenericGridPositioner):
         :param y_size: the height of the widget in the grid layout
         :return: void
         """
-        # TODO figure out how to do this in Tk
-        widget.grid()
+        neighbour_row = neighbour.grid_info()["row"]
+        neighbour_column = neighbour.grid_info()["column"]
+        neighbour_row_end = neighbour_row + neighbour.grid_info()["rowspan"]
+        neighbour_column_end = neighbour_column + neighbour.grid_info()["columnspan"]
+
+        if orientation.upper() in ["NORTH", "N", "TOP"]:
+            widget.grid(row=neighbour_row - 1, column=neighbour_column, rowspan=x_size, columnspan=y_size,
+                        sticky=W + E + N + S)
+        elif orientation.upper() in ["EAST", "E", "RIGHT"]:
+            widget.grid(row=neighbour_row, column=neighbour_column_end, rowspan=x_size, columnspan=y_size,
+                        sticky=W + E + N + S)
+        elif orientation.upper() in ["SOUTH", "S", "BOTTOM"]:
+            widget.grid(row=neighbour_row_end, column=neighbour_column, rowspan=x_size, columnspan=y_size,
+                        sticky=W + E + N + S)
+        elif orientation.upper() in ["WEST", "W", "LEFT"]:
+            widget.grid(row=neighbour_row, column=neighbour_column - 1, rowspan=x_size, columnspan=y_size,
+                        sticky=W + E + N + S)
+        else:
+            raise ValueError("Incorrect orientation type " + orientation)

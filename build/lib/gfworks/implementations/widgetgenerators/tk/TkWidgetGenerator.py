@@ -66,7 +66,13 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         :param args: optional arguments for the executed method as a tuple
         :return: the button widget
         """
-        button = tkinter.Button(self, text=button_text, command=partial(command, args))
+        if command is not None:
+            cmd_args = (object,)
+            if args is not None:
+                cmd_args += args
+            button = tkinter.Button(self, text=button_text, command=partial(command, cmd_args))
+        else:
+            button = tkinter.Button(self, text=button_text)
         return button
 
     def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None) \
@@ -83,7 +89,10 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         entry = tkinter.Entry(self, textvariable=text_var)
         entry.text_var = text_var
         if enter_command is not None:
-            entry.bind('<Return>', partial(enter_command, enter_args))
+            cmd_args = (object,)
+            if enter_args is not None:
+                cmd_args += enter_args
+            entry.bind('<Return>', partial(enter_command, cmd_args))
         return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> tkinter.Checkbutton:
