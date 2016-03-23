@@ -21,11 +21,11 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueSetter import GenericValueSetter
-from gfworks.implementations.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.implementations.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 
 
 class Gtk3ValueSetter(GenericValueSetter):
@@ -97,7 +97,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         raise NotImplementedError("set_progress_bar_float_percentage not implemented")
 
     @staticmethod
-    def set_combo_box_string_options(combo_box: PrimitiveComboBox, string_options: list) -> None:
+    def set_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: list) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -107,8 +107,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_multi_list_box_elements_options(multi_list_box: PrimitiveMultiListBox, list_of_elements: list(tuple)) \
-            -> None:
+    def set_multi_list_box_elements_options(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list(tuple)) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!

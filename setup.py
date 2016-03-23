@@ -35,7 +35,7 @@ def readme():
 
 
 setup(name='gfworks',
-      version='0.1',
+      version='0.1.1',
       description='A cross-framework GUI interface',
       long_description=readme(),
       classifiers=['Development Status :: 1 - Planning',

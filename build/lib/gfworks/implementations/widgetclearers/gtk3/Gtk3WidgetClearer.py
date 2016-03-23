@@ -21,11 +21,11 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueClearer
-from gfworks.implementations.customwidgets.gtk3.PrimitiveComboBox import PrimitiveComboBox
-from gfworks.implementations.customwidgets.gtk3.PrimitiveMultiListBox import PrimitiveMultiListBox
 
 
 class Gtk3ValueClearer(GenericValueClearer):
@@ -49,7 +49,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         """
         raise NotImplementedError("reset_progress_bar not implemented")
 
-    def clear_primitive_combo_box(self, primitive_combo_box: PrimitiveComboBox) -> None:
+    def clear_primitive_combo_box(self, primitive_combo_box: Gtk.ComboBox) -> None:
         """
         Clears all entries of a primitive-type (str, int, etc.) storing combo box.
         :param primitive_combo_box: the combo box to be cleared
@@ -57,7 +57,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         """
         raise NotImplementedError("clear_primitive_combo_box not implemented")
 
-    def clear_primitive_multi_list_box(self, primitive_multi_list_box: PrimitiveMultiListBox) -> None:
+    def clear_primitive_multi_list_box(self, primitive_multi_list_box: Gtk.ScrolledWindow) -> None:
         """
         Clears all entries of a primitive-type (str, int, etc.) storing multi list box.
         :param primitive_multi_list_box: the multi list box to be cleared

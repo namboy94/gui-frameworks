@@ -20,6 +20,9 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
+
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter

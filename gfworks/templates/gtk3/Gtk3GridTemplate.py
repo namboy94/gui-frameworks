@@ -21,6 +21,8 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from gfworks.interfaces.GenericWindow import GenericWindow
