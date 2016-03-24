@@ -1,21 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="">
+    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Re">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customdialogs/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customdialogs/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customdialogs/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customwidgets/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customwidgets/gtk3/PrimitiveComboBox.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customwidgets/gtk3/PrimitiveMultiListBox.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customwidgets/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/customwidgets/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/dialogshowers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/dialogshowers/gtk3/Gtk3DialogShower.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/dialogshowers/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/dialogshowers/tk/TkDialogShower.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/dialogshowers/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/positioners/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/positioners/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/positioners/tk/TkGridPositioner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/positioners/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuegetters/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuegetters/gtk3/Gtk3ValueGetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuegetters/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuegetters/tk/TkValueGetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuegetters/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/tk/TkValueSetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetgenerators/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetgenerators/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetgenerators/tk/TkWidgetGenerator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetgenerators/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/GenericWindow.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/generators/GenericDialogShower.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/generators/GenericWidgetGenerator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/generators/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/positioners/GenericGridPositioner.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/positioners/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/threading/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/GenericValueGetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/gtk3/Gtk3GridTemplate.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/gtk3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/tk/TkGridTemplate.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/tk/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/gfworks-0.1-py3.5.egg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customdialogs/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customdialogs/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customdialogs/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customwidgets/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customwidgets/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/customwidgets/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/dialogshowers/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/dialogshowers/gtk3/Gtk3DialogShower.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/Gtk3DialogShower.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/dialogshowers/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/dialogshowers/tk/TkDialogShower.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/dialogshowers/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuegetters/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/Gtk3ValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuegetters/tk/TkValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuegetters/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customwidgets/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customwidgets/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customwidgets/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customdialogs/tk/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customdialogs/gtk3/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/gtk3/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/customdialogs/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/TkWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/__init__.py" afterPath="$PROJECT_DIR$/gfworks/implementations/custom/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/tk/TkValueSetter.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/implementations/valuesetters/tk/TkValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/gtk3/Gtk3GridTemplate.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/lib/gfworks/templates/tk/TkGridTemplate.py" afterPath="$PROJECT_DIR$/build/lib/gfworks/templates/tk/TkGridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/gfworks.egg-info/PKG-INFO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
     </list>
@@ -31,7 +110,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/gfworks$Gtk3BasicGui.coverage" NAME="Gtk3BasicGui Coverage Results" MODIFIED="1458776996964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gfworks/examples" />
+    <SUITE FILE_PATH="coverage/gfworks$Gtk3BasicGui.coverage" NAME="Gtk3BasicGui Coverage Results" MODIFIED="1458819049346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gfworks/examples" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,8 +121,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Gtk3WidgetClearer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py">
+      <file leaf-file-name="Gtk3GridTemplate.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gtk3WidgetClearer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
               <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
@@ -53,7 +142,7 @@
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/__init__.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -62,52 +151,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericValueSetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1854">
-              <caret line="103" column="90" selection-start-line="103" selection-start-column="90" selection-end-line="103" selection-end-column="90" />
-              <folding>
-                <marker date="1458811995866" expanded="true" signature="947:4609" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Gtk3ValueGetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/Gtk3ValueGetter.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-823">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericWidgetClearer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-103">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="689">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Gtk3WidgetGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="151" selection-end-column="24" />
+            <state relative-caret-position="365">
+              <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Gtk3ValueSetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="1638">
               <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
@@ -115,7 +182,7 @@
         </entry>
       </file>
       <file leaf-file-name="TkValueSetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
               <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
@@ -126,8 +193,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TkGridTemplate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <folding>
+                <element signature="e#913#927#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TkWidgetGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/TkWidgetGenerator.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1638">
               <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
@@ -139,7 +218,7 @@
         </entry>
       </file>
       <file leaf-file-name="TkWidgetClearer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-49">
               <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
@@ -212,13 +291,13 @@
         <option value="$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/Gtk3ValueGetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py" />
-        <option value="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
         <option value="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
+        <option value="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
+        <option value="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
       </list>
     </option>
   </component>
@@ -405,251 +484,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetdatamanipulators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetgenerators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetgenerators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetgenerators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gtk3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetclearers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetclearers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgetclearers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gtk3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valuesetters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valuesetters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valuesetters" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gtk3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -665,9 +500,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gfworks/implementations/generators" />
+      <recent name="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators" />
       <recent name="$PROJECT_DIR$/gfworks/implementations" />
+      <recent name="$PROJECT_DIR$/gfworks/implementations/custom" />
       <recent name="$PROJECT_DIR$/gfworks/interfaces/generators" />
-      <recent name="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Gtk3BasicGui">
@@ -1172,31 +1009,38 @@
       <option name="project" value="LOCAL" />
       <updated>1458734097452</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Implemented all currently defined GTK Interfaces.">
+      <created>1458815970618</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1458815970618</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1212,7 +1056,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mostly completed the GTK 3 Widget Generator." />
     <MESSAGE value="Mostly completed the Tk Widget Generator." />
     <MESSAGE value="Added comments to the other interfaces." />
     <MESSAGE value="Created basic dialog shower classes." />
@@ -1237,14 +1080,17 @@
     <MESSAGE value="Misc fixes" />
     <MESSAGE value="Fixed some Tk positioning and command starting issues." />
     <MESSAGE value="Fixed Gtk import version warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Gtk import version warnings" />
+    <MESSAGE value="Implemented all currently defined GTK Interfaces." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented all currently defined GTK Interfaces." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1252,7 +1098,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/templates/tk.py" />
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/dialogshowers/tk/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1274,7 +1120,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/dialogshowers/gtk3/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1740,28 +1586,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/dialogshowers/tk/TkDialogShower.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuegetters/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuegetters/tk/TkValueGetter.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="78" column="67" selection-start-line="78" selection-start-column="67" selection-end-line="78" selection-end-column="67" />
@@ -1833,7 +1679,7 @@
       </provider>
     </entry>
     <entry file="file:///usr/lib/python3.5/site-packages/gfworks-0.1-py3.5.egg/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" />
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/customwidgets/gtk3/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/custom/customwidgets/gtk3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1853,7 +1699,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/dialogshowers/gtk3/Gtk3DialogShower.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/Gtk3DialogShower.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -1893,7 +1739,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/customdialogs/gtk3/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/custom/customdialogs/gtk3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1906,24 +1752,6 @@
         <state relative-caret-position="558">
           <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="0" selection-start-line="33" selection-start-column="91" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="e#913#927#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1945,23 +1773,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuegetters/gtk3/Gtk3ValueGetter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-823">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="151" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/__init__.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1969,15 +1781,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/tk/TkWidgetClearer.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-49">
           <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
@@ -1985,7 +1789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/TkWidgetGenerator.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1638">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
@@ -1995,7 +1799,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
@@ -2005,10 +1809,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py">
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="e#913#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>

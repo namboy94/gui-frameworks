@@ -23,13 +23,13 @@ This file is part of gfworks.
 
 import tkinter
 
-from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.implementations.valuegetters.tk.TkValueGetter import TkValueGetter
 from gfworks.implementations.valuesetters.tk.TkValueSetter import TkValueSetter
-from gfworks.implementations.widgetclearers.tk.TkWidgetClearer import TkWidgetClearer
-from gfworks.implementations.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
-from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
+from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.implementations.generators.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
+from gfworks.implementations.widgetdatamanipulators.widgetclearers.tk.TkWidgetClearer import TkWidgetClearer
 
 
 class TkGridTemplate(TkWidgetGenerator,
