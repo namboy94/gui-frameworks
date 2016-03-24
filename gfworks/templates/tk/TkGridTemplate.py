@@ -25,6 +25,8 @@ import tkinter
 
 from gfworks.interfaces.GenericWindow import GenericWindow
 from gfworks.implementations.valuegetters.tk.TkValueGetter import TkValueGetter
+from gfworks.implementations.valuesetters.tk.TkValueSetter import TkValueSetter
+from gfworks.implementations.widgetclearers.tk.TkWidgetClearer import TkWidgetClearer
 from gfworks.implementations.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
 from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
@@ -32,6 +34,8 @@ from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositi
 
 class TkGridTemplate(TkWidgetGenerator,
                      TkValueGetter,
+                     TkValueSetter,
+                     TkWidgetClearer,
                      TkDialogShower,
                      TkGridPositioner,
                      GenericWindow):

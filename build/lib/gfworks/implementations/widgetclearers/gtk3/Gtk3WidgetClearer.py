@@ -28,7 +28,7 @@ from gi.repository import Gtk
 from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueClearer
 
 
-class Gtk3ValueClearer(GenericValueClearer):
+class Gtk3WidgetClearer(GenericValueClearer):
     """
     Implements methods to clear widget data in Gtk3/GObject.
     """

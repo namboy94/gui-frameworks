@@ -101,7 +101,7 @@ class GenericValueSetter(object):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_multi_list_box_elements_options(multi_list_box: object, list_of_elements: list(tuple)) -> None:
+    def set_multi_list_box_elements_options(multi_list_box: object, list_of_elements: list) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!

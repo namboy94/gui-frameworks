@@ -27,7 +27,7 @@ from tkinter import ttk
 from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueClearer
 
 
-class TkValueClearer(GenericValueClearer):
+class TkWidgetClearer(GenericValueClearer):
     """
     Implements methods to clear widget data in Tk/Tkinter.
     """

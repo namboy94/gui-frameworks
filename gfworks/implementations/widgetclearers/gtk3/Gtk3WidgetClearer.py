@@ -28,7 +28,7 @@ from gi.repository import Gtk
 from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueClearer
 
 
-class Gtk3ValueClearer(GenericValueClearer):
+class Gtk3WidgetClearer(GenericValueClearer):
     """
     Implements methods to clear widget data in Gtk3/GObject.
     """
@@ -39,7 +39,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         :param text_entry: The text entry to be cleared
         :return: void
         """
-        raise NotImplementedError("clear_text_entry not implemented")
+        text_entry.set_text("")
 
     def reset_percentage_progress_bar(self, percentage_progress_bar: Gtk.ProgressBar) -> None:
         """
@@ -47,7 +47,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         :param percentage_progress_bar: the progress bar to be reset
         :return: void
         """
-        raise NotImplementedError("reset_progress_bar not implemented")
+        percentage_progress_bar.set_fraction(0.0)
 
     def clear_primitive_combo_box(self, primitive_combo_box: Gtk.ComboBox) -> None:
         """
@@ -55,7 +55,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         :param primitive_combo_box: the combo box to be cleared
         :return: void
         """
-        raise NotImplementedError("clear_primitive_combo_box not implemented")
+        primitive_combo_box.option_store.clear()
 
     def clear_primitive_multi_list_box(self, primitive_multi_list_box: Gtk.ScrolledWindow) -> None:
         """
@@ -63,7 +63,7 @@ class Gtk3ValueClearer(GenericValueClearer):
         :param primitive_multi_list_box: the multi list box to be cleared
         :return: void
         """
-        raise NotImplementedError("clear_primitive_multi_list_box not implemented")
+        primitive_multi_list_box.list_store.clear()
 
     def reset_check_box(self, check_box: Gtk.CheckButton) -> None:
         """
@@ -71,11 +71,11 @@ class Gtk3ValueClearer(GenericValueClearer):
         :param check_box: the check box to be reset
         :return: void
         """
-        raise NotImplementedError("reset_check_box not implemented")
+        check_box.set_active(False)
 
     def reset_radio_button(self, radio_button: Gtk.RadioButton) -> None:
         """
         Resets a radio button to be deselected
         :param radio_button: the radio button to be deselected
         """
-        raise NotImplementedError("reset_radio_button not implemented")
+        radio_button.set_active(False)

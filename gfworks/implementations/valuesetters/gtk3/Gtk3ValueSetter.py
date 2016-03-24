@@ -41,7 +41,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         :param text: the text to be displayed
         :return: void
         """
-        raise NotImplementedError("set_label_string not implemented")
+        label.set_text(text)
 
     @staticmethod
     def set_text_entry_string(text_entry: Gtk.Entry, text: str) -> None:
@@ -51,7 +51,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         :param text: the text to be entered into th widget
         :return: void
         """
-        raise NotImplementedError("set_text_entry_string not implemented")
+        text_entry.set_text(text)
 
     @staticmethod
     def set_button_string(button: Gtk.Button, text: str) -> None:
@@ -61,7 +61,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         :param text: the text to be displayed
         :return: void
         """
-        raise NotImplementedError("set_button_string not implemented")
+        button.get_label().set_text(text)
 
     @staticmethod
     def set_check_box_boolean(check_box: Gtk.CheckButton, checked: bool) -> None:
@@ -72,7 +72,7 @@ class Gtk3ValueSetter(GenericValueSetter):
                 True: Selected, False: Deselected
         :return: void
         """
-        raise NotImplementedError("set_check_box_boolean not implemented")
+        check_box.set_active(checked)
 
     @staticmethod
     def set_radio_button_boolean(radio_button: Gtk.RadioButton, checked: bool) -> None:
@@ -83,7 +83,7 @@ class Gtk3ValueSetter(GenericValueSetter):
                 True: Selected, False: Deselected
         :return: void
         """
-        raise NotImplementedError("set_radio_button_boolean not implemented")
+        radio_button.set_active(checked)
 
     @staticmethod
     def set_progress_bar_float_percentage(progress_bar: Gtk.ProgressBar, percentage: float) -> None:
@@ -94,7 +94,7 @@ class Gtk3ValueSetter(GenericValueSetter):
                 float value between 0.0 and 1.0
         :return: void
         """
-        raise NotImplementedError("set_progress_bar_float_percentage not implemented")
+        progress_bar.set_fraction(percentage)
 
     @staticmethod
     def set_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: list) -> None:
@@ -104,10 +104,13 @@ class Gtk3ValueSetter(GenericValueSetter):
         :param string_options: the options to be displayed as a list of strings
         :return: void
         """
-        raise NotImplementedError("set_combo_box_string_options not implemented")
+        combo_box.option_store.clear()
+        for option in string_options:
+            combo_box.option_store.append((option,))
+        combo_box.set_active(0)
 
     @staticmethod
-    def set_multi_list_box_elements_options(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list(tuple)) -> None:
+    def set_multi_list_box_elements_options(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!
@@ -116,4 +119,6 @@ class Gtk3ValueSetter(GenericValueSetter):
                 data types.
         :return: void
         """
-        raise NotImplementedError("set_multi_list_box_elements_options not implemented")
+        multi_list_box.list_store.clear()
+        for element in list_of_elements:
+            multi_list_box.list_store.append(element)

@@ -30,11 +30,15 @@ from gfworks.implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator import Gt
 from gfworks.implementations.positioners.gtk3.Gtk3GridPositioner import Gtk3GridPositioner
 from gfworks.implementations.dialogshowers.gtk3.Gtk3DialogShower import Gtk3DialogShower
 from gfworks.implementations.valuegetters.gtk3.Gtk3ValueGetter import Gtk3ValueGetter
+from gfworks.implementations.valuesetters.gtk3.Gtk3ValueSetter import Gtk3ValueSetter
+from gfworks.implementations.widgetclearers.gtk3.Gtk3WidgetClearer import Gtk3WidgetClearer
 
 
 class Gtk3GridTemplate(Gtk3GridPositioner,
                        Gtk3WidgetGenerator,
                        Gtk3ValueGetter,
+                       Gtk3ValueSetter,
+                       Gtk3WidgetClearer,
                        Gtk3DialogShower,
                        GenericWindow):
     """
