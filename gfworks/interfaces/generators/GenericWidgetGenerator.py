@@ -63,13 +63,16 @@ class GenericWidgetGenerator(object):
         raise NotImplementedError("generate_button not implemented")
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None) -> object:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
+                            on_changed_command: object = None, on_changed_args: tuple = None) -> object:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
         :param default_text: the text to be displayed per default.
         :param enter_command: the command to be executed when the enter key is pressed
         :param enter_args: Optional arguments for the enter command
+        :param on_changed_command: the command to be executed when the content of the entry changes
+        :param on_changed_args: Optional arguments for the on changed command
         :return: the text entry widget
         """
         raise NotImplementedError("generate_text_entry not implemented")

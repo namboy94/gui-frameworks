@@ -79,14 +79,16 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         return button
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None)\
-            -> Gtk.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
+                            on_changed_command: object = None, on_changed_args: tuple = None) -> Gtk.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
         :param default_text: the text to be displayed per default.
         :param enter_command: the command to be executed when the enter key is pressed
         :param enter_args: Optional arguments for the enter command
+        :param on_changed_command: the command to be executed when the content of the entry changes
+        :param on_changed_args: Optional arguments for the on changed command
         :return: the text entry widget
         """
         def enter(widget, event, command, *args):
@@ -95,8 +97,19 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
 
         entry = Gtk.Entry()
         entry.set_text(default_text)
+
         if enter_command is not None:
-            entry.connect("key-press-event", enter, enter_command, enter_args)
+            if enter_args is None:
+                entry.connect("key-press-event", enter, enter_command)
+            else:
+                entry.connect("key-press-event", enter, enter_command, enter_args)
+
+        if on_changed_command is not None:
+            if on_changed_args is None:
+                entry.connect("changed", on_changed_command)
+            else:
+                entry.connect("changed", on_changed_command, on_changed_args)
+
         return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> Gtk.CheckButton:

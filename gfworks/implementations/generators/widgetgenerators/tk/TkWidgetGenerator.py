@@ -69,20 +69,25 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         if command is not None:
             cmd_args = (object,)
             if args is not None:
-                cmd_args += args
-            button = tkinter.Button(self, text=button_text, command=partial(command, cmd_args))
+                try:
+                    cmd_args += args
+                except TypeError:
+                    cmd_args += (args,)
+            button = tkinter.Button(self, text=button_text, command=partial(command, *cmd_args))
         else:
             button = tkinter.Button(self, text=button_text)
         return button
 
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None) \
-            -> tkinter.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
+                            on_changed_command=None, on_changed_args: tuple = None) -> tkinter.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
         :param default_text: the text to be displayed per default.
         :param enter_command: the command to be executed when the enter key is pressed
         :param enter_args: Optional arguments for the enter command
+        :param on_changed_command: the command to be executed when the content of the entry changes
+        :param on_changed_args: Optional arguments for the on changed command
         :return: the text entry widget
         """
         text_var = tkinter.StringVar(self, default_text)
@@ -93,6 +98,12 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             if enter_args is not None:
                 cmd_args += enter_args
             entry.bind('<Return>', partial(enter_command, cmd_args))
+
+        if on_changed_command is not None:
+            on_changed_command_with_args = on_changed_command
+            if on_changed_args:
+                on_changed_command_with_args = partial(on_changed_command, on_changed_args)
+            text_var.trace("w", lambda name, index, mode, sv=text_var: on_changed_command_with_args(sv))
         return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> tkinter.Checkbutton:

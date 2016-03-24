@@ -23,9 +23,9 @@ This file is part of gfworks.
 
 import tkinter
 
-from gfworks.implementations.dialogshowers.tk.TkDialogShower import TkDialogShower
-from gfworks.implementations.valuegetters.tk.TkValueGetter import TkValueGetter
-from gfworks.implementations.valuesetters.tk.TkValueSetter import TkValueSetter
+from gfworks.implementations.generators.dialogshowers.tk.TkDialogShower import TkDialogShower
+from gfworks.implementations.widgetdatamanipulators.valuegetters.tk.TkValueGetter import TkValueGetter
+from gfworks.implementations.widgetdatamanipulators.valuesetters.tk.TkValueSetter import TkValueSetter
 from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
 from gfworks.interfaces.GenericWindow import GenericWindow
 from gfworks.implementations.generators.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator

@@ -41,7 +41,7 @@ class TkGridPositioner(GenericGridPositioner):
         :param y_size: the width of the widget in the grid layout
         :return: void
         """
-        widget.grid(row=x_position, column=y_position, rowspan=x_size, columnspan=y_size, sticky=W + E + N + S)
+        widget.grid(column=x_position, row=y_position, columnspan=x_size, rowspan=y_size, sticky=W + E + N + S)
 
     def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget,
                           orientation: str, x_size: int, y_size: int) -> None:
