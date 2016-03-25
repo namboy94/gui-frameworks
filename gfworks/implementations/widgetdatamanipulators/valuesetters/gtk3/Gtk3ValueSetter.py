@@ -61,7 +61,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         :param text: the text to be displayed
         :return: void
         """
-        button.get_label().set_text(text)
+        button.set_label(text)
 
     @staticmethod
     def set_check_box_boolean(check_box: Gtk.CheckButton, checked: bool) -> None:

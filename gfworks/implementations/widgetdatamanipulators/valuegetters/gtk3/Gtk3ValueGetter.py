@@ -55,7 +55,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         Returns the displayed string from a button
         :return: the button string
         """
-        return button.get_label().get_text()
+        return button.get_label()
 
     @staticmethod
     def get_boolean_from_check_box(check_box: Gtk.CheckButton) -> bool:
@@ -93,7 +93,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return combo_box.option_store.get(combo_iter, 0)[0]
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: Gtk.ScrolledWindow) -> tuple:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: Gtk.ScrolledWindow) -> list:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple
@@ -102,5 +102,14 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         (model, path_list) = multi_list_box.tree_selection.get_selected_rows()
         for path in path_list:
             tree_iter = model.get_iter(path)
-            selected.append(model.get_value(tree_iter, 0))
+            i = 0
+            element = ()
+            added_all_element_components = False
+            while not added_all_element_components:
+                try:
+                    element += (model.get_value(tree_iter, i),)
+                except TypeError:
+                    added_all_element_components = True
+                i += 1
+            selected.append(element)
         return selected

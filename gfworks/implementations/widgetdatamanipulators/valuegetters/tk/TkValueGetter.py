@@ -93,7 +93,7 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         return combo_box.get()
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: tkinter.Listbox) -> tuple:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: tkinter.Listbox) -> list:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple

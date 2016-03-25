@@ -173,13 +173,16 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
         :return the multi list box widget
         """
-        # TODO SORT BY PRIORITY
         types = ()
         titles = []
+        priority = 0
 
-        for title in options_dictionary_with_types:
-            titles.append(title)
-            types += (options_dictionary_with_types[title][1],)
+        while len(titles) < len(options_dictionary_with_types):
+            for title in options_dictionary_with_types:
+                if options_dictionary_with_types[title][0] == priority:
+                    titles.append(title)
+                    types += (options_dictionary_with_types[title][1],)
+                    priority += 1
 
         list_store = Gtk.ListStore(*types)
         tree_view = Gtk.TreeView.new_with_model(list_store.filter_new())

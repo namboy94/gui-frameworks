@@ -84,7 +84,7 @@ class GenericValueGetter(object):
         raise NotImplementedError("get_string_from_current_selected_combo_box not implemented")
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: object) -> tuple:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: object) -> list:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple
