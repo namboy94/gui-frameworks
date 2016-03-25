@@ -129,16 +129,17 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO Implement
         super().generate_radio_button(radio_button_text)
 
-    # TODO Figure out return type
-    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0) -> tkinter.Label:
+    def generate_percentage_progress_bar(self, initial_percentage: float = 0.0) -> ttk.Progressbar:
         """
         Generates a percentage-based progress bar
         :param initial_percentage: the initial percentage of the progress bar to
                 be filled out at the start
         :return: the progress bar widget
         """
-        # TODO implement
-        super().generate_percentage_progress_bar(initial_percentage)
+        float_var = tkinter.DoubleVar()
+        float_var.set(initial_percentage * 100.0)
+        progress_bar = ttk.Progressbar(variable=float_var)
+        return progress_bar
 
     def generate_string_combo_box(self, options_list: list) -> ttk.Combobox:
         """

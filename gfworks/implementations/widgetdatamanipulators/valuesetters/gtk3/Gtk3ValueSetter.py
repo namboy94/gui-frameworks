@@ -97,7 +97,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         progress_bar.set_fraction(percentage)
 
     @staticmethod
-    def set_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: list) -> None:
+    def set_string_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: list) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -110,7 +110,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         combo_box.set_active(0)
 
     @staticmethod
-    def set_multi_list_box_elements_options(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!
@@ -121,4 +121,14 @@ class Gtk3ValueSetter(GenericValueSetter):
         """
         multi_list_box.list_store.clear()
         for element in list_of_elements:
-            multi_list_box.list_store.append(element)
+            multi_list_box.list_store.append(list(element))
+
+    @staticmethod
+    def add_primitive_multi_list_box_element(multi_list_box: Gtk.ScrolledWindow, element: tuple) -> None:
+        """
+        Adds an element to the end of a multi list box displaying primitive types
+        :param multi_list_box: the multi list box widget to be manipulated
+        :param element: The element to be added
+        :return: void
+        """
+        multi_list_box.list_store.append(list(element))

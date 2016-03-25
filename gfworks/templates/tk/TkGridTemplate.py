@@ -23,13 +23,14 @@ This file is part of gfworks.
 
 import tkinter
 
-from gfworks.implementations.generators.dialogshowers.tk.TkDialogShower import TkDialogShower
-from gfworks.implementations.widgetdatamanipulators.valuegetters.tk.TkValueGetter import TkValueGetter
-from gfworks.implementations.widgetdatamanipulators.valuesetters.tk.TkValueSetter import TkValueSetter
-from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
 from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
+from gfworks.implementations.generators.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.implementations.generators.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
 from gfworks.implementations.widgetdatamanipulators.widgetclearers.tk.TkWidgetClearer import TkWidgetClearer
+from gfworks.implementations.widgetdatamanipulators.valuegetters.tk.TkValueGetter import TkValueGetter
+from gfworks.implementations.widgetdatamanipulators.valuesetters.tk.TkValueSetter import TkValueSetter
+from gfworks.implementations.threading.tk.TkThreading import TkThreading
 
 
 class TkGridTemplate(TkWidgetGenerator,
@@ -38,6 +39,7 @@ class TkGridTemplate(TkWidgetGenerator,
                      TkWidgetClearer,
                      TkDialogShower,
                      TkGridPositioner,
+                     TkThreading,
                      GenericWindow):
     """
     Interface that defines how a window is initialized, run and closed

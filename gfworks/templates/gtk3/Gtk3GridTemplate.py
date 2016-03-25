@@ -26,9 +26,10 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from gfworks.interfaces.GenericWindow import GenericWindow
-from gfworks.implementations.generators.widgetgenerators.gtk3.Gtk3WidgetGenerator import Gtk3WidgetGenerator
 from gfworks.implementations.positioners.gtk3.Gtk3GridPositioner import Gtk3GridPositioner
+from gfworks.implementations.generators.widgetgenerators.gtk3.Gtk3WidgetGenerator import Gtk3WidgetGenerator
 from gfworks.implementations.generators.dialogshowers.gtk3.Gtk3DialogShower import Gtk3DialogShower
+from gfworks.implementations.threading.gtk3.Gtk3Threading import Gtk3Threading
 from gfworks.implementations.widgetdatamanipulators.valuegetters.gtk3.Gtk3ValueGetter import Gtk3ValueGetter
 from gfworks.implementations.widgetdatamanipulators.valuesetters.gtk3.Gtk3ValueSetter import Gtk3ValueSetter
 from gfworks.implementations.widgetdatamanipulators.widgetclearers.gtk3.Gtk3WidgetClearer import Gtk3WidgetClearer
@@ -40,6 +41,7 @@ class Gtk3GridTemplate(Gtk3GridPositioner,
                        Gtk3ValueSetter,
                        Gtk3WidgetClearer,
                        Gtk3DialogShower,
+                       Gtk3Threading,
                        GenericWindow):
     """
     Interface that defines how a window is initialized, run and closed

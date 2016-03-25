@@ -103,7 +103,7 @@ class TkValueSetter(GenericValueSetter):
         raise NotImplementedError("set_progress_bar_float_percentage not implemented")
 
     @staticmethod
-    def set_combo_box_string_options(combo_box: ttk.Combobox, string_options: list) -> None:
+    def set_string_combo_box_string_options(combo_box: ttk.Combobox, string_options: list) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -113,13 +113,23 @@ class TkValueSetter(GenericValueSetter):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_multi_list_box_elements_options(multi_list_box: tkinter.Listbox, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: tkinter.Listbox, list_of_elements: list) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!
         :param multi_list_box: the multi list box widget to be manipulated
         :param list_of_elements: List of elements, which are themselves tuples of primitive
                 data types.
+        :return: void
+        """
+        raise NotImplementedError("set_multi_list_box_elements_options not implemented")
+
+    @staticmethod
+    def add_primitive_multi_list_box_element(multi_list_box: object, element: tuple) -> None:
+        """
+        Adds an element to the end of a multi list box displaying primitive types
+        :param multi_list_box: the multi list box widget to be manipulated
+        :param element: The element to be added
         :return: void
         """
         raise NotImplementedError("set_multi_list_box_elements_options not implemented")
