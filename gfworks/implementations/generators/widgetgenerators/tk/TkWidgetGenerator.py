@@ -23,6 +23,7 @@ This file is part of gfworks.
 import tkinter
 from functools import partial
 from tkinter import ttk
+# import tkinter.font as tkFont
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
@@ -94,10 +95,11 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         entry = tkinter.Entry(self, textvariable=text_var)
         entry.text_var = text_var
         if enter_command is not None:
-            cmd_args = (object,)
             if enter_args is not None:
-                cmd_args += enter_args
-            entry.bind('<Return>', partial(enter_command, cmd_args))
+                # noinspection PyArgumentList
+                entry.bind('<Return>', partial(enter_command, *enter_args))
+            else:
+                entry.bind('<Return>', enter_command)
 
         if on_changed_command is not None:
             on_changed_command_with_args = on_changed_command
@@ -136,9 +138,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
                 be filled out at the start
         :return: the progress bar widget
         """
-        float_var = tkinter.DoubleVar()
-        float_var.set(initial_percentage * 100.0)
-        progress_bar = ttk.Progressbar(variable=float_var)
+        progress_bar = ttk.Progressbar(self, value=int(initial_percentage * 100.0), orient="horizontal")
         return progress_bar
 
     def generate_string_combo_box(self, options_list: list) -> ttk.Combobox:
@@ -163,8 +163,51 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
         :return the multi list box widget
         """
-        # TODO Find a better solution
+
+        """
+        def sortby(treea, col, descending):
+            # grab values to sort
+            data = [(treea.set(child, col), child) for child in tree.get_children('')]
+            # if the data to be sorted is numeric change to float
+            # data =  change_numeric(data)
+            # now sort the data in place
+            data.sort(reverse=descending)
+            for ix, item in enumerate(data):
+                treea.move(item[1], '', ix)
+            # switch the heading so it will sort in the opposite direction
+            treea.heading(col, command=lambda col=col: sortby(treea, col, int(not descending)))
+
+        titles = ["Test", "Test2"]
+
+        container = ttk.Frame()
+        #container.pack(fill='both', expand=True)
+
+        tree = ttk.Treeview(columns=titles, show="headings")
+
+        vsb = ttk.Scrollbar(orient="vertical", command=tree.yview)
+        hsb = ttk.Scrollbar(orient="horizontal", command=tree.xview)
+        tree.configure(yscrollcommand=vsb.set, xscrollcommand=hsb.set)
+        tree.grid(column=0, row=0, sticky='nsew', in_=container)
+        vsb.grid(column=1, row=0, sticky='ns', in_=container)
+        hsb.grid(column=0, row=1, sticky='ew', in_=container)
+        container.grid_columnconfigure(0, weight=1)
+        container.grid_rowconfigure(0, weight=1)
+
+        for title in titles:
+            tree.heading(title, text=title, command=lambda c=title: sortby(self.tree, c, 0))
+            tree.column(title, width=tkFont.Font().measure(title))
+
+
+        for item in car_list:
+            self.tree.insert('', 'end', values=item)
+            # adjust column's width if necessary to fit each value
+            for ix, val in enumerate(item):
+                col_w = tkFont.Font().measure(val)
+                if self.tree.column(car_header[ix], width=None) < col_w:
+                    self.tree.column(car_header[ix], width=col_w)
+
+        """
+
         list_box = tkinter.Listbox(self, selectmode=tkinter.MULTIPLE)
-        for item in options_dictionary_with_types:
-            list_box.insert(tkinter.END, options_dictionary_with_types[item][1])
+        list_box.elements = []
         return list_box

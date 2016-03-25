@@ -63,8 +63,11 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         Checks if a check box is currently selected and returns the value
         :return: True if the check box is selected, False otherwise
         """
-        # TODO Check implementation
-        return check_box.getvar().get()
+        value = check_box.number_var.get()
+        if value == 1:
+            return True
+        else:
+            return False
 
     @staticmethod
     def get_boolean_from_radio_button(radio_button: tkinter.Radiobutton) -> bool:
@@ -98,9 +101,8 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple
         """
-        # TODO Check if this is actually correct, I don't trust this at all.
         items = map(int, multi_list_box.curselection())
-        selected = {}
+        selected = []
         for item in items:
-            selected[item] = (multi_list_box.get(item))
+            selected.append(multi_list_box.elements[item])
         return selected

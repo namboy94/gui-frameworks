@@ -22,7 +22,6 @@ This file is part of gfworks.
 """
 
 from threading import Thread
-from functools import partial
 from gi.repository import GLib, GObject
 
 
@@ -37,6 +36,7 @@ class Gtk3Threading(object):
         Runs a thread in parallel to the GUI main loop
         :param target: The command to be executed
         :param args: Optional arguments for the command
+        :return: The created Thread
         """
         if args is None:
             thread = Thread(target=target)
@@ -55,6 +55,7 @@ class Gtk3Threading(object):
         :param args: Optional arguments for the command
         :param insensitive_target: Command that is executed before the sensitive command
         :param insensitive_args: Optional arguments for the insensitive target
+        :return: The created Thread
         """
         GObject.threads_init()
 
@@ -75,10 +76,28 @@ class Gtk3Threading(object):
                 if args is None:
                     target()
                 else:
-                    target(args)
+                    # noinspection PyArgumentList
+                    target(*args)
 
             GLib.idle_add(sensitive_thread)
 
         thread = Thread(target=called_thread)
         thread.start()
         return thread
+
+    @staticmethod
+    def run_thread_safe(target: callable, args: tuple = None) -> None:
+        """
+        Runs a command in a thread-safe manner, avoiding memory errors
+        :param target: The command to be executed
+        :param args: Optional arguments for the command
+        :return: void
+        """
+        def safe_thread():
+            if args is not None:
+                # noinspection PyArgumentList
+                target(*args)
+            else:
+                target()
+
+        GLib.idle_add(safe_thread)

@@ -41,6 +41,14 @@ class Gtk3WidgetClearer(GenericValueClearer):
         """
         text_entry.set_text("")
 
+    def clear_label_text(self, label: Gtk.Label) -> None:
+        """
+        Clears a label widget's text and fills it with an empty string
+        :param label: The label to be cleared
+        :return: void
+        """
+        label.set_text("")
+
     def reset_percentage_progress_bar(self, percentage_progress_bar: Gtk.ProgressBar) -> None:
         """
         Resets a percentage-based progress bar to 0%

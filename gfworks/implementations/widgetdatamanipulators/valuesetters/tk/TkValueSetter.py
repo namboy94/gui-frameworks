@@ -89,9 +89,8 @@ class TkValueSetter(GenericValueSetter):
         # TODO Implement
         raise NotImplementedError("set_radio_button_boolean not implemented")
 
-    # TODO progress bars in Tk
     @staticmethod
-    def set_progress_bar_float_percentage(progress_bar: tkinter.Label, percentage: float) -> None:
+    def set_progress_bar_float_percentage(progress_bar: ttk.Progressbar, percentage: float) -> None:
         """
         Sets the completed percentage of a progress bar widget
         :param progress_bar: the progress bar widget to be modified
@@ -99,8 +98,7 @@ class TkValueSetter(GenericValueSetter):
                 float value between 0.0 and 1.0
         :return: void
         """
-        # TODO Implement
-        raise NotImplementedError("set_progress_bar_float_percentage not implemented")
+        progress_bar["value"] = int(percentage * 100.0)
 
     @staticmethod
     def set_string_combo_box_string_options(combo_box: ttk.Combobox, string_options: list) -> None:
@@ -122,14 +120,27 @@ class TkValueSetter(GenericValueSetter):
                 data types.
         :return: void
         """
-        raise NotImplementedError("set_multi_list_box_elements_options not implemented")
+        multi_list_box.elements = []
+        multi_list_box.delete(0, tkinter.END)
+        for element in list_of_elements:
+            multi_list_box.elements.append(element)
+            element_string = ""
+            for part in element:
+                element_string += str(part) + " - "
+            element_string = element_string[:-3]
+            multi_list_box.insert(tkinter.END, element_string)
 
     @staticmethod
-    def add_primitive_multi_list_box_element(multi_list_box: object, element: tuple) -> None:
+    def add_primitive_multi_list_box_element(multi_list_box: tkinter.Listbox, element: tuple) -> None:
         """
         Adds an element to the end of a multi list box displaying primitive types
         :param multi_list_box: the multi list box widget to be manipulated
         :param element: The element to be added
         :return: void
         """
-        raise NotImplementedError("set_multi_list_box_elements_options not implemented")
+        multi_list_box.elements.append(element)
+        element_string = ""
+        for part in element:
+            element_string += str(part) + " - "
+        element_string = element_string[:-3]
+        multi_list_box.insert(tkinter.END, element_string)

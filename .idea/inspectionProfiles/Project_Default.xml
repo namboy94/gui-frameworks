@@ -21,6 +21,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="tkinter.Checkbutton.number_var" />
+          <option value="tkinter.Listbox.elements" />
+          <option value="tkinter.ttk.Progressbar.float_var" />
         </list>
       </option>
     </inspection_tool>

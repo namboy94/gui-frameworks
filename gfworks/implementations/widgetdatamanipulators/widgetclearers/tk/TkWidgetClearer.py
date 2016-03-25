@@ -38,7 +38,15 @@ class TkWidgetClearer(GenericValueClearer):
         :param text_entry: The text entry to be cleared
         :return: void
         """
-        raise NotImplementedError("clear_text_entry not implemented")
+        text_entry.delete(0, tkinter.END)
+
+    def clear_label_text(self, label: object) -> None:
+        """
+        Clears a label widget's text and fills it with an empty string
+        :param label: The label to be cleared
+        :return: void
+        """
+        raise NotImplementedError()
 
     # TODO Figure out progress bars in Tk
     def reset_percentage_progress_bar(self, percentage_progress_bar: tkinter.Label) -> None:
@@ -47,7 +55,7 @@ class TkWidgetClearer(GenericValueClearer):
         :param percentage_progress_bar: the progress bar to be reset
         :return: void
         """
-        raise NotImplementedError("reset_progress_bar not implemented")
+        percentage_progress_bar["value"] = 0.0
 
     def clear_primitive_combo_box(self, primitive_combo_box: ttk.Combobox) -> None:
         """
@@ -63,7 +71,7 @@ class TkWidgetClearer(GenericValueClearer):
         :param primitive_multi_list_box: the multi list box to be cleared
         :return: void
         """
-        raise NotImplementedError("clear_primitive_multi_list_box not implemented")
+        primitive_multi_list_box.delete(0, tkinter.END)
 
     def reset_check_box(self, check_box: tkinter.Checkbutton) -> None:
         """

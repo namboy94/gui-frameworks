@@ -35,6 +35,14 @@ class GenericValueClearer(object):
         """
         raise NotImplementedError("clear_text_entry not implemented")
 
+    def clear_label_text(self, label: object) -> None:
+        """
+        Clears a label widget's text and fills it with an empty string
+        :param label: The label to be cleared
+        :return: void
+        """
+        raise NotImplementedError()
+
     def reset_percentage_progress_bar(self, percentage_progress_bar: object) -> None:
         """
         Resets a percentage-based progress bar to 0%

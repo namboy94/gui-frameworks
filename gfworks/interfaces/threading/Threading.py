@@ -35,6 +35,7 @@ class Threading(object):
         Runs a thread in parallel to the GUI main loop
         :param target: The command to be executed
         :param args: Optional arguments for the command
+        :return: The created Thread
         """
         raise NotImplementedError("run_threads_in_parallel not implemented")
 
@@ -48,5 +49,16 @@ class Threading(object):
         :param args: Optional arguments for the command
         :param insensitive_target: Command that is executed before the sensitive command
         :param insensitive_args: Optional arguments for the insensitive target
+        :return: The created Thread
         """
         raise NotImplementedError("run_sensitive_thread_in_parallel not implemented")
+
+    @staticmethod
+    def run_thread_safe(target: callable, args: tuple = None) -> None:
+        """
+        Runs a command in a thread-safe manner, avoiding memory errors
+        :param target: The command to be executed
+        :param args: Optional arguments for the command
+        :return: void
+        """
+        raise NotImplementedError("run_thread_safe not implemented")
