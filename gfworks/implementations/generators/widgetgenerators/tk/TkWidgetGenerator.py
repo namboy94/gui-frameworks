@@ -193,4 +193,6 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             tree.heading(title, text=title, command=lambda c=title: sortby(tree, c, 0))
             tree.column(title, width=tk_font.Font().measure(title))
 
+        tree.types=types
+
         return tree

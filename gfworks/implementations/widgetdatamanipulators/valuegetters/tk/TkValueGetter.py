@@ -104,14 +104,17 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
 
         item_selection = multi_list_box.selection()
         titles = multi_list_box["columns"]
+        types = multi_list_box.types
 
         selected_item_list = []
 
         for i in item_selection:
             item_dictionary = multi_list_box.set(i)
             selected_item = ()
+            i = 0
             for title in titles:
-                selected_item += (item_dictionary[title],)
+                selected_item += (types[i](item_dictionary[title]),)
+                i += 1
             selected_item_list.append(selected_item)
 
         return selected_item_list

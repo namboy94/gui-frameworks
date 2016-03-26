@@ -23,6 +23,7 @@
           <option value="tkinter.Checkbutton.number_var" />
           <option value="tkinter.Listbox.elements" />
           <option value="tkinter.ttk.Progressbar.float_var" />
+          <option value="tkinter.ttk.Treeview.types" />
         </list>
       </option>
     </inspection_tool>
