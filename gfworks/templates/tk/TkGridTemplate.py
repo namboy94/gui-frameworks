@@ -61,6 +61,15 @@ class TkGridTemplate(TkWidgetGenerator,
         self.lay_out()
         self.protocol("WM_DELETE_WINDOW", self.stop)
 
+        i = 0
+        while i < self.columncounter:
+            tkinter.Grid.rowconfigure(self, i, weight=1)
+            i += 1
+        i = 0
+        while i < self.rowcounter:
+            tkinter.Grid.columnconfigure(self, i, weight=1)
+            i += 1
+
     def lay_out(self) -> None:
         """
         Initializes widgets and positions them in the Window

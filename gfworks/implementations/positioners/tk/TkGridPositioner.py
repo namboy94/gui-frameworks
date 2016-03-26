@@ -30,6 +30,9 @@ class TkGridPositioner(GenericGridPositioner):
     Implements the grid positioner interface in Tk/Tkinter
     """
 
+    rowcounter = 0
+    columncounter = 0
+
     def position_absolute(self, widget: tkinter.Widget, x_position: int, y_position: int, x_size: int, y_size: int) \
             -> None:
         """
@@ -42,6 +45,10 @@ class TkGridPositioner(GenericGridPositioner):
         :return: void
         """
         widget.grid(column=x_position, row=y_position, columnspan=x_size, rowspan=y_size, sticky=W + E + N + S)
+        if self.rowcounter < y_position + y_size:
+            self.rowcounter = y_position + y_size
+        if self.columncounter < x_position + x_size:
+            self.columncounter = x_position + x_size
 
     def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget,
                           orientation: str, x_size: int, y_size: int) -> None:
@@ -78,3 +85,8 @@ class TkGridPositioner(GenericGridPositioner):
                         sticky=W + E + N + S)
         else:
             raise ValueError("Incorrect orientation type " + orientation)
+
+        if self.columncounter < widget["column"] + widget["columnspan"]:
+            self.columncounter = widget["column"] + widget["columnspan"]
+        if self.rowcounter < widget["row"] + widget["rowspan"]:
+            self.rowcounter = widget["row"] + widget["rowspan"]
