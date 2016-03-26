@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/gfworks.egg-info/PKG-INFO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
     </list>
     <ignored path="gfworks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +22,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/gfworks$Gtk3BasicGui.coverage" NAME="Gtk3BasicGui Coverage Results" MODIFIED="1458930365265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gfworks/examples" />
+    <SUITE FILE_PATH="coverage/gfworks$Gtk3BasicGui.coverage" NAME="Gtk3BasicGui Coverage Results" MODIFIED="1459009104252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gfworks/examples" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,37 +33,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="41" column="53" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TkValueSetter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="96" column="75" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
+            <state relative-caret-position="221">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
-                <marker date="1458930638393" expanded="true" signature="1087:5696" placeholder="..." />
-                <marker date="1458930638393" expanded="true" signature="3324:3681" placeholder="..." />
-                <marker date="1458930638393" expanded="true" signature="4292:5066" placeholder="..." />
-                <marker date="1458930638393" expanded="true" signature="5188:5696" placeholder="..." />
+                <element signature="e#913#927#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gtk3WidgetClearer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -68,38 +48,50 @@
       <file leaf-file-name="Gtk3WidgetGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
+            <state relative-caret-position="-85">
+              <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="187" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ttk.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.5/tkinter/ttk.py">
+      <file leaf-file-name="GenericWidgetGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="491">
+              <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="123" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TkGridPositioner.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py">
+      <file leaf-file-name="TkWidgetGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="91" column="63" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="63" />
+            <state relative-caret-position="59">
+              <caret line="170" column="41" selection-start-line="170" selection-start-column="41" selection-end-line="170" selection-end-column="41" />
+              <folding>
+                <element signature="e#912#926#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TkValueGetter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TkGridTemplate.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py">
+      <file leaf-file-name="Gtk3WidgetClearer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+            <state relative-caret-position="401">
+              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -108,42 +100,41 @@
       <file leaf-file-name="TkWidgetClearer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="383">
+              <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
               <folding>
                 <element signature="e#913#927#0" expanded="true" />
-                <marker date="1458929830886" expanded="true" signature="1093:3341" placeholder="..." />
-                <marker date="1458929830886" expanded="true" signature="1236:1449" placeholder="..." />
-                <marker date="1458929830886" expanded="true" signature="1505:1704" placeholder="..." />
-                <marker date="1458929830886" expanded="true" signature="1840:2055" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TkValueGetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-              <folding>
-                <marker date="1458929166433" expanded="true" signature="2076:2371" placeholder="..." />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TkWidgetGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="140" column="90" selection-start-line="140" selection-start-column="90" selection-end-line="140" selection-end-column="90" />
-              <folding>
-                <element signature="e#912#926#0" expanded="true" />
-                <marker date="1458930577309" expanded="true" signature="1164:9659" placeholder="..." />
-                <marker date="1458930577309" expanded="true" signature="4438:4671" placeholder="..." />
-                <marker date="1458930577309" expanded="true" signature="6182:6554" placeholder="..." />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/implementations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,11 +191,9 @@
         <option value="$PROJECT_DIR$/gfworks/implementations/valuesetters/gtk3/Gtk3ValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/valuesetters/tk/TkValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
-        <option value="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
         <option value="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
         <option value="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueGetter.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py" />
         <option value="$PROJECT_DIR$/gfworks/interfaces/threading/Threading.py" />
@@ -212,13 +201,15 @@
         <option value="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/threading/tk/TkThreading.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" />
         <option value="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
+        <option value="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
       </list>
     </option>
   </component>
@@ -576,29 +567,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="positioners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
+              <option name="myItemId" value="widgetdatamanipulators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gfworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="positioners" />
+              <option name="myItemId" value="valuegetters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -651,6 +624,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="widgetgenerators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widgetgenerators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widgetgenerators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gtk3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1225,12 +1258,19 @@
       <option name="project" value="LOCAL" />
       <updated>1458931107043</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Made Tkinter widgets resizeable in the grid layout.">
+      <created>1458983149637</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1458983149637</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1239,7 +1279,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1265,7 +1305,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added two new interfaces." />
     <MESSAGE value="Implemented ValueGetters" />
     <MESSAGE value="Created Template frameworks." />
     <MESSAGE value="Implemented Grid Templates." />
@@ -1290,7 +1329,8 @@
     <MESSAGE value="Added threading capabilities." />
     <MESSAGE value="Implemented all important gtk functions used by media-manager." />
     <MESSAGE value="Implemented some tkinter functions used by media_manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented some tkinter functions used by media_manager" />
+    <MESSAGE value="Made Tkinter widgets resizeable in the grid layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Tkinter widgets resizeable in the grid layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1299,444 +1339,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk.py" />
-    <entry file="uml://Python/implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner</OriginalElement>
-          <nodes>
-            <node x="161.0" y="0.0">_collections_abc.Hashable</node>
-            <node x="206.5" y="78.0">object</node>
-            <node x="0.0" y="156.0">implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="object" target="_collections_abc.Hashable">
-              <point x="0.0" y="-14.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-238.0" y="-135.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate</OriginalElement>
-          <nodes>
-            <node x="431.0" y="0.0">GenericValueGetter</node>
-            <node x="152.0" y="144.0">templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate</node>
-            <node x="0.0" y="0.0">Window</node>
-            <node x="99.0" y="0.0">GenericWindow</node>
-            <node x="246.0" y="0.0">G</node>
-            <node x="606.0" y="0.0">GenericWidgetGenerator</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="GenericWidgetGenerator">
-              <point x="143.60000000000002" y="-14.0" />
-              <point x="472.1" y="58.0" />
-              <point x="699.5" y="58.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="G">
-              <point x="0.0" y="-14.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="GenericWindow">
-              <point x="-71.80000000000007" y="-14.0" />
-              <point x="256.69999999999993" y="48.0" />
-              <point x="162.5" y="48.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="GenericValueGetter">
-              <point x="71.79999999999995" y="-14.0" />
-              <point x="400.29999999999995" y="48.0" />
-              <point x="508.5" y="48.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="Window">
-              <point x="-143.60000000000002" y="-14.0" />
-              <point x="184.89999999999998" y="58.0" />
-              <point x="39.5" y="58.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-83.0" y="-174.0" />
-          <SelectedNodes>
-            <node>templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Python/#/home/hermann/IDEs/projects/pycharm/gfworks/gfworks">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>#/home/hermann/IDEs/projects/pycharm/gfworks/gfworks</OriginalElement>
-          <nodes>
-            <node x="1792.9234230055645" y="256.0">G</node>
-            <node x="4992.9234230055645" y="256.0">interfaces.widgetdatamanipulators.GenericWidgetClearer.GenericValueSetter</node>
-            <node x="1977.9234230055645" y="256.0">Tk</node>
-            <node x="218.715089672231" y="78.0">_collections_abc.Iterable</node>
-            <node x="174.29842300556447" y="256.0">tkinter.Misc</node>
-            <node x="4058.9234230055645" y="334.0">interfaces.generators.GenericDialogShower.GenericDialogShower</node>
-            <node x="473.2984230055645" y="256.0">tkinter.Wm</node>
-            <node x="961.118614718614" y="452.0">implementations.widgetgenerators.tk.TkWidgetGenerator.TkWidgetGenerator</node>
-            <node x="4290.9234230055645" y="256.0">implementations.customwidgets.gtk3.PrimitiveComboBox.PrimitiveComboBox</node>
-            <node x="4565.9234230055645" y="334.0">interfaces.generators.GenericWidgetGenerator.GenericWidgetGenerator</node>
-            <node x="699.8609230055645" y="256.0">GenericWindow</node>
-            <node x="846.8609230055645" y="256.0">TkDialogShower</node>
-            <node x="329.0484230055645" y="334.0">tkinter.Tk</node>
-            <node x="298.2984230055645" y="256.0">GenericValueGetter</node>
-            <node x="48.71508967223099" y="78.0">_collections_abc.Iterator</node>
-            <node x="4819.9234230055645" y="256.0">TkWidgetGenerator</node>
-            <node x="2567.9234230055645" y="256.0">interfaces.positioners.GenericGridPositioner.GenericGridPositioner</node>
-            <node x="48.11861471861357" y="452.0">implementations.valuegetters.tk.TkValueGetter.TkValueGetter</node>
-            <node x="3747.9234230055645" y="256.0">implementations.customwidgets.gtk3.PrimitiveMultiListBox.PrimitiveMultiListBox</node>
-            <node x="997.8609230055645" y="256.0">implementations.positioners.tk.TkGridPositioner.TkGridPositioner</node>
-            <node x="5937.0806972789105" y="550.0">implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator.Gtk3WidgetGenerator</node>
-            <node x="830.659392393321" y="550.0">templates.tk.TkGridTemplate.TkGridTemplate</node>
-            <node x="1651.9234230055645" y="256.0">TkValueGetter</node>
-            <node x="5419.0806972789105" y="550.0">implementations.dialogshowers.gtk3.Gtk3DialogShower.Gtk3DialogShower</node>
-            <node x="3036.9234230055645" y="256.0">GenericWidgetGenerator</node>
-            <node x="3243.9234230055645" y="256.0">implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner</node>
-            <node x="2043.9234230055645" y="256.0">interfaces.widgetdatamanipulators.GenericValueSetter.GenericValueSetter</node>
-            <node x="5400.721474953617" y="452.0">Window</node>
-            <node x="3576.0885590599873" y="550.0">templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate</node>
-            <node x="1623.3061147186136" y="452.0">interfaces.GenericWindow.GenericWindow</node>
-            <node x="2345.4234230055645" y="0.0">_collections_abc.Hashable</node>
-            <node x="489.11861471861357" y="452.0">implementations.dialogshowers.tk.TkDialogShower.TkDialogShower</node>
-            <node x="2304.9234230055645" y="334.0">interfaces.widgetdatamanipulators.GenericValueGetter.GenericValueGetter</node>
-            <node x="4824.5181972789105" y="550.0">implementations.valuegetters.gtk3.Gtk3ValueGetter.Gtk3ValueGetter</node>
-            <node x="2390.9234230055645" y="78.0">object</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="templates.tk.TkGridTemplate.TkGridTemplate" target="tkinter.Tk">
-              <point x="-125.20000000000027" y="-14.0" />
-              <point x="861.9593923933207" y="530.0" />
-              <point x="0.0" y="530.0" />
-              <point x="0.0" y="392.0" />
-              <point x="340.4234230055645" y="392.0" />
-              <point x="-34.125" y="14.0" />
-            </edge>
-            <edge source="tkinter.Misc" target="_collections_abc.Iterable">
-              <point x="0.0" y="-14.0" />
-              <point x="226.29842300556447" y="126.0" />
-              <point x="294.215089672231" y="126.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="tkinter.Misc" target="object">
-              <point x="34.666666666666686" y="-14.0" />
-              <point x="260.965089672231" y="136.0" />
-              <point x="2392.537059369201" y="136.0" />
-              <point x="-33.88636363636351" y="14.0" />
-            </edge>
-            <edge source="templates.tk.TkGridTemplate.TkGridTemplate" target="interfaces.GenericWindow.GenericWindow">
-              <point x="125.20000000000005" y="-14.0" />
-              <point x="1112.359392393321" y="530.0" />
-              <point x="1696.5561147186136" y="530.0" />
-              <point x="-73.25" y="14.0" />
-            </edge>
-            <edge source="interfaces.generators.GenericWidgetGenerator.GenericWidgetGenerator" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="4809.4234230055645" y="156.0" />
-              <point x="2450.62796846011" y="156.0" />
-              <point x="24.204545454545496" y="14.0" />
-            </edge>
-            <edge source="interfaces.widgetdatamanipulators.GenericWidgetClearer.GenericValueSetter" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="5251.4234230055645" y="136.0" />
-              <point x="2457.0825139146555" y="136.0" />
-              <point x="30.65909090909099" y="14.0" />
-            </edge>
-            <edge source="implementations.positioners.tk.TkGridPositioner.TkGridPositioner" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="1216.8609230055645" y="186.0" />
-              <point x="2408.6734230055645" y="186.0" />
-              <point x="-17.75" y="14.0" />
-            </edge>
-            <edge source="Window" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="5440.221474953617" y="432.0" />
-              <point x="5533.7056972789105" y="432.0" />
-              <point x="5533.7056972789105" y="126.0" />
-              <point x="2460.309786641928" y="126.0" />
-              <point x="33.88636363636351" y="14.0" />
-            </edge>
-            <edge source="Tk" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="2000.9234230055645" y="226.0" />
-              <point x="2421.5825139146555" y="226.0" />
-              <point x="-4.840909090909008" y="14.0" />
-            </edge>
-            <edge source="templates.tk.TkGridTemplate.TkGridTemplate" target="implementations.widgetgenerators.tk.TkWidgetGenerator.TkWidgetGenerator">
-              <point x="62.59999999999991" y="-14.0" />
-              <point x="1049.759392393321" y="520.0" />
-              <point x="1219.618614718614" y="520.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="interfaces.widgetdatamanipulators.GenericValueGetter.GenericValueGetter">
-              <point x="-71.80000000000018" y="-14.0" />
-              <point x="3683.788559059987" y="520.0" />
-              <point x="2753.4727813852805" y="520.0" />
-              <point x="2753.4727813852805" y="412.0" />
-              <point x="2557.4234230055645" y="412.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.customwidgets.gtk3.PrimitiveComboBox.PrimitiveComboBox" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="4544.9234230055645" y="166.0" />
-              <point x="2447.400695732837" y="166.0" />
-              <point x="20.97727272727252" y="14.0" />
-            </edge>
-            <edge source="interfaces.generators.GenericDialogShower.GenericDialogShower" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="4280.4234230055645" y="176.0" />
-              <point x="2444.1734230055645" y="176.0" />
-              <point x="17.75" y="14.0" />
-            </edge>
-            <edge source="implementations.widgetgenerators.tk.TkWidgetGenerator.TkWidgetGenerator" target="interfaces.generators.GenericWidgetGenerator.GenericWidgetGenerator">
-              <point x="129.25" y="-14.0" />
-              <point x="1348.868614718614" y="432.0" />
-              <point x="4647.090089672231" y="432.0" />
-              <point x="-162.33333333333303" y="14.0" />
-            </edge>
-            <edge source="tkinter.Misc" target="_collections_abc.Iterator">
-              <point x="-34.66666666666666" y="-14.0" />
-              <point x="191.63175633889796" y="236.0" />
-              <point x="123.71508967223099" y="236.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.valuegetters.tk.TkValueGetter.TkValueGetter" target="interfaces.widgetdatamanipulators.GenericValueGetter.GenericValueGetter">
-              <point x="105.25" y="-14.0" />
-              <point x="363.86861471861357" y="412.0" />
-              <point x="2389.090089672231" y="412.0" />
-              <point x="-168.33333333333348" y="14.0" />
-            </edge>
-            <edge source="interfaces.widgetdatamanipulators.GenericValueSetter.GenericValueSetter" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="2295.4234230055645" y="236.0" />
-              <point x="2424.809786641928" y="236.0" />
-              <point x="-1.6136363636364877" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="interfaces.generators.GenericDialogShower.GenericDialogShower">
-              <point x="0.0" y="-14.0" />
-              <point x="3755.5885590599873" y="500.0" />
-              <point x="4280.4234230055645" y="500.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="GenericWidgetGenerator" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="3130.4234230055645" y="206.0" />
-              <point x="2434.4916048237465" y="206.0" />
-              <point x="8.068181818181984" y="14.0" />
-            </edge>
-            <edge source="interfaces.widgetdatamanipulators.GenericValueGetter.GenericValueGetter" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="2557.4234230055645" y="226.0" />
-              <point x="2428.037059369201" y="226.0" />
-              <point x="1.6136363636364877" y="14.0" />
-            </edge>
-            <edge source="templates.tk.TkGridTemplate.TkGridTemplate" target="implementations.dialogshowers.tk.TkDialogShower.TkDialogShower">
-              <point x="0.0" y="-14.0" />
-              <point x="987.159392393321" y="510.0" />
-              <point x="715.1186147186136" y="510.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.dialogshowers.gtk3.Gtk3DialogShower.Gtk3DialogShower" target="interfaces.generators.GenericDialogShower.GenericDialogShower">
-              <point x="124.5" y="-14.0" />
-              <point x="5792.5806972789105" y="530.0" />
-              <point x="5583.7056972789105" y="530.0" />
-              <point x="5583.7056972789105" y="392.0" />
-              <point x="4428.090089672231" y="392.0" />
-              <point x="147.66666666666697" y="14.0" />
-            </edge>
-            <edge source="implementations.valuegetters.tk.TkValueGetter.TkValueGetter" target="tkinter.Tk">
-              <point x="-105.25" y="-14.0" />
-              <point x="153.36861471861357" y="402.0" />
-              <point x="363.1734230055645" y="402.0" />
-              <point x="-11.375" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="interfaces.generators.GenericWidgetGenerator.GenericWidgetGenerator">
-              <point x="71.80000000000018" y="-14.0" />
-              <point x="3827.3885590599875" y="510.0" />
-              <point x="4689.658974953617" y="510.0" />
-              <point x="4689.658974953617" y="432.0" />
-              <point x="4809.4234230055645" y="432.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.positioners.gtk3.Gtk3GridPositioner.Gtk3GridPositioner" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="3485.9234230055645" y="196.0" />
-              <point x="2437.718877551019" y="196.0" />
-              <point x="11.295454545454504" y="14.0" />
-            </edge>
-            <edge source="templates.tk.TkGridTemplate.TkGridTemplate" target="implementations.valuegetters.tk.TkValueGetter.TkValueGetter">
-              <point x="-62.60000000000002" y="-14.0" />
-              <point x="924.5593923933211" y="520.0" />
-              <point x="258.61861471861357" y="520.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="tkinter.Wm" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="522.7984230055645" y="156.0" />
-              <point x="2398.9916048237465" y="156.0" />
-              <point x="-27.431818181818016" y="14.0" />
-            </edge>
-            <edge source="tkinter.Tk" target="tkinter.Wm">
-              <point x="22.75" y="-14.0" />
-              <point x="397.2984230055645" y="309.0" />
-              <point x="522.7984230055645" y="309.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="implementations.valuegetters.gtk3.Gtk3ValueGetter.Gtk3ValueGetter" target="Window">
-              <point x="116.75" y="-14.0" />
-              <point x="5174.7681972789105" y="530.0" />
-              <point x="5430.346474953617" y="530.0" />
-              <point x="-9.875" y="14.0" />
-            </edge>
-            <edge source="interfaces.positioners.GenericGridPositioner.GenericGridPositioner" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="2792.4234230055645" y="216.0" />
-              <point x="2431.2643320964735" y="216.0" />
-              <point x="4.840909090909008" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="Window">
-              <point x="143.5999999999999" y="-14.0" />
-              <point x="3899.1885590599873" y="520.0" />
-              <point x="5410.596474953617" y="520.0" />
-              <point x="-29.625" y="14.0" />
-            </edge>
-            <edge source="implementations.dialogshowers.tk.TkDialogShower.TkDialogShower" target="tkinter.Tk">
-              <point x="-113.0" y="-14.0" />
-              <point x="602.1186147186136" y="402.0" />
-              <point x="385.9234230055645" y="402.0" />
-              <point x="11.375" y="14.0" />
-            </edge>
-            <edge source="GenericValueGetter" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="375.7984230055645" y="146.0" />
-              <point x="2395.7643320964735" y="146.0" />
-              <point x="-30.65909090909099" y="14.0" />
-            </edge>
-            <edge source="G" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="1875.4234230055645" y="216.0" />
-              <point x="2418.3552411873825" y="216.0" />
-              <point x="-8.068181818181984" y="14.0" />
-            </edge>
-            <edge source="implementations.customwidgets.gtk3.PrimitiveMultiListBox.PrimitiveMultiListBox" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="4008.9234230055645" y="186.0" />
-              <point x="2440.946150278292" y="186.0" />
-              <point x="14.52272727272748" y="14.0" />
-            </edge>
-            <edge source="TkValueGetter" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="1712.4234230055645" y="206.0" />
-              <point x="2415.12796846011" y="206.0" />
-              <point x="-11.295454545454504" y="14.0" />
-            </edge>
-            <edge source="GenericWindow" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="763.3609230055645" y="166.0" />
-              <point x="2402.218877551019" y="166.0" />
-              <point x="-24.204545454545496" y="14.0" />
-            </edge>
-            <edge source="object" target="_collections_abc.Hashable">
-              <point x="0.0" y="-14.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="TkDialogShower" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="912.3609230055645" y="176.0" />
-              <point x="2405.446150278292" y="176.0" />
-              <point x="-20.97727272727252" y="14.0" />
-            </edge>
-            <edge source="interfaces.GenericWindow.GenericWindow" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="1769.8061147186136" y="402.0" />
-              <point x="1641.4234230055645" y="402.0" />
-              <point x="1641.4234230055645" y="196.0" />
-              <point x="2411.900695732837" y="196.0" />
-              <point x="-14.52272727272748" y="14.0" />
-            </edge>
-            <edge source="implementations.dialogshowers.gtk3.Gtk3DialogShower.Gtk3DialogShower" target="Window">
-              <point x="-124.5" y="-14.0" />
-              <point x="5543.5806972789105" y="530.0" />
-              <point x="5450.096474953617" y="530.0" />
-              <point x="9.875" y="14.0" />
-            </edge>
-            <edge source="tkinter.Tk" target="tkinter.Misc">
-              <point x="-22.75" y="-14.0" />
-              <point x="351.7984230055645" y="309.0" />
-              <point x="226.29842300556447" y="309.0" />
-              <point x="0.0" y="14.0" />
-            </edge>
-            <edge source="templates.gtk3.Gtk3GridTemplate.Gtk3GridTemplate" target="interfaces.GenericWindow.GenericWindow">
-              <point x="-143.5999999999999" y="-14.0" />
-              <point x="3611.9885590599874" y="530.0" />
-              <point x="1843.0561147186136" y="530.0" />
-              <point x="73.25" y="14.0" />
-            </edge>
-            <edge source="TkWidgetGenerator" target="object">
-              <point x="0.0" y="-14.0" />
-              <point x="4896.4234230055645" y="146.0" />
-              <point x="2453.8552411873825" y="146.0" />
-              <point x="27.431818181818016" y="14.0" />
-            </edge>
-            <edge source="implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator.Gtk3WidgetGenerator" target="interfaces.generators.GenericWidgetGenerator.GenericWidgetGenerator">
-              <point x="137.5" y="-14.0" />
-              <point x="6349.5806972789105" y="382.0" />
-              <point x="4971.7567563388975" y="382.0" />
-              <point x="162.33333333333303" y="14.0" />
-            </edge>
-            <edge source="implementations.widgetgenerators.tk.TkWidgetGenerator.TkWidgetGenerator" target="tkinter.Tk">
-              <point x="-129.25" y="-14.0" />
-              <point x="1090.368614718614" y="392.0" />
-              <point x="408.6734230055645" y="392.0" />
-              <point x="34.125" y="14.0" />
-            </edge>
-            <edge source="implementations.widgetgenerators.gtk3.Gtk3WidgetGenerator.Gtk3WidgetGenerator" target="Window">
-              <point x="-137.5" y="-14.0" />
-              <point x="6074.5806972789105" y="520.0" />
-              <point x="5469.846474953617" y="520.0" />
-              <point x="29.625" y="14.0" />
-            </edge>
-            <edge source="implementations.valuegetters.gtk3.Gtk3ValueGetter.Gtk3ValueGetter" target="interfaces.widgetdatamanipulators.GenericValueGetter.GenericValueGetter">
-              <point x="-116.75" y="-14.0" />
-              <point x="4941.2681972789105" y="402.0" />
-              <point x="2725.756756338898" y="402.0" />
-              <point x="168.33333333333348" y="14.0" />
-            </edge>
-            <edge source="implementations.dialogshowers.tk.TkDialogShower.TkDialogShower" target="interfaces.generators.GenericDialogShower.GenericDialogShower">
-              <point x="113.0" y="-14.0" />
-              <point x="828.1186147186136" y="422.0" />
-              <point x="4132.7567563388975" y="422.0" />
-              <point x="-147.66666666666697" y="14.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.3000000000000003" x="819.0" y="137.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1894,26 +1496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="74" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericDialogShower.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1987,7 +1573,7 @@
         <state relative-caret-position="78">
           <caret line="78" column="32" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="49" />
           <folding>
-            <element signature="e#913#941#0" expanded="true" />
+            <element signature="e#913#941#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2019,64 +1605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-          <folding>
-            <marker date="1458929166433" expanded="true" signature="2076:2371" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="45" column="48" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#913#927#0" expanded="true" />
-            <marker date="1458929830886" expanded="true" signature="1093:3341" placeholder="..." />
-            <marker date="1458929830886" expanded="true" signature="1236:1449" placeholder="..." />
-            <marker date="1458929830886" expanded="true" signature="1505:1704" placeholder="..." />
-            <marker date="1458929830886" expanded="true" signature="1840:2055" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="140" column="90" selection-start-line="140" selection-start-column="90" selection-end-line="140" selection-end-column="90" />
-          <folding>
-            <element signature="e#912#926#0" expanded="true" />
-            <marker date="1458930577309" expanded="true" signature="1164:9659" placeholder="..." />
-            <marker date="1458930577309" expanded="true" signature="4438:4671" placeholder="..." />
-            <marker date="1458930577309" expanded="true" signature="6182:6554" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="96" column="75" selection-start-line="96" selection-start-column="75" selection-end-line="96" selection-end-column="75" />
-          <folding>
-            <marker date="1458930638393" expanded="true" signature="1087:5696" placeholder="..." />
-            <marker date="1458930638393" expanded="true" signature="3324:3681" placeholder="..." />
-            <marker date="1458930638393" expanded="true" signature="4292:5066" placeholder="..." />
-            <marker date="1458930638393" expanded="true" signature="5188:5696" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -2085,26 +1613,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="599">
           <caret line="91" column="63" selection-start-line="91" selection-start-column="63" selection-end-line="91" selection-end-column="63" />
-          <folding />
+          <folding>
+            <marker date="1458982816683" expanded="true" signature="1093:4448" placeholder="..." />
+            <marker date="1458982816683" expanded="true" signature="1350:2103" placeholder="..." />
+            <marker date="1458982816683" expanded="true" signature="2266:4448" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="-49">
           <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericDialogShower.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="123" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="178" column="8" selection-start-line="178" selection-start-column="8" selection-end-line="187" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+          <folding>
+            <element signature="e#913#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#913#927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="170" column="41" selection-start-line="170" selection-start-column="41" selection-end-line="170" selection-end-column="41" />
+          <folding>
+            <element signature="e#912#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
           <folding />
         </state>
       </provider>

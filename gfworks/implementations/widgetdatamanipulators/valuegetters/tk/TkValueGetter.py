@@ -96,13 +96,22 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         return combo_box.get()
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: tkinter.Listbox) -> list:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: ttk.Treeview) -> list:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple
         """
-        items = map(int, multi_list_box.curselection())
-        selected = []
-        for item in items:
-            selected.append(multi_list_box.elements[item])
-        return selected
+
+        item_selection = multi_list_box.selection()
+        titles = multi_list_box["columns"]
+
+        selected_item_list = []
+
+        for i in item_selection:
+            item_dictionary = multi_list_box.set(i)
+            selected_item = ()
+            for title in titles:
+                selected_item += (item_dictionary[title],)
+            selected_item_list.append(selected_item)
+
+        return selected_item_list

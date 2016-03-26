@@ -164,13 +164,16 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
 
         return combo_box
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> Gtk.ScrolledWindow:
+    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: dict,
+                                                 multi_selectable: bool = True) -> Gtk.ScrolledWindow:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected
         :param options_dictionary_with_types: a dictionary containing the column titles and
                 their types, combined with their position starting from 0 in a tuple.
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
+        :param multi_selectable: Flag that defines if more than one element may be selected at any
+                given time.
         :return the multi list box widget
         """
         types = ()
@@ -194,7 +197,12 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         scrollable_tree_list.set_vexpand(True)
         scrollable_tree_list.add(tree_view)
         tree_selection = tree_view.get_selection()
-        tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
+
+        if multi_selectable:
+            tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
+        else:
+            tree_selection.set_mode(Gtk.SelectionMode.SINGLE)
+
         scrollable_tree_list.set_hexpand(True)
         scrollable_tree_list.set_vexpand(True)
 

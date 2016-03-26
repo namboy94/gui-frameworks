@@ -23,7 +23,7 @@ This file is part of gfworks.
 import tkinter
 from functools import partial
 from tkinter import ttk
-# import tkinter.font as tkFont
+import tkinter.font as tk_font
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
@@ -154,60 +154,43 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         combo_box.state(['readonly'])
         return combo_box
 
-    def generate_primitive_multi_list_box(self, options_dictionary_with_types: dict) -> tkinter.Listbox:
+    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: dict,
+                                                 multi_selectable: bool = True) -> ttk.Treeview:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
         Multiple elements can be selected
         :param options_dictionary_with_types: a dictionary containing the column titles and
                 their types, combined with their position starting from 0 in a tuple.
                 The form of the dictionary is: {title1: (position1, type1), title2: (position2, type2), ...}
+        :param multi_selectable: Flag that defines if more than one element may be selected at any
+                given time.
         :return the multi list box widget
         """
-
-        """
         def sortby(treea, col, descending):
-            # grab values to sort
             data = [(treea.set(child, col), child) for child in tree.get_children('')]
-            # if the data to be sorted is numeric change to float
-            # data =  change_numeric(data)
-            # now sort the data in place
             data.sort(reverse=descending)
             for ix, item in enumerate(data):
                 treea.move(item[1], '', ix)
-            # switch the heading so it will sort in the opposite direction
-            treea.heading(col, command=lambda col=col: sortby(treea, col, int(not descending)))
+            treea.heading(col, command=lambda column=col: sortby(treea, column, int(not descending)))
 
-        titles = ["Test", "Test2"]
+        types = ()
+        titles = []
+        priority = 0
 
-        container = ttk.Frame()
-        #container.pack(fill='both', expand=True)
+        while len(titles) < len(options_dictionary_with_types):
+            for title in options_dictionary_with_types:
+                if options_dictionary_with_types[title][0] == priority:
+                    titles.append(title)
+                    types += (options_dictionary_with_types[title][1],)
+                    priority += 1
 
-        tree = ttk.Treeview(columns=titles, show="headings")
-
-        vsb = ttk.Scrollbar(orient="vertical", command=tree.yview)
-        hsb = ttk.Scrollbar(orient="horizontal", command=tree.xview)
-        tree.configure(yscrollcommand=vsb.set, xscrollcommand=hsb.set)
-        tree.grid(column=0, row=0, sticky='nsew', in_=container)
-        vsb.grid(column=1, row=0, sticky='ns', in_=container)
-        hsb.grid(column=0, row=1, sticky='ew', in_=container)
-        container.grid_columnconfigure(0, weight=1)
-        container.grid_rowconfigure(0, weight=1)
+        tree = ttk.Treeview(self, columns=titles, show="headings")
+        vertical_scroll_bar = ttk.Scrollbar(orient="vertical", command=tree.yview)
+        horizontal_scroll_bar = ttk.Scrollbar(orient="horizontal", command=tree.xview)
+        tree.configure(yscrollcommand=vertical_scroll_bar.set, xscrollcommand=horizontal_scroll_bar.set)
 
         for title in titles:
-            tree.heading(title, text=title, command=lambda c=title: sortby(self.tree, c, 0))
-            tree.column(title, width=tkFont.Font().measure(title))
+            tree.heading(title, text=title, command=lambda c=title: sortby(tree, c, 0))
+            tree.column(title, width=tk_font.Font().measure(title))
 
-
-        for item in car_list:
-            self.tree.insert('', 'end', values=item)
-            # adjust column's width if necessary to fit each value
-            for ix, val in enumerate(item):
-                col_w = tkFont.Font().measure(val)
-                if self.tree.column(car_header[ix], width=None) < col_w:
-                    self.tree.column(car_header[ix], width=col_w)
-
-        """
-
-        list_box = tkinter.Listbox(self, selectmode=tkinter.MULTIPLE)
-        list_box.elements = []
-        return list_box
+        return tree

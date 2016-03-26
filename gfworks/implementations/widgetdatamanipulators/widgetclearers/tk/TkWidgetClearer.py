@@ -65,13 +65,13 @@ class TkWidgetClearer(GenericValueClearer):
         """
         raise NotImplementedError("clear_primitive_combo_box not implemented")
 
-    def clear_primitive_multi_list_box(self, primitive_multi_list_box: tkinter.Listbox) -> None:
+    def clear_primitive_multi_list_box(self, primitive_multi_list_box: ttk.Treeview) -> None:
         """
         Clears all entries of a primitive-type (str, int, etc.) storing multi list box.
         :param primitive_multi_list_box: the multi list box to be cleared
         :return: void
         """
-        primitive_multi_list_box.delete(0, tkinter.END)
+        primitive_multi_list_box.delete(*primitive_multi_list_box.get_children())
 
     def reset_check_box(self, check_box: tkinter.Checkbutton) -> None:
         """

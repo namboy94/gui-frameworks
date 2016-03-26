@@ -23,6 +23,7 @@ This file is part of gfworks.
 
 import tkinter
 from tkinter import ttk
+import tkinter.font as tk_font
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueSetter import GenericValueSetter
 
@@ -111,7 +112,7 @@ class TkValueSetter(GenericValueSetter):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_primitive_multi_list_box_elements(multi_list_box: tkinter.Listbox, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: ttk.Treeview, list_of_elements: list) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!
@@ -120,27 +121,22 @@ class TkValueSetter(GenericValueSetter):
                 data types.
         :return: void
         """
-        multi_list_box.elements = []
-        multi_list_box.delete(0, tkinter.END)
+        multi_list_box.delete(*multi_list_box.get_children())
+
         for element in list_of_elements:
-            multi_list_box.elements.append(element)
-            element_string = ""
-            for part in element:
-                element_string += str(part) + " - "
-            element_string = element_string[:-3]
-            multi_list_box.insert(tkinter.END, element_string)
+            TkValueSetter.add_primitive_multi_list_box_element(multi_list_box, element)
 
     @staticmethod
-    def add_primitive_multi_list_box_element(multi_list_box: tkinter.Listbox, element: tuple) -> None:
+    def add_primitive_multi_list_box_element(multi_list_box: ttk.Treeview, element: tuple) -> None:
         """
         Adds an element to the end of a multi list box displaying primitive types
         :param multi_list_box: the multi list box widget to be manipulated
         :param element: The element to be added
         :return: void
         """
-        multi_list_box.elements.append(element)
-        element_string = ""
-        for part in element:
-            element_string += str(part) + " - "
-        element_string = element_string[:-3]
-        multi_list_box.insert(tkinter.END, element_string)
+        multi_list_box.insert('', 'end', values=element)
+
+        for index, value in enumerate(element):
+            column_width = tk_font.Font().measure(value)
+            if multi_list_box.column(multi_list_box["columns"][index], width=None) < column_width:
+                multi_list_box.column(multi_list_box["columns"][index], width=column_width)
