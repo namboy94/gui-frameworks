@@ -33,7 +33,12 @@ class Gtk3GridPositioner(GenericGridPositioner):
     Implements the grid positioner interface in GTK 3/GObject
     """
 
-    grid = Gtk.Grid()
+    def __init__(self):
+        """
+        Dummy Constructor to avoid segfaults when no Window can be created
+        """
+        self.grid = Gtk.Grid()
+        raise NotImplementedError("This is a dummy Constructor")
 
     def position_absolute(self, widget: Gtk.Widget, x_position: int, y_position: int, x_size: int, y_size: int) -> None:
         """

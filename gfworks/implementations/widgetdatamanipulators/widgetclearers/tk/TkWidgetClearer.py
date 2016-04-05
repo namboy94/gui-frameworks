@@ -40,13 +40,13 @@ class TkWidgetClearer(GenericValueClearer):
         """
         text_entry.delete(0, tkinter.END)
 
-    def clear_label_text(self, label: object) -> None:
+    def clear_label_text(self, label: tkinter.Label) -> None:
         """
         Clears a label widget's text and fills it with an empty string
         :param label: The label to be cleared
         :return: void
         """
-        raise NotImplementedError()
+        label['text'] = ""
 
     # TODO Figure out progress bars in Tk
     def reset_percentage_progress_bar(self, percentage_progress_bar: tkinter.Label) -> None:

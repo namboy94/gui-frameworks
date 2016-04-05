@@ -63,11 +63,11 @@ class TkGridTemplate(TkWidgetGenerator,
 
         i = 0
         while i < self.columncounter:
-            tkinter.Grid.rowconfigure(self, i, weight=1)
+            tkinter.Grid.columnconfigure(self, i, weight=2)
             i += 1
         i = 0
         while i < self.rowcounter:
-            tkinter.Grid.columnconfigure(self, i, weight=1)
+            tkinter.Grid.rowconfigure(self, i, weight=2)
             i += 1
 
     def lay_out(self) -> None:
