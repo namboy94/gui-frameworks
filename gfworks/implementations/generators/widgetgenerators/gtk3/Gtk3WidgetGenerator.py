@@ -24,6 +24,7 @@ This file is part of gfworks.
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk
+from typing import List, Dict, Tuple
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
@@ -62,7 +63,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> Gtk.Button:
+    def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> Gtk.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -79,8 +80,8 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         return button
 
     # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
-                            on_changed_command: object = None, on_changed_args: tuple = None) -> Gtk.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: callable = None, enter_args: Tuple[object] = None,
+                            on_changed_command: callable = None, on_changed_args: Tuple[object] = None) -> Gtk.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -144,7 +145,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         progress_bar.set_fraction(initial_percentage)
         return progress_bar
 
-    def generate_string_combo_box(self, options_list: list) -> Gtk.ComboBox:
+    def generate_string_combo_box(self, options_list: List[str]) -> Gtk.ComboBox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -164,7 +165,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
 
         return combo_box
 
-    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: dict,
+    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: Dict[str, Tuple[int, type]],
                                                  multi_selectable: bool = True) -> Gtk.ScrolledWindow:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)

@@ -21,6 +21,8 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from typing import List, Dict, Tuple
+
 
 class GenericWidgetGenerator(object):
     """
@@ -51,8 +53,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_image_label not implemented")
 
-    # TODO Find out command type
-    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> object:
+    def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> object:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -62,9 +63,8 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_button not implemented")
 
-    # TODO Find out command type
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
-                            on_changed_command: object = None, on_changed_args: tuple = None) -> object:
+    def generate_text_entry(self, default_text: str, enter_command: callable = None, enter_args: Tuple[object] = None,
+                            on_changed_command: callable = None, on_changed_args: Tuple[object] = None) -> object:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -103,7 +103,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_percentage_progress_bar not implemented")
 
-    def generate_string_combo_box(self, options_list: list) -> object:
+    def generate_string_combo_box(self, options_list: List[str]) -> object:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -112,7 +112,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_string_combo_box not implemented")
 
-    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: dict,
+    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: Dict[str, Tuple[int, type]],
                                                  multi_selectable: bool = True) -> object:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)

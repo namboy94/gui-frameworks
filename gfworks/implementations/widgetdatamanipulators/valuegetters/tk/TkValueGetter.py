@@ -23,6 +23,8 @@ This file is part of gfworks.
 
 import tkinter
 from tkinter import ttk
+from typing import List
+
 from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
 
@@ -96,7 +98,7 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         return combo_box.get()
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: ttk.Treeview) -> list:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: ttk.Treeview) -> List[object]:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple

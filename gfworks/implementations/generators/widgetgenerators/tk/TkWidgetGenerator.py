@@ -24,6 +24,7 @@ import tkinter
 from functools import partial
 from tkinter import ttk
 import tkinter.font as tk_font
+from typing import List, Dict, Tuple
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
@@ -59,7 +60,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
-    def generate_button(self, button_text: str, command: object = None, args: tuple = None) -> tkinter.Button:
+    def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> tkinter.Button:
         """
         Generates a button widget that shows some text and may execute a command if pressed.
         :param button_text: The text to be displayed on the button
@@ -79,8 +80,9 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             button = tkinter.Button(self, text=button_text)
         return button
 
-    def generate_text_entry(self, default_text: str, enter_command: object = None, enter_args: tuple = None,
-                            on_changed_command=None, on_changed_args: tuple = None) -> tkinter.Entry:
+    def generate_text_entry(self, default_text: str, enter_command: callable = None, enter_args: Tuple[object] = None,
+                            on_changed_command: callable = None, on_changed_args: Tuple[object] = None)\
+            -> tkinter.Entry:
         """
         Generates a text entry widget that allows a user to enter text. It may also execute a
         command when it is in focus and the enter key is pressed.
@@ -141,7 +143,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         progress_bar = ttk.Progressbar(self, value=int(initial_percentage * 100.0), orient="horizontal")
         return progress_bar
 
-    def generate_string_combo_box(self, options_list: list) -> ttk.Combobox:
+    def generate_string_combo_box(self, options_list: List[str]) -> ttk.Combobox:
         """
         Generates a combo box comprising of string values
         :param options_list: list of strings that will be selectable options in the
@@ -154,7 +156,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         combo_box.state(['readonly'])
         return combo_box
 
-    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: dict,
+    def generate_primitive_multi_column_list_box(self, options_dictionary_with_types: Dict[str, Tuple[int, type]],
                                                  multi_selectable: bool = True) -> ttk.Treeview:
         """
         Generates a multi list box displaying primitive data types (str, int, float, etc.)
@@ -193,6 +195,6 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             tree.heading(title, text=title, command=lambda c=title: sortby(tree, c, 0))
             tree.column(title, width=tk_font.Font().measure(title))
 
-        tree.types=types
+        tree.types = types
 
         return tree

@@ -22,6 +22,7 @@ This file is part of gfworks.
 """
 
 from threading import Thread
+from typing import Tuple
 
 
 class Threading(object):
@@ -30,7 +31,7 @@ class Threading(object):
     """
 
     @staticmethod
-    def run_thread_in_parallel(target: callable, args: tuple = None) -> Thread:
+    def run_thread_in_parallel(target: callable, args: Tuple[object] = None) -> Thread:
         """
         Runs a thread in parallel to the GUI main loop
         :param target: The command to be executed
@@ -40,8 +41,9 @@ class Threading(object):
         raise NotImplementedError("run_threads_in_parallel not implemented")
 
     @staticmethod
-    def run_sensitive_thread_in_parallel(target: callable, args: tuple = None,
-                                         insensitive_target: callable = None, insensitive_args: tuple = None) -> Thread:
+    def run_sensitive_thread_in_parallel(target: callable, args: Tuple[object] = None,
+                                         insensitive_target: callable = None, insensitive_args: Tuple[object] = None)\
+            -> Thread:
         """
         Runs a thread in parallel to the GUI main loop which may interfere with the actual main loop
         by changing widget elements.
@@ -54,7 +56,7 @@ class Threading(object):
         raise NotImplementedError("run_sensitive_thread_in_parallel not implemented")
 
     @staticmethod
-    def run_thread_safe(target: callable, args: tuple = None) -> None:
+    def run_thread_safe(target: callable, args: Tuple[object] = None) -> None:
         """
         Runs a command in a thread-safe manner, avoiding memory errors
         :param target: The command to be executed

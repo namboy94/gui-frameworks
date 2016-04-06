@@ -24,6 +24,7 @@ This file is part of gfworks.
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+from typing import List
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
@@ -93,7 +94,7 @@ class Gtk3ValueGetter(Gtk.Window, GenericValueGetter):
         return combo_box.option_store.get(combo_iter, 0)[0]
 
     @staticmethod
-    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: Gtk.ScrolledWindow) -> list:
+    def get_list_of_selected_elements_from_multi_list_box(multi_list_box: Gtk.ScrolledWindow) -> List[object]:
         """
         Gets the currently selected element from a multi list box
         :return: the currently selected multi list box element as a tuple
