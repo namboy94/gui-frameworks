@@ -24,6 +24,7 @@ This file is part of gfworks.
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+from typing import List
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueSetter import GenericValueSetter
 
@@ -97,7 +98,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         progress_bar.set_fraction(percentage)
 
     @staticmethod
-    def set_string_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: list) -> None:
+    def set_string_combo_box_string_options(combo_box: Gtk.ComboBox, string_options: List[str]) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -110,7 +111,7 @@ class Gtk3ValueSetter(GenericValueSetter):
         combo_box.set_active(0)
 
     @staticmethod
-    def set_primitive_multi_list_box_elements(multi_list_box: Gtk.ScrolledWindow, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: Gtk.ScrolledWindow, list_of_elements: List[tuple]) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!

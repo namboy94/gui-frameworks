@@ -21,6 +21,8 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from typing import List
+
 
 class GenericValueSetter(object):
     """
@@ -91,7 +93,7 @@ class GenericValueSetter(object):
         raise NotImplementedError("set_progress_bar_float_percentage not implemented")
 
     @staticmethod
-    def set_string_combo_box_string_options(combo_box: object, string_options: list) -> None:
+    def set_string_combo_box_string_options(combo_box: object, string_options: List[str]) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -101,7 +103,7 @@ class GenericValueSetter(object):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_primitive_multi_list_box_elements(multi_list_box: object, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: object, list_of_elements: List[tuple]) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!

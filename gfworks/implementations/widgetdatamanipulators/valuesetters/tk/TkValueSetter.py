@@ -24,6 +24,7 @@ This file is part of gfworks.
 import tkinter
 from tkinter import ttk
 import tkinter.font as tk_font
+from typing import List
 
 from gfworks.interfaces.widgetdatamanipulators.GenericValueSetter import GenericValueSetter
 
@@ -102,7 +103,7 @@ class TkValueSetter(GenericValueSetter):
         progress_bar["value"] = int(percentage * 100.0)
 
     @staticmethod
-    def set_string_combo_box_string_options(combo_box: ttk.Combobox, string_options: list) -> None:
+    def set_string_combo_box_string_options(combo_box: ttk.Combobox, string_options: List[str]) -> None:
         """
         Sets a list of strings as the combo box options. This clears all previous entries!
         :param combo_box: the combo box widget to be modified
@@ -112,7 +113,7 @@ class TkValueSetter(GenericValueSetter):
         raise NotImplementedError("set_combo_box_string_options not implemented")
 
     @staticmethod
-    def set_primitive_multi_list_box_elements(multi_list_box: ttk.Treeview, list_of_elements: list) -> None:
+    def set_primitive_multi_list_box_elements(multi_list_box: ttk.Treeview, list_of_elements: List[tuple]) -> None:
         """
         Sets a list of elements(tuples) to be displayed by a multi list box.
         This clears the multi list box beforehand!
