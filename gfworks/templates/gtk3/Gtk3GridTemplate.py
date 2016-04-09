@@ -35,13 +35,13 @@ from gfworks.implementations.widgetdatamanipulators.valuesetters.gtk3.Gtk3ValueS
 from gfworks.implementations.widgetdatamanipulators.widgetclearers.gtk3.Gtk3WidgetClearer import Gtk3WidgetClearer
 
 
-class Gtk3GridTemplate(Gtk3GridPositioner,
-                       Gtk3WidgetGenerator,
+class Gtk3GridTemplate(Gtk3WidgetGenerator,
                        Gtk3ValueGetter,
                        Gtk3ValueSetter,
                        Gtk3WidgetClearer,
                        Gtk3DialogShower,
                        Gtk3Threading,
+                       Gtk3GridPositioner,
                        GenericWindow):
     """
     Interface that defines how a window is initialized, run and closed
