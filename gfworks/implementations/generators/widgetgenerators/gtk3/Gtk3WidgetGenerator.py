@@ -45,7 +45,6 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         label.set_text(label_text)
         return label
 
-    # TODO figure out return type
     def generate_image_label(self, image_path: str,
                              maintain_aspect_ratio: bool = True, width: int = None, height: int = None) -> Gtk.Label:
         """
@@ -60,7 +59,6 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         to the maintain_aspect_ratio flag
         :return: the image label widget
         """
-        # TODO Implement
         super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> Gtk.Button:
