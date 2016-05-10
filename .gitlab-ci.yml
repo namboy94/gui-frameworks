@@ -5,11 +5,15 @@ stages:
   - cleanup
   - upgrade
 
-clone:
+clone_master:
   stage: setup
   script:
     - cd
     - git clone http://gitlab.namibsun.net/namboy94/gfworks.git
+    - cd gfworks
+    - git push -u git@gitlab.com:namboy94/gfworks.git --all
+    - git push -u git@github.com:namboy94/gfworks.git --all
+    - git push -u git@bitbucket.org:namboy94/gfworks.git --all
 
 run_unit_tests:
   stage: test
@@ -48,9 +52,3 @@ delete_clone:
   script:
     - cd
     - rm -rf gfworks
-
-upgrade_from_pypi:
-  stage: upgrade
-  script:
-    - sudo pip3.5 install gfworks --upgrade
-    - sleep 5
