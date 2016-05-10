@@ -22,23 +22,34 @@ This file is part of gfworks.
 """
 
 # imports
+import gfworks.metadata as metadata
 from setuptools import setup, find_packages
 
 
-def readme():
+def readme() -> str:
     """
-    Reads the readme file.
+    Reads the readme file and converts it from markdown to restructured text
+
     :return: the readme file as a string
     """
-    with open('README.md') as f:
-        return f.read()
+    try:
+        # noinspection PyPackageRequirements
+        import pypandoc
+        with open('README.md') as f:
+            # Convert markdown file to rst
+            markdown = f.read()
+            rst = pypandoc.convert(markdown, 'rst', format='md')
+            return rst
+    except (OSError, ImportError):
+        # If pandoc is not installed, just return the raw markdown text
+        with open('README.md') as f:
+            return f.read()
 
-
-setup(name='gfworks',
-      version='0.1.5',
-      description='A cross-framework GUI interface',
+setup(name=metadata.project_name,
+      version=metadata.version_number,
+      description=metadata.project_description,
       long_description=readme(),
-      classifiers=['Development Status :: 1 - Planning',
+      classifiers=[metadata.development_status,
                    'Intended Audience :: Developers',
                    'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
                    'Programming Language :: Python :: 3',
@@ -46,17 +57,13 @@ setup(name='gfworks',
                    'Natural Language :: English',
                    'Operating System :: OS Independent'
                    ],
-      url='http://gitlab.namibsun.net/namboy94/gfworks',
-      author='Hermann Krumrey',
-      author_email='hermann@krumreyh.com',
-      license='GNU GPL3',
+      url=metadata.project_url,
+      author=metadata.author_name,
+      author_email=metadata.author_email,
+      license=metadata.license_type,
       packages=find_packages(),
-      install_requires=[],
-      dependency_links=['https://git.gnome.org/browse/pygobject'],
+      install_requires=metadata.python3_requirements,
+      scripts=metadata.scripts,
       test_suite='nose.collector',
       tests_require=['nose'],
-      scripts=[],
       zip_safe=False)
-
-# How to upload to pypi:
-# python setup.py register sdist upload
