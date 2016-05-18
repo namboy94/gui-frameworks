@@ -77,6 +77,15 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_text_entry not implemented")
 
+    def generate_password_entry(self, enter_command: callable = None, enter_args: Tuple[object] = None) -> object:
+        """
+        Generates a password entry widget that allows a user to enter a password while the input is obfuscated
+        :param enter_command: a command to be run when the entry is selected and the Enter/Return key is pressed.
+        :param enter_args: optional arguments for the enter_command
+        :return: the password entry
+        """
+        raise NotImplementedError("generate_password_entry not implemented")
+
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> object:
         """
         Generates a Check Box widget that allows selecting and deselecting options
@@ -103,6 +112,7 @@ class GenericWidgetGenerator(object):
         """
         raise NotImplementedError("generate_percentage_progress_bar not implemented")
 
+    # noinspection PyTypeChecker
     def generate_string_combo_box(self, options_list: List[str]) -> object:
         """
         Generates a combo box comprising of string values

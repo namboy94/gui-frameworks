@@ -77,7 +77,6 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
                 button.connect("clicked", command, args)
         return button
 
-    # TODO Find out command type
     def generate_text_entry(self, default_text: str, enter_command: callable = None, enter_args: Tuple[object] = None,
                             on_changed_command: callable = None, on_changed_args: Tuple[object] = None) -> Gtk.Entry:
         """
@@ -109,6 +108,17 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
             else:
                 entry.connect("changed", on_changed_command, on_changed_args)
 
+        return entry
+
+    def generate_password_entry(self, enter_command: callable = None, enter_args: Tuple[object] = None) -> object:
+        """
+        Generates a password entry widget that allows a user to enter a password while the input is obfuscated
+        :param enter_command: a command to be run when the entry is selected and the Enter/Return key is pressed.
+        :param enter_args: optional arguments for the enter_command
+        :return: the password entry
+        """
+        entry = self.generate_text_entry(default_text="", enter_command=enter_command, enter_args=enter_args)
+        entry.set_visibility(False)
         return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> Gtk.CheckButton:

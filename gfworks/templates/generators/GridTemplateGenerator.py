@@ -40,17 +40,17 @@ class GridTemplateGenerator(object):
 
         :return: the dictionary of templates
         """
-        templates = []
+        templates = {}
 
         try:
             from gfworks.templates.gtk3.Gtk3GridTemplate import Gtk3GridTemplate
-            templates.append(Gtk3GridTemplate)
+            templates["gtk3"] = Gtk3GridTemplate
         except ImportError:
             pass
 
         try:
             from gfworks.templates.tk.TkGridTemplate import TkGridTemplate
-            templates.append(TkGridTemplate)
+            templates["tk"] = TkGridTemplate
         except ImportError:
             pass
 

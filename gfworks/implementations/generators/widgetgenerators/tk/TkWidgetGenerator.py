@@ -110,6 +110,23 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
             text_var.trace("w", lambda name, index, mode, sv=text_var: on_changed_command_with_args(sv))
         return entry
 
+    def generate_password_entry(self, enter_command: callable = None, enter_args: Tuple[object] = None) -> object:
+        """
+        Generates a password entry widget that allows a user to enter a password while the input is obfuscated
+        :param enter_command: a command to be run when the entry is selected and the Enter/Return key is pressed.
+        :param enter_args: optional arguments for the enter_command
+        :return: the password entry
+        """
+        text_var = tkinter.StringVar(self, "")
+        entry = tkinter.Entry(self, textvariable=text_var, show="*")
+        entry.text_var = text_var
+        if enter_command is not None:
+            if enter_args is not None:
+                # noinspection PyArgumentList
+                entry.bind('<Return>', partial(enter_command, *enter_args))
+            else:
+                entry.bind('<Return>', enter_command)
+
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> tkinter.Checkbutton:
         """
         Generates a Check Box widget that allows selecting and deselecting options
@@ -143,6 +160,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         progress_bar = ttk.Progressbar(self, value=int(initial_percentage * 100.0), orient="horizontal")
         return progress_bar
 
+    # noinspection PyTypeChecker
     def generate_string_combo_box(self, options_list: List[str]) -> ttk.Combobox:
         """
         Generates a combo box comprising of string values
