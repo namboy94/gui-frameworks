@@ -44,7 +44,7 @@ class Gtk3GridTemplate(Gtk3WidgetGenerator,
                        Gtk3GridPositioner,
                        GenericWindow):
     """
-    Interface that defines how a window is initialized, run and closed
+    Grid GUI base written in Gtk 3
     """
 
     def __init__(self, title: str = "Window", parent: Gtk.Window = None, hide_parent: bool = True) -> None:
@@ -84,6 +84,7 @@ class Gtk3GridTemplate(Gtk3WidgetGenerator,
         self.window.connect("delete-event", Gtk.main_quit)
         self.window.show_all()
         Gtk.main()
+        self.stop()
         if self.parent and self.hide_parent:
             self.parent.show_all()
 

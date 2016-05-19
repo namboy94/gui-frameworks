@@ -23,7 +23,7 @@ This file is part of gfworks.
 
 # imports
 from typing import Dict
-from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.templates.generic.GenericGridTemplate import GenericGridTemplate
 
 
 class GridTemplateGenerator(object):
@@ -33,7 +33,7 @@ class GridTemplateGenerator(object):
 
     # noinspection PyUnresolvedReferences
     @staticmethod
-    def get_grid_templates() -> Dict[str, GenericWindow]:
+    def get_grid_templates() -> Dict[str, GenericGridTemplate]:
         """
         Returns a dictionary of gfworks grid templates, with an identifier string to mark which
         template implements which framework

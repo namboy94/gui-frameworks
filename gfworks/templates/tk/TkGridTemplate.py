@@ -42,7 +42,7 @@ class TkGridTemplate(TkWidgetGenerator,
                      TkThreading,
                      GenericWindow):
     """
-    Interface that defines how a window is initialized, run and closed
+    Grid Gui Base written in Tk
     """
 
     def __init__(self, title: str = "Window", parent: tkinter.Tk = None, hide_parent: bool = True) -> None:

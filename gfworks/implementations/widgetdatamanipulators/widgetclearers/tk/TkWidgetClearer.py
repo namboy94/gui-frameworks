@@ -24,10 +24,10 @@ This file is part of gfworks.
 import tkinter
 from tkinter import ttk
 
-from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericValueClearer
+from gfworks.interfaces.widgetdatamanipulators.GenericWidgetClearer import GenericWidgetClearer
 
 
-class TkWidgetClearer(GenericValueClearer):
+class TkWidgetClearer(GenericWidgetClearer):
     """
     Implements methods to clear widget data in Tk/Tkinter.
     """

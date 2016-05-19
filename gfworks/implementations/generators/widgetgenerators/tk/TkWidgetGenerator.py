@@ -126,6 +126,7 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
                 entry.bind('<Return>', partial(enter_command, *enter_args))
             else:
                 entry.bind('<Return>', enter_command)
+        return entry
 
     def generate_check_box(self, combo_box_text: str, active: bool = False) -> tkinter.Checkbutton:
         """
