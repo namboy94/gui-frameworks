@@ -23,7 +23,7 @@ This file is part of gfworks.
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk, Gdk, GdkPixbuf
 from typing import List, Dict, Tuple
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
@@ -59,7 +59,10 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         to the maintain_aspect_ratio flag
         :return: the image label widget
         """
-        super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
+        image = GdkPixbuf.Pixbuf.new_from_file_at_scale(image_path, width=width, height=height,
+                                                        preserve_aspect_ratio=maintain_aspect_ratio)
+        image_widget = Gtk.Image.new_from_pixbuf(image)
+        return image_widget
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> Gtk.Button:
         """
@@ -153,6 +156,7 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         progress_bar.set_fraction(initial_percentage)
         return progress_bar
 
+    # noinspection PyTypeChecker
     def generate_string_combo_box(self, options_list: List[str]) -> Gtk.ComboBox:
         """
         Generates a combo box comprising of string values

@@ -101,10 +101,9 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         :param body: the body text of the dialog
         :return: the entered text, or an empty string if the operation was cancelled
         """
-        # TODO make window title
-        str(title)
         dialog = Gtk.MessageDialog(self, Gtk.DialogFlags.MODAL | Gtk.DialogFlags.DESTROY_WITH_PARENT,
-                                   Gtk.MessageType.QUESTION, Gtk.ButtonsType.OK_CANCEL, body)
+                                   Gtk.MessageType.QUESTION, Gtk.ButtonsType.OK_CANCEL, title)
+        dialog.format_secondary_text(body)
 
         dialog_box = dialog.get_content_area()
         user_entry = Gtk.Entry()
@@ -116,7 +115,4 @@ class Gtk3DialogShower(Gtk.Window, GenericDialogShower):
         response = dialog.run()
         response_text = user_entry.get_text()
         dialog.destroy()
-        if (response == Gtk.ResponseType.OK) and (response_text != ''):
-            return response_text
-        else:
-            return ""
+        return response_text if (response == Gtk.ResponseType.OK) and (response_text != '') else ""

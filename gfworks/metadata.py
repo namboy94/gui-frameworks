@@ -36,7 +36,7 @@ project_description = "A bot that interfaces with several different messenger se
 A short description of the project
 """
 
-version_number = "0.1.8"
+version_number = "0.2"
 """
 The current version of the program.
 """
@@ -72,7 +72,7 @@ license_type = "GNU GPL3"
 The project's license type
 """
 
-python3_requirements = []
+python3_requirements = ["PIL"]
 """
 Python 3 Python Packaging Index requirements
 """

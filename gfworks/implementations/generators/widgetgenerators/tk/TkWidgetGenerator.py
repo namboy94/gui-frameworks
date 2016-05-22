@@ -20,10 +20,12 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
+
 import tkinter
-from functools import partial
-from tkinter import ttk
 import tkinter.font as tk_font
+from tkinter import ttk
+from functools import partial
+from PIL import Image, ImageTk
 from typing import List, Dict, Tuple
 
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
@@ -57,8 +59,13 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         to the maintain_aspect_ratio flag
         :return: the image label widget
         """
-        # TODO Implement
-        super().generate_image_label(image_path, maintain_aspect_ratio, width, height)
+        image = Image.open(image_path)
+        if maintain_aspect_ratio:
+            image.thumbnail((width, height), Image.ANTIALIAS)
+        else:
+            image.resize((width, height), Image.ANTIALIAS)
+        image = ImageTk.PhotoImage(image)
+        return tkinter.Label(self.gui, image=image)
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> tkinter.Button:
         """
