@@ -1,4 +1,6 @@
+V 0.2.1
+    - Fixed bug that caused checkboxes to not function in tkinter
 V 0.2
-    - Added support for imge labels
+    - Added support for image labels
 V 0.1.8
 	- Added Password Entry widget generators

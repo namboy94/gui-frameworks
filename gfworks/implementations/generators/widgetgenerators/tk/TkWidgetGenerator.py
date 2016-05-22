@@ -142,11 +142,22 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         :param active: The starting state of the widget, default to False
         :return: the check box widget
         """
-        number_var = tkinter.IntVar()
-        check_button = tkinter.Checkbutton(self, text=combo_box_text, variable=number_var)
-        check_button.number_var = number_var
+        bool_var = tkinter.BooleanVar()
+
+        def toggle():
+            """
+            Callback method that toggles the value of the variable associated with the checkbox
+
+            :return: None
+            """
+            bool_var.set(not bool_var.get())
+
+        check_button = tkinter.Checkbutton(self, text=combo_box_text, variable=bool_var, command=toggle)
+        check_button.bool_var = bool_var
+
         if active:
             check_button.select()
+            bool_var.set(True)
         return check_button
 
     def generate_radio_button(self, radio_button_text: str) -> tkinter.Radiobutton:

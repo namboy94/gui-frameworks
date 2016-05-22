@@ -65,11 +65,8 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         Checks if a check box is currently selected and returns the value
         :return: True if the check box is selected, False otherwise
         """
-        value = check_box.number_var.get()
-        if value == 1:
-            return True
-        else:
-            return False
+        # noinspection PyUnresolvedReferences
+        return check_box.bool_var.get()
 
     @staticmethod
     def get_boolean_from_radio_button(radio_button: tkinter.Radiobutton) -> bool:
@@ -97,6 +94,7 @@ class TkValueGetter(tkinter.Tk, GenericValueGetter):
         """
         return combo_box.get()
 
+    # noinspection PyTypeChecker
     @staticmethod
     def get_list_of_selected_elements_from_multi_list_box(multi_list_box: ttk.Treeview) -> List[object]:
         """
