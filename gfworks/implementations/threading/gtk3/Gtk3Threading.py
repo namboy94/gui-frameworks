@@ -32,23 +32,26 @@ class Gtk3Threading(object):
     """
 
     @staticmethod
-    def run_thread_in_parallel(target: callable, args: Tuple[object] = None) -> Thread:
+    def run_thread_in_parallel(target: callable, args: Tuple[object] = None, daemon: bool = False) -> Thread:
         """
         Runs a thread in parallel to the GUI main loop
         :param target: The command to be executed
         :param args: Optional arguments for the command
+        :param daemon: Can be set to true to run this thread as a daemon
         :return: The created Thread
         """
         if args is None:
             thread = Thread(target=target)
         else:
             thread = Thread(target=target, args=args)
+        thread.daemon = daemon
         thread.start()
         return thread
 
     @staticmethod
     def run_sensitive_thread_in_parallel(target: callable, args: Tuple[object] = None,
-                                         insensitive_target: callable = None, insensitive_args: Tuple[object] = None) \
+                                         insensitive_target: callable = None, insensitive_args: Tuple[object] = None,
+                                         daemon: bool = False) \
             -> Thread:
         """
         Runs a thread in parallel to the GUI main loop which may interfere with the actual main loop
@@ -57,6 +60,7 @@ class Gtk3Threading(object):
         :param args: Optional arguments for the command
         :param insensitive_target: Command that is executed before the sensitive command
         :param insensitive_args: Optional arguments for the insensitive target
+        :param daemon: Can be set to true to run this thread as a daemon
         :return: The created Thread
         """
         GObject.threads_init()
@@ -84,6 +88,7 @@ class Gtk3Threading(object):
             GLib.idle_add(sensitive_thread)
 
         thread = Thread(target=called_thread)
+        thread.daemon = daemon
         thread.start()
         return thread
 
