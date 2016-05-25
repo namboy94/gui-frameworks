@@ -23,7 +23,9 @@ This file is part of gfworks.
 
 from gfworks.templates.gtk3.Gtk3GridTemplate import Gtk3GridTemplate
 from gfworks.templates.tk.TkGridTemplate import TkGridTemplate
-
+from tkinter import *
+from PIL import ImageTk, Image
+import os
 
 class TestGui(TkGridTemplate):
 
@@ -31,13 +33,10 @@ class TestGui(TkGridTemplate):
         super().__init__("Test")
 
     def lay_out(self):
-        button = self.generate_button("Test", self.test_function)
-        self.position_absolute(button, 1, 1, 1, 1)
-
-    def test_function(self, widget):
-        self.show_text_input_box("Test", "test2")
-        self.show_message_dialog("test", "test2")
-        self.show_yes_no_dialog("Test", "test2")
+        imagelabel = self.generate_image_label("/home/hermann/Desktop/sun.png")
+        print(imagelabel)
+        imagelabel.pack()
 
 if __name__ == '__main__':
-    TestGui().start()
+    x = TestGui()
+    x.start()

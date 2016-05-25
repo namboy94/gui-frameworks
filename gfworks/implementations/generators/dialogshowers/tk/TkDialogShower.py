@@ -20,7 +20,7 @@ This file is part of gfworks.
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
-import tkinter
+
 from tkinter import filedialog
 from tkinter import messagebox
 from tkinter import simpledialog
@@ -28,7 +28,7 @@ from tkinter import simpledialog
 from gfworks.interfaces.generators.GenericDialogShower import GenericDialogShower
 
 
-class TkDialogShower(tkinter.Tk, GenericDialogShower):
+class TkDialogShower(GenericDialogShower):
     """
     Implements the Dialog showing commands for Tk/Tkinter
     """

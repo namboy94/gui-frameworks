@@ -54,6 +54,12 @@ class TkGridTemplate(TkWidgetGenerator,
         :param hide_parent: Flag that defines if the parent should be hidden
         :return: void
         """
+        self.is_root_window = False
+        if parent is None:
+            self.tkinter_root = tkinter.Tk()
+            self.tkinter_root.withdraw()
+            self.is_root_window = True
+
         super().__init__()
         self.title(title)
         self.parent = parent
@@ -96,3 +102,5 @@ class TkGridTemplate(TkWidgetGenerator,
         if self.parent is not None and self.hide_parent:
             self.parent.deiconify()
         self.destroy()
+        if self.is_root_window:
+            self.tkinter_root.destroy()

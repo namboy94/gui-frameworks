@@ -31,7 +31,7 @@ from typing import List, Dict, Tuple
 from gfworks.interfaces.generators.GenericWidgetGenerator import GenericWidgetGenerator
 
 
-class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
+class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Toplevel):
     """
     Implements the Widget Generating commands for Tk/Tkinter
     """
@@ -60,12 +60,13 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Tk):
         :return: the image label widget
         """
         image = Image.open(image_path)
-        if maintain_aspect_ratio:
-            image.thumbnail((width, height), Image.ANTIALIAS)
-        else:
-            image.resize((width, height), Image.ANTIALIAS)
+        if width is not None or height is not None:
+            if maintain_aspect_ratio:
+                image.thumbnail((width, height), Image.ANTIALIAS)
+            else:
+                image.resize((width, height), Image.ANTIALIAS)
         image = ImageTk.PhotoImage(image)
-        return tkinter.Label(self.gui, image=image)
+        return tkinter.Label(self, image=image)
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> tkinter.Button:
         """

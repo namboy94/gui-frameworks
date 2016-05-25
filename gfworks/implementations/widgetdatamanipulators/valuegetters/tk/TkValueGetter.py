@@ -28,7 +28,7 @@ from typing import List
 from gfworks.interfaces.widgetdatamanipulators.GenericValueGetter import GenericValueGetter
 
 
-class TkValueGetter(tkinter.Tk, GenericValueGetter):
+class TkValueGetter(tkinter.Toplevel, GenericValueGetter):
     """
     Interface that defines the requirements for a GUI framework to read values from widgets.
     """
