@@ -16,9 +16,9 @@ Furthermore, the lay_out method needs to be implemented to add widgets and other
 
 This project is mirrored to:
 
-* [github.com](https://github.com/namboy94/media-manager)
-* [gitlab.com](https://gitlab.com/namboy94/media-manager)
-* [bitbucket.org](https://bitbucket.org/namboy94/media-manager)
+* [github.com](https://github.com/namboy94/gfworks)
+* [gitlab.com](https://gitlab.com/namboy94/gfworks)
+* [bitbucket.org](https://bitbucket.org/namboy94/gfworks)
 
 [//]: # ([Documentation](http://gitlab.namibsun.net/namboy94/gfworks/wikis/git_stats/general.html))
 [//]: # ([Documentation](http://gitlab.namibsun.net/namboy94/gfworks/wikis/html/index.html))

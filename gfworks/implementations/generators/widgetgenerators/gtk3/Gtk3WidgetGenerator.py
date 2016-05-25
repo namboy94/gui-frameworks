@@ -206,8 +206,8 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
             renderer = Gtk.CellRendererText()
             column = Gtk.TreeViewColumn(column_title, renderer, text=i)
             tree_view.append_column(column)
+
         scrollable_tree_list = Gtk.ScrolledWindow()
-        scrollable_tree_list.set_vexpand(True)
         scrollable_tree_list.add(tree_view)
         tree_selection = tree_view.get_selection()
 
@@ -215,9 +215,6 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
             tree_selection.set_mode(Gtk.SelectionMode.MULTIPLE)
         else:
             tree_selection.set_mode(Gtk.SelectionMode.SINGLE)
-
-        scrollable_tree_list.set_hexpand(True)
-        scrollable_tree_list.set_vexpand(True)
 
         scrollable_tree_list.tree_selection = tree_selection
         scrollable_tree_list.list_store = list_store

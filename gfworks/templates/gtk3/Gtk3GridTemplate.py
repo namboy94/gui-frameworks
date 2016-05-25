@@ -64,8 +64,6 @@ class Gtk3GridTemplate(Gtk3WidgetGenerator,
         super().__init__(title=title)
         self.grid = Gtk.Grid()
         self.add(self.grid)
-        self.grid.set_column_homogeneous(True)
-        self.grid.set_row_homogeneous(True)
         self.lay_out()
 
     def lay_out(self) -> None:

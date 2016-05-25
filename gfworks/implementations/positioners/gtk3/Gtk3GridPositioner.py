@@ -50,6 +50,9 @@ class Gtk3GridPositioner(GenericGridPositioner):
         :param y_size: the width of the widget in the grid layout
         :return: void
         """
+        widget.set_vexpand(True)
+        widget.set_hexpand(True)
+        widget.set_size_request(0, 0)
         self.grid.attach(widget, x_position, y_position, x_size, y_size)
 
     def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int) \
