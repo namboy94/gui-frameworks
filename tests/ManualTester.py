@@ -21,22 +21,25 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from gfworks.templates.gtk3.Gtk3GridTemplate import Gtk3GridTemplate
-from gfworks.templates.tk.TkGridTemplate import TkGridTemplate
-from tkinter import *
-from PIL import ImageTk, Image
-import os
+import sys
 
-class TestGui(TkGridTemplate):
+if sys.argv[1] == "gtk":
+
+    from gfworks.templates.gtk3.Gtk3GridTemplate import Gtk3GridTemplate as Template
+
+else:
+    from gfworks.templates.tk.TkGridTemplate import TkGridTemplate as Template
+
+
+class TestGui(Template):
 
     def __init__(self):
-        super().__init__("Test")
+        super().__init__()
 
     def lay_out(self):
-        imagelabel = self.generate_image_label("/home/hermann/Desktop/sun.png")
-        print(imagelabel)
-        imagelabel.pack()
+        self.panel = self.generate_image_label("/home/hermann/Desktop/sun.png", False, 1, 20)
+        self.position_absolute(self.panel, 1, 2, 1, 1)
 
 if __name__ == '__main__':
-    x = TestGui()
-    x.start()
+
+    TestGui().start()

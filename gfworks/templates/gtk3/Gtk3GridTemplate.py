@@ -25,7 +25,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.templates.generic.GenericGridTemplate import GenericGridTemplate
 from gfworks.implementations.positioners.gtk3.Gtk3GridPositioner import Gtk3GridPositioner
 from gfworks.implementations.generators.widgetgenerators.gtk3.Gtk3WidgetGenerator import Gtk3WidgetGenerator
 from gfworks.implementations.generators.dialogshowers.gtk3.Gtk3DialogShower import Gtk3DialogShower
@@ -42,9 +42,14 @@ class Gtk3GridTemplate(Gtk3WidgetGenerator,
                        Gtk3DialogShower,
                        Gtk3Threading,
                        Gtk3GridPositioner,
-                       GenericWindow):
+                       GenericGridTemplate):
     """
     Grid GUI base written in Gtk 3
+    """
+
+    identifier = "gtk3-grid"
+    """
+    An identifier to implement framework-specific code
     """
 
     def __init__(self, title: str = "Window", parent: Gtk.Window = None, hide_parent: bool = True) -> None:
@@ -61,7 +66,8 @@ class Gtk3GridTemplate(Gtk3WidgetGenerator,
         self.parent = parent
         self.hide_parent = hide_parent
 
-        super().__init__(title=title)
+        # noinspection PyCallByClass
+        Gtk.Window.__init__(self, title=title)
         self.grid = Gtk.Grid()
         self.add(self.grid)
         self.lay_out()

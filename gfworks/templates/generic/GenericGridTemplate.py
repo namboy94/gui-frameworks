@@ -43,4 +43,8 @@ class GenericGridTemplate(GenericWidgetGenerator,
     """
     The buildup of a Generic Grid Template
     """
-    pass
+
+    identifier = "generic-grid"
+    """
+    An identifier to implement framework-specific code
+    """

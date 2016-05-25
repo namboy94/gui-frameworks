@@ -23,7 +23,7 @@ This file is part of gfworks.
 
 import tkinter
 
-from gfworks.interfaces.GenericWindow import GenericWindow
+from gfworks.templates.generic.GenericGridTemplate import GenericGridTemplate
 from gfworks.implementations.positioners.tk.TkGridPositioner import TkGridPositioner
 from gfworks.implementations.generators.dialogshowers.tk.TkDialogShower import TkDialogShower
 from gfworks.implementations.generators.widgetgenerators.tk.TkWidgetGenerator import TkWidgetGenerator
@@ -40,9 +40,14 @@ class TkGridTemplate(TkWidgetGenerator,
                      TkDialogShower,
                      TkGridPositioner,
                      TkThreading,
-                     GenericWindow):
+                     GenericGridTemplate):
     """
     Grid Gui Base written in Tk
+    """
+
+    identifier = "tk-grid"
+    """
+    An identifier to implement framework-specific code
     """
 
     def __init__(self, title: str = "Window", parent: tkinter.Tk = None, hide_parent: bool = True) -> None:
@@ -60,7 +65,7 @@ class TkGridTemplate(TkWidgetGenerator,
             self.tkinter_root.withdraw()
             self.is_root_window = True
 
-        super().__init__()
+        tkinter.Toplevel.__init__(self)
         self.title(title)
         self.parent = parent
         self.hide_parent = hide_parent

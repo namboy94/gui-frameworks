@@ -66,7 +66,9 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Toplevel):
             else:
                 image.resize((width, height), Image.ANTIALIAS)
         image = ImageTk.PhotoImage(image)
-        return tkinter.Label(self, image=image)
+        image_label = tkinter.Label(self, image=image)
+        image_label.image_reference = image
+        return image_label
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> tkinter.Button:
         """
