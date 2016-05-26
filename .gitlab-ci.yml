@@ -17,7 +17,7 @@ clone_master:
     - git push -u git@github.com:namboy94/jfworks.git master
     - git push -u git@bitbucket.org:namboy94/jfworks.git master
 
-    -cd ../jfworks.wiki
+    - cd ../jfworks.wiki
 
     - git push -u git@gitlab.com:namboy94/jfworks.wiki.git master
     - git push -u git@github.com:namboy94/jfworks.wiki.git master
@@ -37,10 +37,10 @@ clone_develop:
     - git push -u git@github.com:namboy94/jfworks.git develop
     - git push -u git@bitbucket.org:namboy94/jfworks.git develop
 
-
 cleanup:
   stage: cleanup
   when: always
   script:
+    - cd
     - rm -rf jfworks
     - rm -rf jfworks.wiki
