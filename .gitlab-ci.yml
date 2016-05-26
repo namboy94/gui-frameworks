@@ -37,10 +37,10 @@ clone_develop:
     - git push -u git@github.com:namboy94/jfworks.git develop
     - git push -u git@bitbucket.org:namboy94/jfworks.git develop
 
-
 cleanup:
   stage: cleanup
   when: always
   script:
+    - cd
     - rm -rf jfworks
     - rm -rf jfworks.wiki
