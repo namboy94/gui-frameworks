@@ -3,7 +3,7 @@ stages:
   - cleanup
 
 clone_master:
-  stage: setup
+  stage: clonemirror
   only:
     - master
   script:
@@ -23,10 +23,10 @@ clone_master:
     - git push -u git@github.com:namboy94/jfworks.wiki.git master
     - git push -u git@bitbucket.org:namboy94/jfworks.git/wiki master
 
-clone_master:
-  stage: setup
+clone_develop:
+  stage: clonemirror
   only:
-    - master
+    - develop
   script:
     - cd
     - git clone -b develop git@gitlab.namibsun.net:namboy94/jfworks.git jfworks
