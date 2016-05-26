@@ -1,0 +1,46 @@
+stages:
+  - clonemirror
+  - cleanup
+
+clone_master:
+  stage: setup
+  only:
+    - master
+  script:
+    - cd
+    - git clone git@gitlab.namibsun.net:namboy94/jfworks.git
+    - git clone git@gitlab.namibsun.net:namboy94/jfworks.wiki.git
+
+    - cd jfworks
+
+    - git push -u git@gitlab.com:namboy94/jfworks.git master
+    - git push -u git@github.com:namboy94/jfworks.git master
+    - git push -u git@bitbucket.org:namboy94/jfworks.git master
+
+    -cd ../jfworks.wiki
+
+    - git push -u git@gitlab.com:namboy94/jfworks.wiki.git master
+    - git push -u git@github.com:namboy94/jfworks.wiki.git master
+    - git push -u git@bitbucket.org:namboy94/jfworks.git/wiki master
+
+clone_master:
+  stage: setup
+  only:
+    - master
+  script:
+    - cd
+    - git clone -b develop git@gitlab.namibsun.net:namboy94/jfworks.git jfworks
+
+    - cd jfworks
+
+    - git push -u git@gitlab.com:namboy94/jfworks.git develop
+    - git push -u git@github.com:namboy94/jfworks.git develop
+    - git push -u git@bitbucket.org:namboy94/jfworks.git develop
+
+
+cleanup:
+  stage: cleanup
+  when: always
+  script:
+    - rm -rf jfworks
+    - rm -rf jfworks.wiki
