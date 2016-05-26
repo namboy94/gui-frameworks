@@ -34,9 +34,9 @@ abstract class GenericWindow {
     /**
      * Constructor that defines a standardized method signature and calls the layOut()
      * method.
-     * @param title - The Title of the GUI Window
-     * @param parent - The parent of the GUI Window
-     * @param hideParent - If set to True, the parent window will be hidden
+     * @param title The Title of the GUI Window
+     * @param parent The parent of the GUI Window
+     * @param hideParent If set to True, the parent window will be hidden
      */
     GenericWindow(String title, GenericWindow parent, boolean hideParent) {
         this.layOut();
