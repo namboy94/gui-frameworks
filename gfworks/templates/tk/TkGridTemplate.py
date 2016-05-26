@@ -97,7 +97,11 @@ class TkGridTemplate(TkWidgetGenerator,
             self.parent.withdraw()
         self.mainloop()
         if self.parent is not None and self.hide_parent:
-            self.parent.deiconify()
+            # noinspection PyProtectedMember
+            try:
+                self.parent.deiconify()
+            except tkinter._tkinter.TclError:
+                pass
 
     def stop(self) -> None:
         """
