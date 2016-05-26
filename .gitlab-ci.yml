@@ -17,7 +17,7 @@ clone_master:
     - git push -u git@github.com:namboy94/jfworks.git master
     - git push -u git@bitbucket.org:namboy94/jfworks.git master
 
-    -cd ../jfworks.wiki
+    - cd ../jfworks.wiki
 
     - git push -u git@gitlab.com:namboy94/jfworks.wiki.git master
     - git push -u git@github.com:namboy94/jfworks.wiki.git master
