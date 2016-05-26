@@ -36,7 +36,7 @@ project_description = "A bot that interfaces with several different messenger se
 A short description of the project
 """
 
-version_number = "0.2.2"
+version_number = "0.3"
 """
 The current version of the program.
 """
@@ -82,12 +82,42 @@ python2_requirements = python3_requirements
 Python 2 Python Packaging Index requirements
 """
 
-dependency_links=['https://git.gnome.org/browse/pygobject']
+dependency_links = ['https://git.gnome.org/browse/pygobject']
 """
 Links to dependencies that are not packaged on pypi.
 """
 
-scripts = []
+audience = "Intended Audience :: Developers"
 """
-List of script files to be installed during installation
+The intended audience of this software
+"""
+
+environment = "Environment :: Other Environment"
+"""
+The intended environment in which the program will be used
+"""
+
+programming_language = 'Programming Language :: Python :: 3'
+"""
+The programming language used in this project
+"""
+
+topic = "Topic :: Software Development :: User Interfaces"
+"""
+The broad subject/topic of the project
+"""
+
+language = "Natural Language :: English"
+"""
+The (default) language of this project
+"""
+
+compatible_os = "Operating System :: OS Independent"
+"""
+The Operating Systems on which the program can run
+"""
+
+license_identifier = "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+"""
+The license used for this project
 """

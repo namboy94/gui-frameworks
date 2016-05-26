@@ -22,6 +22,7 @@ This file is part of gfworks.
 """
 
 # imports
+import os
 import gfworks.metadata as metadata
 from setuptools import setup, find_packages
 
@@ -45,17 +46,31 @@ def readme() -> str:
         with open('README.md') as f:
             return f.read()
 
+
+def find_scripts() -> "list of scripts":
+    """
+    Returns a list of scripts in the bin directory
+
+    :return: the list of scripts
+    """
+    scripts = []
+    for file_name in os.listdir("bin"):
+        if os.path.isfile(os.path.join("bin", file_name)) and not file_name == "__init__.py":
+            scripts.append("bin/" + file_name)
+    return scripts
+
 setup(name=metadata.project_name,
       version=metadata.version_number,
       description=metadata.project_description,
       long_description=readme(),
       classifiers=[metadata.development_status,
-                   'Intended Audience :: Developers',
-                   'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-                   'Programming Language :: Python :: 3',
-                   'Topic :: Software Development :: User Interfaces',
-                   'Natural Language :: English',
-                   'Operating System :: OS Independent'
+                   metadata.audience,
+                   metadata.license_identifier,
+                   metadata.programming_language,
+                   metadata.topic,
+                   metadata.language,
+                   metadata.compatible_os,
+                   metadata.environment
                    ],
       url=metadata.project_url,
       author=metadata.author_name,
@@ -63,7 +78,7 @@ setup(name=metadata.project_name,
       license=metadata.license_type,
       packages=find_packages(),
       install_requires=metadata.python3_requirements,
-      scripts=metadata.scripts,
+      scripts=find_scripts(),
       test_suite='nose.collector',
       tests_require=['nose'],
       zip_safe=False)

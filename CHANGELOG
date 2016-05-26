@@ -1,3 +1,6 @@
+V 0.3
+  - Fixed Tkinter Threading issues due to multiple Tk instances being invoked
+  - Implemented Image Labels
 V 0.2.2
   - Added daemon support to threading
 V 0.2.1
