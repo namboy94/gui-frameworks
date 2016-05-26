@@ -1,4 +1,4 @@
-package test.java.net.namibsun;
+package test.java.net.namibsun.jfworks;
 
 /**
  * Created by hermann on 5/26/16.
