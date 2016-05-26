@@ -37,7 +37,7 @@ class TestGui(Template):
         super().__init__()
 
     def lay_out(self):
-        self.panel = self.generate_image_label("/home/hermann/Desktop/sun.png", False, 1, 20)
+        self.panel = self.generate_image_label("/home/hermann/Desktop/sun.png", False, 50, 100)
         self.position_absolute(self.panel, 1, 2, 1, 1)
 
 if __name__ == '__main__':

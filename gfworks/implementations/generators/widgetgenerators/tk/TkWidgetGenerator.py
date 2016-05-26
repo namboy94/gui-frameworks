@@ -59,15 +59,18 @@ class TkWidgetGenerator(GenericWidgetGenerator, tkinter.Toplevel):
         to the maintain_aspect_ratio flag
         :return: the image label widget
         """
-        image = Image.open(image_path)
-        if width is not None or height is not None:
-            if maintain_aspect_ratio:
-                image.thumbnail((width, height), Image.ANTIALIAS)
-            else:
-                image.resize((width, height), Image.ANTIALIAS)
-        image = ImageTk.PhotoImage(image)
+        width, height = self.calculate_image_dimensions(image_path, width, height, maintain_aspect_ratio)
+        pil_image = Image.open(image_path)
+
+        if maintain_aspect_ratio:
+            pil_image.thumbnail((width, height), Image.ANTIALIAS)
+        else:
+            pil_image = pil_image.resize((width, height), Image.ANTIALIAS)
+
+        image = ImageTk.PhotoImage(pil_image)
         image_label = tkinter.Label(self, image=image)
         image_label.image_reference = image
+
         return image_label
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> tkinter.Button:

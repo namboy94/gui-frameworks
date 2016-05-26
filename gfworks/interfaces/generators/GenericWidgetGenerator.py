@@ -21,6 +21,7 @@ This file is part of gfworks.
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from PIL import Image
 from typing import List, Dict, Tuple
 
 
@@ -52,6 +53,34 @@ class GenericWidgetGenerator(object):
         :return: the image label widget
         """
         raise NotImplementedError("generate_image_label not implemented")
+
+    @staticmethod
+    def calculate_image_dimensions(image_file: str, width: int, height: int, maintain_aspect_ratio: bool) \
+            -> Tuple[int, int]:
+        """
+        Calculates the dimensions for an image using the PIL lybrary and specified values
+
+        :param image_file: The original image
+        :param width: the width specified
+        :param height: the height specified
+        :param maintain_aspect_ratio: can be set to True to maintain the aspect ratio
+        :return: A tuple of the calculated width and height
+        """
+        pil_image = Image.open(image_file)
+        height_ratio = pil_image.height / pil_image.width  # Multiply times width to get new height
+        width_ratio = pil_image.width / pil_image.height  # Multiply times height to get new width
+
+        if width is not None and height is None:
+            height = int(height_ratio * width) if maintain_aspect_ratio else pil_image.height
+        elif width is None and height is not None:
+            width = int(width_ratio * height) if maintain_aspect_ratio else pil_image.width
+        elif width is None and height is None:
+            height = pil_image.height
+            width = pil_image.width
+
+        pil_image.close()
+
+        return width, height
 
     def generate_button(self, button_text: str, command: callable = None, args: Tuple[object] = None) -> object:
         """

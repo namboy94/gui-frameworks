@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="">
+    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Fixed resolution orders and tkinter image labels">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ManualTester.py" afterPath="$PROJECT_DIR$/tests/ManualTester.py" />
     </list>
     <ignored path="gfworks.iws" />
@@ -24,8 +23,8 @@
     <SUITE FILE_PATH="coverage/gfworks$Nosetests_in_tests.coverage" NAME="Nosetests in tests Coverage Results" MODIFIED="1463652541997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/gfworks$Nosetests_in_ManualTester.coverage" NAME="Nosetests in ManualTester Coverage Results" MODIFIED="1463652532576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/gfworks$Gtk3BasicGui.coverage" NAME="Gtk3BasicGui Coverage Results" MODIFIED="1460241671336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gfworks/examples" />
-    <SUITE FILE_PATH="coverage/gfworks$testgui_gtk.coverage" NAME="testgui gtk Coverage Results" MODIFIED="1464218889493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/" />
-    <SUITE FILE_PATH="coverage/gfworks$testgui.coverage" NAME="testgui tk Coverage Results" MODIFIED="1464218972923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/" />
+    <SUITE FILE_PATH="coverage/gfworks$testgui_gtk.coverage" NAME="testgui gtk Coverage Results" MODIFIED="1464221772885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/" />
+    <SUITE FILE_PATH="coverage/gfworks$testgui.coverage" NAME="testgui tk Coverage Results" MODIFIED="1464221777521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,21 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TkValueSetter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
-              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TkWidgetGenerator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="219" column="20" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
+            <state relative-caret-position="378">
+              <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
               <folding>
                 <element signature="e#913#927#0" expanded="true" />
               </folding>
@@ -66,6 +55,16 @@
               <folding>
                 <element signature="e#913#927#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metadata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/metadata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,19 +92,21 @@
       <file leaf-file-name="Gtk3WidgetGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/templates/tk/__init__.py">
+      <file leaf-file-name="GenericWidgetGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="757">
+              <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
+              <folding>
+                <element signature="e#913#934#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/tests/ManualTester.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="39" column="92" selection-start-line="39" selection-start-column="92" selection-end-line="39" selection-end-column="92" />
+              <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -190,7 +191,6 @@
         <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/gfworks/templates/generic/GridTemplateGenerator.py" />
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
-        <option value="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
         <option value="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
@@ -202,15 +202,16 @@
         <option value="$PROJECT_DIR$/CHANGELOG" />
         <option value="$PROJECT_DIR$/gfworks/metadata.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
-        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
         <option value="$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py" />
         <option value="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
         <option value="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
+        <option value="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
         <option value="$PROJECT_DIR$/tests/ManualTester.py" />
+        <option value="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
       </list>
     </option>
   </component>
@@ -400,6 +401,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="generic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gfworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -951,13 +992,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458491756968</updated>
     </task>
-    <task id="LOCAL-00012" summary="Mostly completed the GTK 3 Widget Generator.">
-      <created>1458507886295</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1458507886295</updated>
-    </task>
     <task id="LOCAL-00013" summary="Mostly completed the Tk Widget Generator.">
       <created>1458508907924</created>
       <option name="number" value="00013" />
@@ -1294,7 +1328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464213951846</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Fixed resolution orders and tkinter image labels">
+      <created>1464218999116</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1464218999117</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1354,7 +1395,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed some Tk positioning and command starting issues." />
     <MESSAGE value="Fixed Gtk import version warnings" />
     <MESSAGE value="Implemented all currently defined GTK Interfaces." />
     <MESSAGE value="Restructured some Implementation packages." />
@@ -1379,7 +1419,8 @@
     <MESSAGE value="Added daemon support to threading" />
     <MESSAGE value="Fixed Gtk3 not expanding." />
     <MESSAGE value="Replace tkinter.Tk with tkinter.Toplevel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace tkinter.Tk with tkinter.Toplevel" />
+    <MESSAGE value="Fixed resolution orders and tkinter image labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed resolution orders and tkinter image labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1503,13 +1544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="86" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -1601,14 +1635,6 @@
       </provider>
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/templates/gtk3/__init__.py">
@@ -1707,14 +1733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1749,18 +1767,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/metadata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="88" column="75" selection-start-line="88" selection-start-column="75" selection-end-line="88" selection-end-column="75" />
+          <folding>
+            <element signature="e#913#934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/ManualTester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="39" column="92" selection-start-line="39" selection-start-column="92" selection-end-line="39" selection-end-column="92" />
+          <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="219" column="20" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
+        <state relative-caret-position="378">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
           <folding>
             <element signature="e#913#927#0" expanded="true" />
           </folding>

@@ -59,6 +59,8 @@ class Gtk3WidgetGenerator(GenericWidgetGenerator, Gtk.Window):
         to the maintain_aspect_ratio flag
         :return: the image label widget
         """
+        width, height = self.calculate_image_dimensions(image_path, width, height, maintain_aspect_ratio)
+
         image = GdkPixbuf.Pixbuf.new_from_file_at_scale(image_path, width=width, height=height,
                                                         preserve_aspect_ratio=maintain_aspect_ratio)
         image_widget = Gtk.Image.new_from_pixbuf(image)
