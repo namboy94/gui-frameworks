@@ -59,7 +59,6 @@ abstract class GenericWindow {
 
 }
 
-
 // Order:
 // WidgetGenerator extends Framework implement WidgetGenerator
 // -> Dialogshower
