@@ -19,14 +19,14 @@ run_unit_tests:
     - master
     - develop
   script:
-    - python setup.py test
+    - python3 setup.py test
 
 upload_to_pypi:
   stage: deploy
   only:
     - master
   script:
-    - python setup.py register sdist upload
+    - python3 setup.py register sdist upload
   allow_failure: true
 
 generate_statistics:
