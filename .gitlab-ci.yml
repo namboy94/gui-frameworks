@@ -35,17 +35,18 @@ generate_statistics:
     - master
   script:
     - gitstats . git_stats
-    - cd doc
-    - make clean
-    - make buildsource
-    - make html
-    - cd ..
+    #- cd doc
+    #- make clean
+    #- make buildsource
+    #- make html
+    #- cd ..
 
     - git clone git@gitlab.namibsun.net:namboy94/gfworks.wiki.git
     - cd gfworks.wiki
-    - rm -rf git_stats html
+    #- rm -rf git_stats html
+    - rm -rf git_stats
     - mv ../git_stats .
-    - mv ../doc/build/html .
+    #- mv ../doc/build/html .
     - git add --all
-    - git commit -m "Updated Documentation and Statistics"
+    - git commit -m "Updated Statistics" #and Documentation
     - git push -u origin master
