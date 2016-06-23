@@ -5,7 +5,7 @@ stages:
   - wiki
 
 mirror_master:
-  stage: setup
+  stage: mirror
   only:
     - master
   script:
@@ -22,7 +22,7 @@ run_unit_tests:
     - python setup.py test
 
 upload_to_pypi:
-  stage: upload
+  stage: deploy
   only:
     - master
   script:

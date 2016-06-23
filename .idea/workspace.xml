@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Fixed faulty setup.py">
+    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitlab-ci.yml" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/generators/GridTemplateGenerator.py" afterPath="$PROJECT_DIR$/gfworks/templates/generators/GridTemplateGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <ignored path="gfworks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,8 +105,8 @@
       <file leaf-file-name=".gitlab-ci.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+            <state relative-caret-position="165">
+              <caret line="24" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -816,13 +814,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458491756968</updated>
     </task>
-    <task id="LOCAL-00015" summary="Created basic dialog shower classes.">
-      <created>1458538901423</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1458538901423</updated>
-    </task>
     <task id="LOCAL-00016" summary="Implemented dialog showers.">
       <created>1458539485183</created>
       <option name="number" value="00016" />
@@ -1159,7 +1150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464222030311</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Fixed faulty setup.py&#10;&#10;Also streamlined the gitlab build process&#10;and fixed small error when importing gtk frameworks.">
+      <created>1466689289646</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1466689289648</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1219,7 +1217,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Restructured some Implementation packages." />
     <MESSAGE value="Fixed Tk positionin issues, bugfixes in the Generator Classes." />
     <MESSAGE value="Added threading capabilities." />
     <MESSAGE value="Implemented all important gtk functions used by media-manager." />
@@ -1244,7 +1241,8 @@
     <MESSAGE value="Fixed resolution orders and tkinter image labels" />
     <MESSAGE value="Fixed resizing with Image Labels" />
     <MESSAGE value="Fixed Exception being thrown whenever the Tk root window is destroyed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Exception being thrown whenever the Tk root window is destroyed." />
+    <MESSAGE value="Fixed faulty setup.py&#10;&#10;Also streamlined the gitlab build process&#10;and fixed small error when importing gtk frameworks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed faulty setup.py&#10;&#10;Also streamlined the gitlab build process&#10;and fixed small error when importing gtk frameworks." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1626,8 +1624,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        <state relative-caret-position="165">
+          <caret line="24" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
