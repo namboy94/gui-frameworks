@@ -22,7 +22,6 @@ This file is part of gfworks.
 """
 
 # imports
-import os
 import gfworks.metadata as metadata
 from setuptools import setup, find_packages
 
@@ -46,19 +45,6 @@ def readme() -> str:
         with open('README.md') as f:
             return f.read()
 
-
-def find_scripts() -> "list of scripts":
-    """
-    Returns a list of scripts in the bin directory
-
-    :return: the list of scripts
-    """
-    scripts = []
-    for file_name in os.listdir("bin"):
-        if os.path.isfile(os.path.join("bin", file_name)) and not file_name == "__init__.py":
-            scripts.append("bin/" + file_name)
-    return scripts
-
 setup(name=metadata.project_name,
       version=metadata.version_number,
       description=metadata.project_description,
@@ -78,7 +64,6 @@ setup(name=metadata.project_name,
       license=metadata.license_type,
       packages=find_packages(),
       install_requires=metadata.python3_requirements,
-      scripts=find_scripts(),
       test_suite='nose.collector',
       tests_require=['nose'],
       zip_safe=False)

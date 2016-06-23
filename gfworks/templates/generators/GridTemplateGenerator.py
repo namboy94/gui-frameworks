@@ -45,7 +45,7 @@ class GridTemplateGenerator(object):
         try:
             from gfworks.templates.gtk3.Gtk3GridTemplate import Gtk3GridTemplate
             templates["gtk3"] = Gtk3GridTemplate
-        except ImportError:
+        except (ImportError, ValueError):
             pass
 
         try:
