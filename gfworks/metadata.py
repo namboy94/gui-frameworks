@@ -33,22 +33,22 @@ project_name = "gfworks"
 The name of the project
 """
 
-project_description = "A bot that interfaces with several different messenger services"
+project_description = "A mutiple-gui-framework wrapper for python"
 """
 A short description of the project
 """
 
-version_number = "0.3.1"
+version_number = "0.3.2"
 """
 The current version of the program.
 """
 
-development_status = "Development Status :: 1 - Planning"
+development_status = "Development Status :: 2 - Pre-Alpha"
 """
 The current development status of the program
 """
 
-project_url = "http://namibsun.net/namboy94/gfworks"
+project_url = "http://gitlab.namibsun.net/namboy94/gfworks"
 """
 A URL linking to the home page of the project, in this case a
 self-hosted Gitlab page
@@ -76,7 +76,7 @@ The project's license type
 
 dependencies = ["pillow"]
 """
-Python 3 Python Packaging Index requirements
+Python Packaging Index requirements
 """
 
 dependency_links = ['https://git.gnome.org/browse/pygobject']
