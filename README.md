@@ -12,15 +12,23 @@ This class needs to override the __init__ method while also calling the super().
 
 Furthermore, the lay_out method needs to be implemented to add widgets and other UI elements to the GUI.
 
-## Links:
+## Installation
 
-This project is mirrored to:
+The project has its own [python packaging index site](https://pypi.python.org/pypi/gfworks),
+and it's possible to install it using ```pip install gfworks``` or ```pip install gfworks --user```
+if you do not have admin/root rights.
 
-* [github.com](https://github.com/namboy94/gfworks)
-* [gitlab.com](https://gitlab.com/namboy94/gfworks)
-* [bitbucket.org](https://bitbucket.org/namboy94/gfworks)
+## Contributing
 
-[//]: # ([Documentation](http://gitlab.namibsun.net/namboy94/gfworks/wikis/git_stats/general.html))
-[//]: # ([Documentation](http://gitlab.namibsun.net/namboy94/gfworks/wikis/html/index.html))
+This project is automatically mirrored to [github](https://github.com/namboy94/gfworks), however all development
+is conducted at a privately hosted [Gitlab instance](http://gitlab.namibsun.net/namboy94/gfworks). Issues
+on both services are taken unto consideration.
 
-Check out this project's [python package index site](https://pypi.python.org/pypi/gfworks)!
+## Documentation
+
+Sphinx Documentation can be found [here](http://krumreyh.eu/gfworks/documentation/html/index.html).
+A [PDF version](http://krumreyh.eu/gfworks/documentation/documentation.pdf) is also available
+
+## Statistics
+
+Automatically generated git statistics can be found [here](http://krumreyh.eu/gfworks/git_stats/index.html)

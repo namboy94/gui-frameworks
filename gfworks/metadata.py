@@ -1,4 +1,5 @@
 """
+LICENSE:
 Copyright 2016 Hermann Krumrey
 
 This file is part of gfworks.
@@ -19,6 +20,7 @@ This file is part of gfworks.
 
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
+LICENSE
 """
 
 """
@@ -31,22 +33,22 @@ project_name = "gfworks"
 The name of the project
 """
 
-project_description = "A bot that interfaces with several different messenger services"
+project_description = "A mutiple-gui-framework wrapper for python"
 """
 A short description of the project
 """
 
-version_number = "0.3.1"
+version_number = "0.3.2"
 """
 The current version of the program.
 """
 
-development_status = "Development Status :: 1 - Planning"
+development_status = "Development Status :: 2 - Pre-Alpha"
 """
 The current development status of the program
 """
 
-project_url = "http://namibsun.net/namboy94/gfworks"
+project_url = "http://gitlab.namibsun.net/namboy94/gfworks"
 """
 A URL linking to the home page of the project, in this case a
 self-hosted Gitlab page
@@ -72,14 +74,9 @@ license_type = "GNU GPL3"
 The project's license type
 """
 
-python3_requirements = ["pillow"]
+dependencies = ["pillow"]
 """
-Python 3 Python Packaging Index requirements
-"""
-
-python2_requirements = python3_requirements
-"""
-Python 2 Python Packaging Index requirements
+Python Packaging Index requirements
 """
 
 dependency_links = ['https://git.gnome.org/browse/pygobject']
@@ -97,7 +94,8 @@ environment = "Environment :: Other Environment"
 The intended environment in which the program will be used
 """
 
-programming_language = 'Programming Language :: Python :: 3'
+programming_languages = ['Programming Language :: Python :: 3',
+                         'Programming Language :: Python :: 2']
 """
 The programming language used in this project
 """

@@ -1,4 +1,5 @@
 """
+LICENSE:
 Copyright 2016 Hermann Krumrey
 
 This file is part of gfworks.
@@ -19,6 +20,7 @@ This file is part of gfworks.
 
     You should have received a copy of the GNU General Public License
     along with gfworks. If not, see <http://www.gnu.org/licenses/>.
+LICENSE
 """
 
 from typing import List
