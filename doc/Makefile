@@ -225,6 +225,6 @@ dummy:
 	@echo "Build finished. Dummy builder generates no files."
 
 buildsource:
-	sphinx-apidoc -fMeET ../gfworks -o source
+	sphinx-apidoc -f ../gfworks -o source
 	@echo "Auto-generation of API documentation finished. " \
 		"The generated files are in 'source/'"

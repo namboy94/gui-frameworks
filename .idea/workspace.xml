@@ -1,37 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Updated license texts to be ignored by sphinx">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Added gfworks module to index">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/source/modules.rst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitlab-ci.yml" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/Gtk3DialogShower.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/Gtk3DialogShower.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/threading/gtk3/Gtk3Threading.py" afterPath="$PROJECT_DIR$/gfworks/implementations/threading/gtk3/Gtk3Threading.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/threading/tk/TkThreading.py" afterPath="$PROJECT_DIR$/gfworks/implementations/threading/tk/TkThreading.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/gtk3/Gtk3ValueGetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuegetters/tk/TkValueGetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/gtk3/Gtk3ValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/valuesetters/tk/TkValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/gtk3/Gtk3WidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/implementations/widgetdatamanipulators/widgetclearers/tk/TkWidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/GenericWindow.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/GenericWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericDialogShower.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericDialogShower.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/generators/GenericWidgetGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/threading/Threading.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/threading/Threading.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueGetter.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueGetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericValueSetter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/widgetdatamanipulators/GenericWidgetClearer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/metadata.py" afterPath="$PROJECT_DIR$/gfworks/metadata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/generators/GridTemplateGenerator.py" afterPath="$PROJECT_DIR$/gfworks/templates/generators/GridTemplateGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" afterPath="$PROJECT_DIR$/gfworks/templates/tk/TkGridTemplate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Makefile" afterPath="$PROJECT_DIR$/doc/Makefile" />
     </list>
     <ignored path="gfworks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -126,38 +100,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitlab-ci.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/source/index.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4086">
+              <caret line="227" column="20" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Gtk3GridTemplate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/templates/gtk3/Gtk3GridTemplate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericGridTemplate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/templates/generic/GenericGridTemplate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridTemplateGenerator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/templates/generators/GridTemplateGenerator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericWindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gfworks/interfaces/GenericWindow.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
@@ -191,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/usr/lib/python3.5/site-packages/gfworks-0.1-py3.5.egg/gfworks/interfaces/GenericWindow.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/customwidgets/gtk3/PrimitiveMultiListBox.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/customwidgets/gtk3/PrimitiveComboBox.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/widgetgenerators/tk/TkWidgetGenerator.py" />
@@ -210,8 +183,6 @@
         <option value="$PROJECT_DIR$/tests/ManualTester.py" />
         <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
         <option value="$PROJECT_DIR$/CHANGELOG" />
-        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
-        <option value="$PROJECT_DIR$/doc/Makefile" />
         <option value="$PROJECT_DIR$/doc/source/conf.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/gtk3/Gtk3DialogShower.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/generators/dialogshowers/tk/TkDialogShower.py" />
@@ -242,6 +213,9 @@
         <option value="$PROJECT_DIR$/gfworks/metadata.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/doc/source/index.rst" />
+        <option value="$PROJECT_DIR$/doc/Makefile" />
+        <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
       </list>
     </option>
   </component>
@@ -1783,20 +1757,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458491756968</updated>
     </task>
-    <task id="LOCAL-00021" summary="Implemented Grid Templates.">
-      <created>1458544759225</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1458544759225</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Defined Grid Positioner Interface.">
-      <created>1458555125771</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1458555125771</updated>
-    </task>
     <task id="LOCAL-00023" summary="Implemented Grid Positioner in GTK 3.">
       <created>1458556462274</created>
       <option name="number" value="00023" />
@@ -2126,7 +2086,21 @@
       <option name="project" value="LOCAL" />
       <updated>1467900835223</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Updated license texts to be ignored by sphinx">
+      <created>1467901100685</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1467901100685</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Added gfworks module to index">
+      <created>1467901121960</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1467901121960</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2186,8 +2160,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented a better Tk Multi List Box" />
-    <MESSAGE value="Fixed Tk Multi List Box types." />
     <MESSAGE value="Fixed an error that caused segfaults when no Window could be created.&#10;&#10;This killed all programs importing gfworks." />
     <MESSAGE value="Did some cosmetic surgery on the code." />
     <MESSAGE value="Finished repairing some type annotations using the typing library." />
@@ -2211,7 +2183,9 @@
     <MESSAGE value="Temporarily removed documentation generating from gitlab file." />
     <MESSAGE value="Added documentation support using sphinx" />
     <MESSAGE value="Correctly set up documentation config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correctly set up documentation config" />
+    <MESSAGE value="Updated license texts to be ignored by sphinx" />
+    <MESSAGE value="Added gfworks module to index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added gfworks module to index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2240,30 +2214,6 @@
       </provider>
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/source/index.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/source/modules.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doc/source/gfworks.implementations.custom.customwidgets.rst">
@@ -2350,14 +2300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="227" column="4" selection-start-line="227" selection-start-column="4" selection-end-line="227" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -2638,6 +2580,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/source/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/source/modules.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4086">
+          <caret line="227" column="20" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitlab-ci.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding />
         </state>
       </provider>
