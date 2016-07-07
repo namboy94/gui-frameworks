@@ -28,7 +28,7 @@ import gfworks.metadata as metadata
 from setuptools import setup, find_packages
 
 
-def readme() -> str:
+def readme():
     """
     Reads the readme file and converts it from markdown to restructured text
 
@@ -54,18 +54,17 @@ setup(name=metadata.project_name,
       classifiers=[metadata.development_status,
                    metadata.audience,
                    metadata.license_identifier,
-                   metadata.programming_language,
                    metadata.topic,
                    metadata.language,
                    metadata.compatible_os,
                    metadata.environment
-                   ],
+                   ] + metadata.programming_languages,
       url=metadata.project_url,
       author=metadata.author_name,
       author_email=metadata.author_email,
       license=metadata.license_type,
       packages=find_packages(),
-      install_requires=metadata.python3_requirements,
+      install_requires=metadata.dependencies,
       test_suite='nose.collector',
       tests_require=['nose'],
       zip_safe=False)

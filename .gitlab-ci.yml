@@ -39,7 +39,7 @@ binary_2_dist:
   only:
     - master
   script:
-    - 3to2 . --write
+    - 3to2 gfworks --write
     - python2 setup.py bdist_wheel upload
 
 generate_documentation:
