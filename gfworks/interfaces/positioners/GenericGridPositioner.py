@@ -41,7 +41,8 @@ class GenericGridPositioner(object):
         """
         raise NotImplementedError("position_absolute not implemented")
 
-    def position_relative(self, widget: object, neighbour: object, orientation: str, x_size: int, y_size: int) -> None:
+    def position_relative(self, widget: object, neighbour: object, orientation: str, x_size: int, y_size: int,
+                          spacing: int = 0) -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned
@@ -54,6 +55,7 @@ class GenericGridPositioner(object):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :param spacing: space between the widgets
         :return: void
         """
         raise NotImplementedError("position_relative not implemented")
