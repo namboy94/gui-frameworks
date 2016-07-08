@@ -98,4 +98,6 @@ class Gtk3GridPositioner(GenericGridPositioner):
         :param y_size: the height of the spacing
         :return: None
         """
-        raise NotImplementedError("add_spacing_next_to not implemented")
+        spacer_label = Gtk.Label()
+        spacer_label.set_text("")
+        self.position_relative(spacer_label, widget, orientation, x_size, y_size)
