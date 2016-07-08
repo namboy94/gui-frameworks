@@ -52,8 +52,8 @@ class TkGridPositioner(GenericGridPositioner):
         if self.columncounter < x_position + x_size:
             self.columncounter = x_position + x_size
 
-    def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget,
-                          orientation: str, x_size: int, y_size: int) -> None:
+    def position_relative(self, widget: tkinter.Widget, neighbour: tkinter.Widget, orientation: str, x_size: int,
+                          y_size: int, spacing: int = 0) -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned
@@ -66,8 +66,13 @@ class TkGridPositioner(GenericGridPositioner):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :param spacing: space between the widgets
         :return: void
         """
+        x_spacing = 1 if orientation.upper() in ["NORTH", "N", "TOP", "SOUTH", "S", "BOTTOM"] else spacing
+        y_spacing = 1 if orientation.upper() in ["EAST", "E", "RIGHT", "WEST", "W", "LEFT"] else spacing
+        widget = widget if spacing == 0 else self.add_spacing_next_to(widget, orientation, x_spacing, y_spacing)
+
         neighbour_row = neighbour.grid_info()["row"]
         neighbour_column = neighbour.grid_info()["column"]
         neighbour_row_end = neighbour_row + neighbour.grid_info()["rowspan"]
@@ -93,7 +98,7 @@ class TkGridPositioner(GenericGridPositioner):
         if self.rowcounter < widget["row"] + widget["rowspan"]:
             self.rowcounter = widget["row"] + widget["rowspan"]
 
-    def add_spacing_next_to(self, widget: tkinter.Widget, orientation: str, x_size: int, y_size: int) -> None:
+    def add_spacing_next_to(self, widget: tkinter.Widget, orientation: str, x_size: int, y_size: int) -> tkinter.Widget:
         """
         Adds an empty label next to a widget to add spacing between widgets
         :param widget: the widget to which the spacing will be added next to
@@ -105,7 +110,8 @@ class TkGridPositioner(GenericGridPositioner):
                                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the spacing
         :param y_size: the height of the spacing
-        :return: None
+        :return: the spacer label
         """
         spacer_label = tkinter.Label(self, text="")
         self.position_relative(spacer_label, widget, orientation, x_size, y_size)
+        return spacer_label

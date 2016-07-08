@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="">
+    <list default="true" id="aec393a4-9b47-4b73-8bd0-02e7bef2847b" name="Default" comment="Added spacing option to relative positioner interface">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" afterPath="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" />
     </list>
     <ignored path="gfworks.iws" />
@@ -52,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericGridPositioner.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenericGridPositioner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+            <state relative-caret-position="407">
+              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -65,8 +67,8 @@
       <file leaf-file-name="Gtk3GridPositioner.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+            <state relative-caret-position="353">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="78" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -92,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TkGridPositioner.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TkGridPositioner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
+            <state relative-caret-position="263">
+              <caret line="73" column="112" selection-start-line="73" selection-start-column="112" selection-end-line="73" selection-end-column="112" />
               <folding />
             </state>
           </provider>
@@ -208,9 +210,9 @@
         <option value="$PROJECT_DIR$/.gitlab-ci.yml" />
         <option value="$PROJECT_DIR$/CHANGELOG" />
         <option value="$PROJECT_DIR$/gfworks/metadata.py" />
+        <option value="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py" />
         <option value="$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py" />
-        <option value="$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py" />
       </list>
     </option>
   </component>
@@ -1053,13 +1055,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458491756968</updated>
     </task>
-    <task id="LOCAL-00029" summary="Made framework for implementations of widget setters.">
-      <created>1458576093211</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1458576093211</updated>
-    </task>
     <task id="LOCAL-00030" summary="Added current packages to setup.py">
       <created>1458578275320</created>
       <option name="number" value="00030" />
@@ -1396,7 +1391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467967989607</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Added spacing option to relative positioner interface">
+      <created>1467968413575</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1467968413575</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1456,7 +1458,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added mirrors to github, gitlab and bitbucket" />
     <MESSAGE value="Added password generators" />
     <MESSAGE value="Implemented Generic Grid Template to help IDEs." />
     <MESSAGE value="Implemented Image Labels, updated readme." />
@@ -1481,7 +1482,8 @@
     <MESSAGE value="Added spacer methods to gtk and tk" />
     <MESSAGE value="Implemented Gtk3 spacer" />
     <MESSAGE value="Implemented tk spacer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented tk spacer" />
+    <MESSAGE value="Added spacing option to relative positioner interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spacing option to relative positioner interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1758,30 +1760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/tk/TkWidgetGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1790,10 +1768,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/generators/widgetgenerators/gtk3/Gtk3WidgetGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="46" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gfworks/interfaces/positioners/GenericGridPositioner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+        <state relative-caret-position="407">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/gtk3/Gtk3GridPositioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="78" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gfworks/implementations/positioners/tk/TkGridPositioner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="73" column="112" selection-start-line="73" selection-start-column="112" selection-end-line="73" selection-end-column="112" />
           <folding />
         </state>
       </provider>

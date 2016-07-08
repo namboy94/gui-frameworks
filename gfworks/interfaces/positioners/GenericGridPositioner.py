@@ -60,7 +60,7 @@ class GenericGridPositioner(object):
         """
         raise NotImplementedError("position_relative not implemented")
 
-    def add_spacing_next_to(self, widget: object, orientation: str, x_size: int, y_size: int) -> None:
+    def add_spacing_next_to(self, widget: object, orientation: str, x_size: int, y_size: int) -> object:
         """
         Adds an empty label next to a widget to add spacing between widgets
         :param widget: the widget to which the spacing will be added next to
@@ -72,6 +72,6 @@ class GenericGridPositioner(object):
                                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the spacing
         :param y_size: the height of the spacing
-        :return: None
+        :return: the spacer label
         """
         raise NotImplementedError("add_spacing_next_to not implemented")
