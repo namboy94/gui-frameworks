@@ -57,8 +57,8 @@ class Gtk3GridPositioner(GenericGridPositioner):
         widget.set_size_request(0, 0)
         self.grid.attach(widget, x_position, y_position, x_size, y_size)
 
-    def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int) \
-            -> None:
+    def position_relative(self, widget: Gtk.Widget, neighbour: Gtk.Widget, orientation: str, x_size: int, y_size: int,
+                          spacing: int = 0) -> None:
         """
         Position a widget relatively to another widget in a grid layout
         :param widget: the widget to be positioned
@@ -71,15 +71,45 @@ class Gtk3GridPositioner(GenericGridPositioner):
                 For Future: Maybe consider using a python enum equivalent
         :param x_size: the width of the widget in the grid layout
         :param y_size: the height of the widget in the grid layout
+        :param spacing: space between the widgets
         :return: void
         """
+        x_spacing = 1 if orientation.upper() in ["NORTH", "N", "TOP", "SOUTH", "S", "BOTTOM"] else spacing
+        y_spacing = 1 if orientation.upper() in ["EAST", "E", "RIGHT", "WEST", "W", "LEFT"] else spacing
+        root_widget = neighbour if spacing == 0 else \
+            self.add_spacing_next_to(neighbour, orientation, x_spacing, y_spacing)
+
+        widget.set_vexpand(True)
+        widget.set_hexpand(True)
+        widget.set_size_request(0, 0)
+
         if orientation.upper() in ["NORTH", "N", "TOP"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.TOP, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.TOP, x_size, y_size)
         elif orientation.upper() in ["EAST", "E", "RIGHT"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.RIGHT, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.RIGHT, x_size, y_size)
         elif orientation.upper() in ["SOUTH", "S", "BOTTOM"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.BOTTOM, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.BOTTOM, x_size, y_size)
         elif orientation.upper() in ["WEST", "W", "LEFT"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.LEFT, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.LEFT, x_size, y_size)
         else:
             raise ValueError("Incorrect orientation type " + orientation)
+
+    def add_spacing_next_to(self, widget: Gtk.Widget, orientation: str, x_size: int, y_size: int) -> Gtk.Widget:
+        """
+        Adds an empty label next to a widget to add spacing between widgets
+        :param widget: the widget to which the spacing will be added next to
+        :param orientation: the direction from which the spacing will be added
+                                should be able to accept:
+                                    NORTH/EAST/SOUTH/WEST
+                                    N/E/S/W
+                                    TOP/BOTTOM/RIGHT/LEFT
+                                For Future: Maybe consider using a python enum equivalent
+        :param x_size: the width of the spacing
+        :param y_size: the height of the spacing
+        :return: the spacing label
+        """
+        spacer_label = Gtk.Label()
+        spacer_text = " " * x_size
+        spacer_label.set_text(spacer_text)
+        self.position_relative(spacer_label, widget, orientation, x_size, y_size)
+        return spacer_label
