@@ -71,7 +71,8 @@ class TkGridPositioner(GenericGridPositioner):
         """
         x_spacing = 1 if orientation.upper() in ["NORTH", "N", "TOP", "SOUTH", "S", "BOTTOM"] else spacing
         y_spacing = 1 if orientation.upper() in ["EAST", "E", "RIGHT", "WEST", "W", "LEFT"] else spacing
-        widget = widget if spacing == 0 else self.add_spacing_next_to(widget, orientation, x_spacing, y_spacing)
+        neighbour = neighbour if spacing == 0 \
+            else self.add_spacing_next_to(neighbour, orientation, x_spacing, y_spacing)
 
         neighbour_row = neighbour.grid_info()["row"]
         neighbour_column = neighbour.grid_info()["column"]
@@ -79,24 +80,24 @@ class TkGridPositioner(GenericGridPositioner):
         neighbour_column_end = neighbour_column + neighbour.grid_info()["columnspan"]
 
         if orientation.upper() in ["NORTH", "N", "TOP"]:
-            widget.grid(row=neighbour_row - 1, column=neighbour_column, rowspan=x_size, columnspan=y_size,
-                        sticky=W + E + N + S)
+            row = neighbour_row - 1
+            column = neighbour_column
         elif orientation.upper() in ["EAST", "E", "RIGHT"]:
-            widget.grid(row=neighbour_row, column=neighbour_column_end, rowspan=x_size, columnspan=y_size,
-                        sticky=W + E + N + S)
+            row = neighbour_row
+            column = neighbour_column_end
         elif orientation.upper() in ["SOUTH", "S", "BOTTOM"]:
-            widget.grid(row=neighbour_row_end, column=neighbour_column, rowspan=x_size, columnspan=y_size,
-                        sticky=W + E + N + S)
+            row = neighbour_row_end
+            column = neighbour_column
         elif orientation.upper() in ["WEST", "W", "LEFT"]:
-            widget.grid(row=neighbour_row, column=neighbour_column - 1, rowspan=x_size, columnspan=y_size,
-                        sticky=W + E + N + S)
+            row = neighbour_row
+            column = neighbour_column - 1
         else:
             raise ValueError("Incorrect orientation type " + orientation)
 
-        if self.columncounter < widget["column"] + widget["columnspan"]:
-            self.columncounter = widget["column"] + widget["columnspan"]
-        if self.rowcounter < widget["row"] + widget["rowspan"]:
-            self.rowcounter = widget["row"] + widget["rowspan"]
+        widget.grid(row=row, column=column, rowspan=y_size, columnspan=x_size, sticky=W + E + N + S)
+
+        self.columncounter = column + x_size if self.columncounter < column + x_size else self.columncounter
+        self.rowcounter = row + y_size if self.rowcounter < row + y_size else self.rowcounter
 
     def add_spacing_next_to(self, widget: tkinter.Widget, orientation: str, x_size: int, y_size: int) -> tkinter.Widget:
         """

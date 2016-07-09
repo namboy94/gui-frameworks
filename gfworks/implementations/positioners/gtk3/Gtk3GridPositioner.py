@@ -76,16 +76,21 @@ class Gtk3GridPositioner(GenericGridPositioner):
         """
         x_spacing = 1 if orientation.upper() in ["NORTH", "N", "TOP", "SOUTH", "S", "BOTTOM"] else spacing
         y_spacing = 1 if orientation.upper() in ["EAST", "E", "RIGHT", "WEST", "W", "LEFT"] else spacing
-        widget = widget if spacing == 0 else self.add_spacing_next_to(widget, orientation, x_spacing, y_spacing)
+        root_widget = neighbour if spacing == 0 else \
+            self.add_spacing_next_to(neighbour, orientation, x_spacing, y_spacing)
+
+        widget.set_vexpand(True)
+        widget.set_hexpand(True)
+        widget.set_size_request(0, 0)
 
         if orientation.upper() in ["NORTH", "N", "TOP"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.TOP, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.TOP, x_size, y_size)
         elif orientation.upper() in ["EAST", "E", "RIGHT"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.RIGHT, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.RIGHT, x_size, y_size)
         elif orientation.upper() in ["SOUTH", "S", "BOTTOM"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.BOTTOM, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.BOTTOM, x_size, y_size)
         elif orientation.upper() in ["WEST", "W", "LEFT"]:
-            self.grid.attach_next_to(widget, neighbour, Gtk.PositionType.LEFT, x_size, y_size)
+            self.grid.attach_next_to(widget, root_widget, Gtk.PositionType.LEFT, x_size, y_size)
         else:
             raise ValueError("Incorrect orientation type " + orientation)
 
@@ -104,6 +109,7 @@ class Gtk3GridPositioner(GenericGridPositioner):
         :return: the spacing label
         """
         spacer_label = Gtk.Label()
-        spacer_label.set_text("")
+        spacer_text = " " * x_size
+        spacer_label.set_text(spacer_text)
         self.position_relative(spacer_label, widget, orientation, x_size, y_size)
         return spacer_label
