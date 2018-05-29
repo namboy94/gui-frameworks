@@ -1,4 +1,6 @@
-# GUI-Frameworks [![pipeline status](https://gitlab.namibsun.net/namboy94/gui-frameworks/badges/master/pipeline.svg)](https://gitlab.namibsun.net/namboy94/gui-frameworks/commits/master)
+# GUI-Frameworks
+
+[![pipeline status](https://gitlab.namibsun.net/namibsun/museum/gui-frameworks/badges/master/pipeline.svg)](https://gitlab.namibsun.net/namibsun/museum/gui-frameworks/commits/master)
 
 ![Logo](resources/logo/logo-readme.png)
 
@@ -12,9 +14,8 @@ gfworks is a framework for python, jfworks for java.
 
 ## Further Information
 
-* [Changelog](https://gitlab.namibsun.net/namboy94/gui-frameworks/raw/master/CHANGELOG)
-* [License (GPLv3)](https://gitlab.namibsun.net/namboy94/gui-frameworks/raw/master/LICENSE)
-* [Gitlab](https://gitlab.namibsun.net/namboy94/gui-frameworks)
+* [Changelog](CHANGELOG)
+* [License](LICENSE)
+* [Gitlab](https://gitlab.namibsun.net/namibsun/museum/gui-frameworks)
 * [Github](https://github.com/namboy94/gui-frameworks)
-* [Git Statistics (gitstats)](https://gitstats.namibsun.net/gitstats/gui-frameworks/index.html)
-* [Git Statistics (git_stats)](https://gitstats.namibsun.net/git_stats/gui-frameworks/index.html)
+* [Progstats](https://progstats.namibsun.net/projects/gui-frameworks)
